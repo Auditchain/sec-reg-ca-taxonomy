@@ -26,7 +26,7 @@ A filing in the LucaSuite JSON format: an object whose sections include `BaseInf
    | `dimensions` | an object with one entry for each `Facts-Dimensions` record of the fact: the key is the full name of `Dimension`; the value is the full name of `Member` if `Member` is not empty, and otherwise the typed value `Value` as text, a number exactly as written (for example `1`). A fact has at most one record for each dimension, and every record has either a `Member` or a typed `Value`. |
    | `unit` | `Units`, as written |
    | `decimals` | `Rounding`, as written |
-   | `value` | `FactValue` as text: a string as it is; a number exactly as written in the filing's JSON text (for example `716666.67` or `9.1e-07`, not re-formatted); `true` or `false` for a boolean. A null value leaves the key out. |
+   | `value` | `FactValue` as text: a string as it is; a number exactly as written in the filing's JSON text (for example `716666.67` or `9.1e-7`, not re-formatted); `true` or `false` for a boolean. A null value leaves the key out. |
 
    In this format `ReportingEntityAspect`, `CalendarPeriodAspect`, `Units` and `Rounding` are strings. Every value in the object is therefore a string or, for `dimensions`, an object of strings. No text is trimmed or Unicode-normalized. A top-level key whose value is an empty string, an empty object or null is left out; inside `dimensions`, every record gives an entry.
 

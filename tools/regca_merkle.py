@@ -11,7 +11,7 @@ Method
        unit        the unit, as the filing records it
        decimals    the rounding, as the filing records it
        value       the value, as the filing records it: a string as it is, a number exactly as written in the
-                   filing's JSON text (for example 9.1e-07), not re-formatted
+                   filing's JSON text (for example 9.1e-7), not re-formatted
      Keys whose value is empty are left out. Every value is a string (dimensions: an object of strings).
      The full specification is tools/merkle-method-v1.md.
   2. The object is serialized under RFC 8785 (JSON Canonicalization Scheme).

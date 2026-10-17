@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <rewriteURI uriStartString="https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/taxonomy/2026-10-16/" rewritePrefix="../"/>
-</catalog>
