@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tp:taxonomyPackage xmlns:tp="http://xbrl.org/2016/taxonomy-package" xml:lang="en">
+  <tp:identifier>urn:luca:entrypoint-package</tp:identifier>
+  <tp:name>Luca Entrypoint Package</tp:name>
+  <tp:description>Generated package containing entrypoint schema and linked taxonomy files.</tp:description>
+  <tp:version>1.0</tp:version>
+  <tp:publisher>Pacioli Luca</tp:publisher>
+  <tp:publicationDate>2026-10-17</tp:publicationDate>
+  <tp:entryPoints>
+    <tp:entryPoint>
+      <tp:name>Default Entrypoint</tp:name>
+      <tp:entryPointDocument href="../entrypoint.xsd"/>
+    </tp:entryPoint>
+  </tp:entryPoints>
+</tp:taxonomyPackage>
