@@ -101,6 +101,7 @@ The method hashes every number as the filing writes it. The filings write number
 
 ## Changes
 
+- **October 18, 2026 (later):** a Form 1-CRYPTO or Form 1-SU that is the issuer's first filing under Regulation Crypto Assets can now pass validation. The four rules that require the previous filing's merkle root and date on those forms (`REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot`, `REGCA_REQ_1CRYPTO_PreviousFilingDate`, `REGCA_REQ_S103_PreviousFilingMerkleRoot` and `REGCA_REQ_S103_PreviousFilingDate`) now also accept an entry for the item in the omission register, where the first filing lists it as not applicable. Only `report-for.xml` changed, as exported by LucaSuite from the updated model. No element, label, reference or fact changed, the number of rules is the same, and the merkle roots, transactions and entry point address of the nine sample filings are unchanged.
 - **October 18, 2026:** ten references added to seven filing provenance elements that cited neither the Commission nor the FASB: the anchor table, its axis and its line items (17 CFR 228.103(b)(7) and Release at 237), the method, its domain and its member (Release at 237), and the network identifier (17 CFR 228.103(b)(7)), as the other filing provenance elements already cite them. Only `report-ref.xml` changed, as exported by LucaSuite from the updated model. No element, label, relationship or rule changed, and the merkle roots, transactions and entry point address of the nine sample filings are unchanged.
 
 ## Files
