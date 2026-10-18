@@ -34,7 +34,7 @@ The package follows the XBRL Taxonomy Packages 1.0 specification. Its catalog ma
   - 36 open-ended (typed) axes, so that a filer can add as many rows as a form calls for ("each risk factor", "each related person", and so on);
   - 66 tables and sections.
 - **Proposed elements:** 95 of the concepts are not required by the proposed rule. Their documentation label says "Proposed by Auditchain Labs; not required by the proposed rule."
-- **References:** 2,619. Each element carries, as its reference, the verbatim text of the proposed rule or form item that calls for it or, for financial statement elements, of the FASB Accounting Standards Codification. The filing provenance elements cite the standards they use (RFC 8785, RFC 6962, FIPS 180-4, CAIP-2 and XBRL Taxonomy Packages 1.0).
+- **References:** 2,629. Each element carries, as its reference, the verbatim text of the proposed rule or form item that calls for it or, for financial statement elements, of the FASB Accounting Standards Codification. The filing provenance elements cite the standards they use (RFC 8785, RFC 6962, FIPS 180-4, CAIP-2 and XBRL Taxonomy Packages 1.0).
 - **Validation:** 493 validation assertions (XBRL Formula 1.0), with the offering limits and deadlines held as 30 parameters.
 - **Filing provenance:** every form carries a merkle root of its facts, the root of the issuer's previous filing and the record of the root on a blockchain network (see below).
 
@@ -98,6 +98,10 @@ The method hashes every number as the filing writes it. The filings write number
 | 7 | Form 1-SC | [`0x62cc3508…bdd208f6`](https://etherscan.io/tx/0x62cc350807201b02830052a03d1b52375e58cffcf83bf73920d3a165bdd208f6) | 26,214,810 |
 | 8 | Form 1-UC | [`0x92aa950f…3871b5a6`](https://etherscan.io/tx/0x92aa950fe3eb380a8072468e3b07671e7dabb7c57a64da1131443b983871b5a6) | 26,214,816 |
 | 9 | Form TR | [`0x0df4552f…26d2bc0a`](https://etherscan.io/tx/0x0df4552f156cef48963145ceebf4e9af7e2801842cff17bd6dd0d23126d2bc0a) | 26,214,822 |
+
+## Changes
+
+- **October 18, 2026:** ten references added to seven filing provenance elements that cited neither the Commission nor the FASB: the anchor table, its axis and its line items (17 CFR 228.103(b)(7) and Release at 237), the method, its domain and its member (Release at 237), and the network identifier (17 CFR 228.103(b)(7)), as the other filing provenance elements already cite them. Only `report-ref.xml` changed, as exported by LucaSuite from the updated model. No element, label, relationship or rule changed, and the merkle roots, transactions and entry point address of the nine sample filings are unchanged.
 
 ## Files
 
