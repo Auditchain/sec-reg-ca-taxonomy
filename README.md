@@ -87,7 +87,7 @@ Auditchain Labs anchored the roots of its nine sample filings on Ethereum mainne
 | 8 | Form 1-UC | Dec. 22, 2028 | `67f0956f27c528924a2fc99d9557fed95220187a8d40cd6815c4ae515c013af5` | [`0x91c01254…2daa329a`](https://etherscan.io/tx/0x91c01254a7091c0274f8b4a106d0c45a48c11358955eb165f5da4d792daa329a) | 26,215,311 |
 | 9 | Form TR | Dec. 29, 2028 | `f3dcfbcb423b567d76a20b39650e64b14919581c6be6137574135fa749e13099` | [`0x5e85a575…00a3707b`](https://etherscan.io/tx/0x5e85a5755a7acd1c3c09484fd22eef8a501cee8077a8e8c5313c37f800a3707b) | 26,215,317 |
 
-The method hashes every number as the filing writes it. The filings write numbers smaller than 0.0001 with a one-digit exponent (for example `9.1e-7`), as LucaSuite does, so that the root computed from LucaSuite's export of each filing is the anchored root. Filings 3 to 9 were first anchored with roots computed when those numbers had a two-digit exponent (`9.1e-07`); those transactions are superseded:
+The method hashes every number as the filing writes it. The filings write numbers smaller than 0.0001 with a one-digit exponent (for example `9.1e-7`), as LucaSuite does, so that the root computed from LucaSuite's export of each filing is the anchored root. Filings 3 to 9 were first anchored with other roots: filings 3 to 6 then wrote those numbers with a two-digit exponent (`9.1e-07`), and because each filing reports the root of the filing before it, the roots of filings 7 to 9 differed too. Those seven transactions are superseded:
 
 | # | Sample filing | Superseded transaction | Block |
 |---|---|---|---|
