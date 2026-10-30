@@ -1,11 +1,11 @@
 {
   "run": {
     "tool": "sbrm-regca-build 1.0",
-    "run_at": "2026-10-30T12:52:47+00:00",
+    "run_at": "2026-10-30T18:02:58+00:00",
     "inputs": {
       "M1": {
-        "file": "Reg CA Complete Model 2026-10-18.json",
-        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+        "file": "Reg CA Complete Model of Record 2026-10-18.json",
+        "sha256": "7ce7270d3d55faa9683081e705695c1002594868f1d62a67dd397e5ad8d9b51f"
       },
       "M2": {
         "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
@@ -16,15 +16,23 @@
   "pinned_vocabulary_files": [
     "vendor/omg-commons/AnnotationVocabulary.ttl",
     "vendor/omg-commons/Classifiers.ttl",
+    "vendor/omg-commons/CodesAndCodeSets.ttl",
     "vendor/omg-commons/Collections.ttl",
     "vendor/omg-commons/ContextualDesignators.ttl",
     "vendor/omg-commons/DatesAndTimes.ttl",
     "vendor/omg-commons/Designators.ttl",
     "vendor/omg-commons/Documents.ttl",
+    "vendor/omg-commons/Identifiers.ttl",
+    "vendor/omg-commons/Languages.ttl",
+    "vendor/omg-commons/Locations.ttl",
+    "vendor/omg-commons/Organizations.ttl",
     "vendor/omg-commons/PartiesAndSituations.ttl",
     "vendor/omg-commons/QuantitiesAndUnits.ttl",
     "vendor/omg-commons/RolesAndCompositions.ttl",
     "vendor/omg-commons/TextDatatype.ttl",
+    "vendor/omg-lcc/ISO639-1-LanguageCodes.ttl",
+    "vendor/omg-lcc/LanguageRepresentation.ttl",
+    "vendor/omg-mvf/MultipleVocabularyFacility.ttl",
     "vendor/omg-sbrm/DocumentComponents.ttl",
     "vendor/omg-sbrm/FinancialReportElements.ttl",
     "vendor/omg-sbrm/ReportStructure.ttl",
@@ -35,16 +43,18 @@
   ],
   "unresolved_owl_imports": [],
   "omg_terms_referenced_but_never_declared": [
+    "https://www.omg.org/spec/LCC/AboutLCC/",
+    "https://www.omg.org/spec/LCC/Languages/AboutLanguages/",
     "https://www.omg.org/spec/SBRM/FinancialReportElements/hasOperator"
   ],
   "rdf_parse": {
     "complete-2026-10-18/regca-complete.definition.jsonld": {
-      "rdflib_quads": 67665,
-      "pyld_quads": 67665
+      "rdflib_quads": 84994,
+      "pyld_quads": 84994
     },
     "form-1-crypto-second-offering/regca-1-crypto.definition.jsonld": {
-      "rdflib_quads": 52842,
-      "pyld_quads": 52842
+      "rdflib_quads": 65565,
+      "pyld_quads": 65565
     },
     "form-1-crypto-second-offering/regca-1-crypto.report.jsonld": {
       "rdflib_quads": 14293,

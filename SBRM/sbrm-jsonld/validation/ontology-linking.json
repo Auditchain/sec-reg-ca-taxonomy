@@ -1,0 +1,105 @@
+{
+  "run_at": "2026-10-30T18:04:24+00:00",
+  "xbrl_vocabulary": "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/report.xsd",
+  "xbrl_elements_published": 1011,
+  "models": {
+    "complete-2026-10-18": {
+      "report_elements": 975,
+      "mvf_entries": 975,
+      "vocabulary_entries": 1950,
+      "semantic_references": 1674,
+      "xbrl_elements_resolved": 975,
+      "vocabularies": {
+        "standard-labels": {
+          "language": "http://luca.pacioli.ai/report/sbrm/complete-2026-10-18/language/en",
+          "lcc": [
+            "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/English"
+          ],
+          "ok": true
+        },
+        "xbrl-taxonomy": {
+          "language": "http://luca.pacioli.ai/report/sbrm/complete-2026-10-18/language/en",
+          "lcc": [
+            "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/English"
+          ],
+          "ok": true
+        }
+      },
+      "mvf_restriction_violations": [],
+      "mvf_restriction_violation_count": 0,
+      "problems": [],
+      "problem_count": 0,
+      "ok": true
+    },
+    "form-1-crypto-second-offering": {
+      "report_elements": 733,
+      "mvf_entries": 733,
+      "vocabulary_entries": 1466,
+      "semantic_references": 1422,
+      "xbrl_elements_resolved": 733,
+      "vocabularies": {
+        "standard-labels": {
+          "language": "http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/language/en",
+          "lcc": [
+            "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/English"
+          ],
+          "ok": true
+        },
+        "xbrl-taxonomy": {
+          "language": "http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/language/en",
+          "lcc": [
+            "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/English"
+          ],
+          "ok": true
+        }
+      },
+      "mvf_restriction_violations": [],
+      "mvf_restriction_violation_count": 0,
+      "problems": [],
+      "problem_count": 0,
+      "ok": true
+    }
+  },
+  "controls": [
+    {
+      "control": "a report element without an MVF entry",
+      "caught": true,
+      "reported": [
+        "RegulationCryptoAssetsFilingAbstract: 0 MVF entries"
+      ]
+    },
+    {
+      "control": "an MVF entry whose XBRL element does not exist",
+      "caught": true,
+      "reported": [
+        "RegulationCryptoAssetsFilingAbstract: XBRL reference 'https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/report.xsd#regca_NoSuchElement' does not resolve"
+      ]
+    },
+    {
+      "control": "a vocabulary with two languages",
+      "caught": true,
+      "reported": [
+        "http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/mvf/vocabulary/standard-labels: language https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/German is not an LCC language",
+        "http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/mvf/vocabulary/standard-labels: 2 languages"
+      ]
+    },
+    {
+      "control": "a vocabulary entry without a name",
+      "caught": true,
+      "reported": [
+        "RegulationCryptoAssetsFilingAbstract: vocabulary entries {'standard-labels': 'None', 'xbrl-taxonomy': 'regca:RegulationCryptoAssetsFilingAbstract'}",
+        "http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/mvf/term/standard-label/RegulationCryptoAssetsFilingAbstract: exact 1 https://www.omg.org/spec/Commons/Designators/hasTextualName (has 0)"
+      ]
+    },
+    {
+      "control": "a language that is not an LCC language",
+      "caught": true,
+      "reported": [
+        "http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/mvf/vocabulary/standard-labels: language http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/language/en is not an LCC language",
+        "http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/mvf/vocabulary/xbrl-taxonomy: language http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/language/en is not an LCC language"
+      ]
+    }
+  ],
+  "failures": [],
+  "ok": true
+}
