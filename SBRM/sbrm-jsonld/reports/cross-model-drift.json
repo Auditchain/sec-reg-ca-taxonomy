@@ -1,0 +1,653 @@
+{
+  "run": {
+    "tool": "sbrm-regca-build 1.0",
+    "run_at": "2026-10-30T12:52:47+00:00",
+    "inputs": {
+      "M1": {
+        "file": "Reg CA Complete Model 2026-10-18.json",
+        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+      },
+      "M2": {
+        "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+        "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1"
+      }
+    }
+  },
+  "models": [
+    "M1",
+    "M2"
+  ],
+  "sections": {
+    "BaseInformation": {
+      "M1_records": 7,
+      "M2_records": 7,
+      "only_in_M1": 0,
+      "only_in_M2": 0,
+      "differing_content": 1,
+      "differing_sequence_only": 0,
+      "only_in_M2_keys": [],
+      "differences": [
+        {
+          "key": "('Local', 'regca')",
+          "fields": [
+            "TaxonomyDescription"
+          ],
+          "examples": {
+            "TaxonomyDescription": [
+              "Reg CA Complete Model: the complete taxonomy of the Regulation Crypto Assets disclosure framework (proposed rule, Release 33-11434, 91 FR 54510), covering all s",
+              "Form 1-CRYPTO — offering statement under the fundraising exemption (Rule 301; Appendix A, 91 FR 54617). One of seven form models of the Regulation Crypto Assets"
+            ]
+          }
+        }
+      ]
+    },
+    "Terms": {
+      "M1_records": 975,
+      "M2_records": 733,
+      "only_in_M1": 242,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 0,
+      "only_in_M2_keys": [],
+      "differences": []
+    },
+    "Labels": {
+      "M1_records": 1261,
+      "M2_records": 1031,
+      "only_in_M1": 318,
+      "only_in_M2": 88,
+      "differing_content": 29,
+      "differing_sequence_only": 0,
+      "only_in_M2_keys": [
+        "('regca:BlockchainProtocolName', 'Documentation', 'en')",
+        "('regca:BlockchainNetworkType', 'Documentation', 'en')",
+        "('regca:ConsensusMechanismType', 'Documentation', 'en')",
+        "('regca:PrimaryUseForDigitalAsset', 'Documentation', 'en')",
+        "('regca:SmartContractAddress', 'Documentation', 'en')",
+        "('regca:SmartContractDeploymentDate', 'Documentation', 'en')",
+        "('regca:IssuerOperatesBlockchainInfrastructureIndicator', 'Documentation', 'en')",
+        "('regca:OperatingEntityDescription', 'Documentation', 'en')",
+        "('regca:TypeOfNetworkParticipation', 'Documentation', 'en')",
+        "('regca:NumberOfNodesOrValidatorsOperated', 'Documentation', 'en')",
+        "('regca:GeographicLocationOfInfrastructureExplanatory', 'Documentation', 'en')",
+        "('regca:TotalValueStaked', 'Documentation', 'en')",
+        "('regca:NumberOfValidatorSlotsControlled', 'Documentation', 'en')",
+        "('regca:TotalValidatorSlotsInNetwork', 'Documentation', 'en')",
+        "('regca:ValidatorUptimePercentage', 'Documentation', 'en')",
+        "('regca:EstimatedHashPowerSharePercentage', 'Documentation', 'en')",
+        "('regca:BasisForHashPowerEstimateExplanatory', 'Documentation', 'en')",
+        "('regca:DataSourceForNetworkShareEstimate', 'Documentation', 'en')",
+        "('regca:EstimatedStakeSharePercentage', 'Documentation', 'en')",
+        "('regca:EntityHoldsGovernanceTokensIndicator', 'Documentation', 'en')",
+        "('regca:GovernanceTokenName', 'Documentation', 'en')",
+        "('regca:GovernanceTokensQuantityHeld', 'Documentation', 'en')",
+        "('regca:VotingPowerPercentage', 'Documentation', 'en')",
+        "('regca:ParticipatedInGovernanceVotesPast12MonthsIndicator', 'Documentation', 'en')",
+        "('regca:NumberOfGovernanceVotesCast', 'Documentation', 'en')",
+        "('regca:SignificantGovernancePositionsExplanatory', 'Documentation', 'en')",
+        "('regca:BlockchainNetworkParticipationRevenue', 'Documentation', 'en')",
+        "('regca:BlockchainNetworkParticipationRevenuePercentageOfTotal', 'Documentation', 'en')",
+        "('regca:BlockchainNetworkParticipationNetIncome', 'Documentation', 'en')",
+        "('regca:BlockchainNetworkParticipationCapitalExpenditures', 'Documentation', 'en')",
+        "('regca:NetworkInfrastructureCriticalToOperationsIndicator', 'Documentation', 'en')",
+        "('regca:InfrastructureDependencyDescriptionExplanatory', 'Documentation', 'en')",
+        "('regca:BusinessContinuityPlanForInfrastructureFailureExplanatory', 'Documentation', 'en')",
+        "('regca:DigitalAssetCanFunctionIfInfrastructureFailsIndicator', 'Documentation', 'en')",
+        "('regca:BackupValidatorsOperatedByThirdPartiesIndicator', 'Documentation', 'en')",
+        "('regca:BackupProviderIdentificationExplanatory', 'Documentation', 'en')",
+        "('regca:GovernanceAndOversightOfNetworkParticipationExplanatory', 'Documentation', 'en')",
+        "('regca:BoardCommitteeOverseesBlockchainInfrastructureIndicator', 'Documentation', 'en')",
+        "('regca:InformationBarriersBetweenNetworkAndManagementIndicator', 'Documentation', 'en')",
+        "('regca:InformationBarrierPoliciesExplanatory', 'Documentation', 'en')",
+        "('regca:PolicyProhibitsPreferentialTreatmentIndicator', 'Documentation', 'en')",
+        "('regca:TransactionOrderingDecisionsLoggedIndicator', 'Documentation', 'en')",
+        "('regca:MonitoringForFrontRunningIndicator', 'Documentation', 'en')",
+        "('regca:NetworkParticipationSubjectToInternalAuditIndicator', 'Documentation', 'en')",
+        "('regca:MostRecentNetworkParticipationAuditDate', 'Documentation', 'en')",
+        "('regca:AffiliatesEngageInBlockchainNetworkParticipationIndicator', 'Documentation', 'en')",
+        "('regca:AffiliateLegalName', 'Documentation', 'en')",
+        "('regca:AffiliateLegalEntityIdentifier', 'Documentation', 'en')",
+        "('regca:AffiliateRelationshipToIssuer', 'Documentation', 'en')",
+        "('regca:AffiliateOwnershipPercentage', 'Documentation', 'en')",
+        "('regca:OverlappingDirectorsOrOfficersExplanatory', 'Documentation', 'en')",
+        "('regca:AffiliateParticipatesOnSameProtocolIndicator', 'Documentation', 'en')",
+        "('regca:AffiliateProvidesServicesToIssuerIndicator', 'Documentation', 'en')",
+        "('regca:ServicesProvidedByAffiliateExplanatory', 'Documentation', 'en')",
+        "('regca:ServicesProvidedAtArmsLengthPricingIndicator', 'Documentation', 'en')",
+        "('regca:AnnualFeesPaidToAffiliateForServices', 'Documentation', 'en')",
+        "('regca:IssuerCouldObtainServicesFromUnaffiliatedPartiesIndicator', 'Documentation', 'en')",
+        "('regca:NonCompeteOrExclusivityAgreementsWithAffiliateIndicator', 'Documentation', 'en')",
+        "('regca:ConflictsOfInterestDescriptionExplanatory', 'Documentation', 'en')",
+        "('regca:ConflictMitigationMeasuresExplanatory', 'Documentation', 'en')",
+        "('regca:AffiliateTotalBlockchainNetworkParticipationRevenue', 'Documentation', 'en')",
+        "('regca:AffiliateTotalBlockchainNetworkParticipationNetIncome', 'Documentation', 'en')",
+        "('regca:AffiliateTotalBlockchainNetworkParticipationCapitalExpenditures', 'Documentation', 'en')",
+        "('regca:AffiliateBlockchainNetworkParticipationType', 'Documentation', 'en')",
+        "('regca:AffiliateEstimatedHashPowerSharePercentage', 'Documentation', 'en')",
+        "('regca:AffiliateEstimatedStakeSharePercentage', 'Documentation', 'en')",
+        "('regca:AffiliateBlockchainNetworkParticipationRevenue', 'Documentation', 'en')",
+        "('regca:AffiliateParticipatesInProtocolGovernanceIndicator', 'Documentation', 'en')",
+        "('regca:AffiliateBlockchainNetworkParticipationNetIncome', 'Documentation', 'en')",
+        "('regca:AffiliateBlockchainNetworkParticipationCapitalExpenditures', 'Documentation', 'en')",
+        "('regca:TotalAffiliateBlockchainNetworkParticipationRevenue', 'Documentation', 'en')",
+        "('regca:TotalAffiliateBlockchainNetworkParticipationNetIncome', 'Documentation', 'en')",
+        "('regca:TotalAffiliateBlockchainNetworkParticipationCapitalExpenditures', 'Documentation', 'en')",
+        "('regca:AffiliateCanInfluenceTransactionOrderingIndicator', 'Documentation', 'en')",
+        "('regca:AffiliateCanObserveTransactionsBeforeConfirmationIndicator', 'Documentation', 'en')",
+        "('regca:CombinedEntitiesCouldInfluenceConsensusIndicator', 'Documentation', 'en')",
+        "('regca:SinglePointsOfFailureIndicator', 'Documentation', 'en')",
+        "('regca:SinglePointsOfFailureDescriptionExplanatory', 'Documentation', 'en')",
+        "('regca:MiningOrStakingAssetsPledgedOrEncumberedIndicator', 'Documentation', 'en')",
+        "('regca:PledgedOrEncumberedAssetsDescriptionExplanatory', 'Documentation', 'en')",
+        "('regca:ThirdPartyProvidesBlockchainServicesIndicator', 'Documentation', 'en')",
+        "('regca:ThirdPartyServiceProviderLegalName', 'Documentation', 'en')",
+        "('regca:ThirdPartyServiceProviderLegalEntityIdentifier', 'Documentation', 'en')",
+        "('regca:ThirdPartyServicesDescriptionExplanatory', 'Documentation', 'en')",
+        "('regca:ThirdPartyServiceFeesPaid', 'Documentation', 'en')",
+        "('regca:ThirdPartyConflictsOfInterestIndicator', 'Documentation', 'en')",
+        "('regca:ThirdPartyConflictsDescriptionExplanatory', 'Documentation', 'en')",
+        "('regca:ThirdPartyConflictMitigationMeasuresExplanatory', 'Documentation', 'en')"
+      ],
+      "differences": [
+        {
+          "key": "('regca:NetworkNativeTokenSymbol', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Ticker symbol of the network's native token, which is the unit in which effective stake and total active stake on that network are expressed.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Ticker symbol of the network's native token, which is the unit in which effective stake and tota"
+            ]
+          }
+        },
+        {
+          "key": "('regca:EffectiveStakeControlledOnNetwork', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Stake whose consensus weight the issuer controls on the network, including stake delegated to the issuer's validators, expressed in units of the network's nativ",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Stake whose consensus weight the issuer controls on the network, including stake delegated to th"
+            ]
+          }
+        },
+        {
+          "key": "('regca:TotalActiveStakeOnNetwork', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Total stake actively securing the network at the measurement instant, expressed in units of the network's native token.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Total stake actively securing the network at the measurement instant, expressed in units of the "
+            ]
+          }
+        },
+        {
+          "key": "('regca:HashRateContributedToNetwork', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Hash rate the issuer contributes to the network at the measurement instant, in the unit stated on the fact.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Hash rate the issuer contributes to the network at the measurement instant, in the unit stated o"
+            ]
+          }
+        },
+        {
+          "key": "('regca:TotalNetworkHashRate', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Total hash rate securing the network at the measurement instant, in the unit stated on the fact.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Total hash rate securing the network at the measurement instant, in the unit stated on the fact."
+            ]
+          }
+        },
+        {
+          "key": "('regca:BlockchainNetworkParticipationExpenses', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Operating expenses of the issuer's blockchain network participation on the network. Capital expenditure is reported separately and is excluded.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Operating expenses of the issuer's blockchain network participation on the network. Capital expe"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliateEngagedInBlockchainNetworkParticipationIndicator', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Whether this affiliate is engaged in blockchain network participation as of the reporting instant. Reported for every affiliate row on the affiliate axis. The r",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Whether this affiliate is engaged in blockchain network participation as of the reporting instan"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliateControlDirection', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Which limb of the Rule 405 affiliate definition brings this person inside the perimeter: it controls the issuer, it is controlled by the issuer, or it is under ",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Which limb of the Rule 405 affiliate definition brings this person inside the perimeter: it cont"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliateControlBasis', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "How control is held, using the Rule 405 definition of control that Regulation Crypto Assets adopts: through the ownership of voting securities, by contract, or ",
+              "Proposed by Auditchain Labs; not required by the proposed rule. How control is held, using the Rule 405 definition of control that Regulation Crypto Assets adop"
+            ]
+          }
+        },
+        {
+          "key": "('regca:NumberOfBlockchainNetworksOnWhichAffiliateParticipates', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "The number of distinct blockchain networks on which this affiliate participates as of the reporting instant. Reported once per affiliate on the affiliate axis. ",
+              "Proposed by Auditchain Labs; not required by the proposed rule. The number of distinct blockchain networks on which this affiliate participates as of the report"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliateTotalBlockchainNetworkParticipationExpenses', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "The affiliate's blockchain network participation operating expenses across all networks on which it participates.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. The affiliate's blockchain network participation operating expenses across all networks on which"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliateParticipatesOnNetworkIndicator', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Whether the affiliate participates on this blockchain network as of the reporting instant. Exactly one such fact anchors each affiliate-network row.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Whether the affiliate participates on this blockchain network as of the reporting instant. Exact"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliateEffectiveStakeControlledOnNetwork', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Stake whose consensus weight the affiliate controls on the network, expressed in units of the network's native token.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Stake whose consensus weight the affiliate controls on the network, expressed in units of the ne"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliateHashRateContributedToNetwork', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Hash rate the affiliate contributes to the network at the measurement instant.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Hash rate the affiliate contributes to the network at the measurement instant."
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliateNumberOfValidatorSlotsControlled', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Number of validator slots on the network controlled by the affiliate.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Number of validator slots on the network controlled by the affiliate."
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliateBlockchainNetworkParticipationExpenses', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Operating expenses of the affiliate's blockchain network participation on the network. Capital expenditure is excluded.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Operating expenses of the affiliate's blockchain network participation on the network. Capital e"
+            ]
+          }
+        },
+        {
+          "key": "('regca:TotalAffiliateBlockchainNetworkParticipationExpenses', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Blockchain network participation operating expenses of all affiliates combined, across all networks.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Blockchain network participation operating expenses of all affiliates combined, across all netwo"
+            ]
+          }
+        },
+        {
+          "key": "('regca:NumberOfAffiliatesEngagedInBlockchainNetworkParticipation', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "The number of the issuer's affiliates that are engaged in blockchain network participation as of the reporting instant. Reported dimensionlessly; the enumerated",
+              "Proposed by Auditchain Labs; not required by the proposed rule. The number of the issuer's affiliates that are engaged in blockchain network participation as of"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliatePerimeterCompletenessAttestationIndicator', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Affirmative statement that the enumerated list of affiliates engaged in blockchain network participation includes every affiliate so engaged, applying the contr",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Affirmative statement that the enumerated list of affiliates engaged in blockchain network parti"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliatePerimeterAttestingOfficerName', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Full legal name of the executive officer who certifies that the enumerated affiliate perimeter is complete. This is the element that converts regca:AffiliatePer",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Full legal name of the executive officer who certifies that the enumerated affiliate perimeter i"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliatePerimeterAttestingOfficerTitle', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Title of the officer attesting to the affiliate perimeter, as the issuer itself styles the position. Reported in addition to regca:AffiliatePerimeterAttestingOf",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Title of the officer attesting to the affiliate perimeter, as the issuer itself styles the posit"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliatePerimeterAttestingOfficerRole', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Role category of the officer attesting to the affiliate perimeter. The residual member regca:FunctionalEquivalentExecutiveOfficerMember covers a signer who hold",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Role category of the officer attesting to the affiliate perimeter. The residual member regca:Fun"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliatePerimeterAttestingOfficerIdentifier', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Stable issuer-assigned identifier for the certifying officer, carried across filings so the same person is recognisable when a middle initial, a suffix or a nic",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Stable issuer-assigned identifier for the certifying officer, carried across filings so the same"
+            ]
+          }
+        },
+        {
+          "key": "('regca:AffiliatePerimeterAttestationDate', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Date on which the certifying officer signed the affiliate-perimeter completeness certification. Must fall on or after the reporting date and on or before the fi",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Date on which the certifying officer signed the affiliate-perimeter completeness certification. "
+            ]
+          }
+        },
+        {
+          "key": "('regca:CombinedStakeSharePercentageOnNetwork', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "The proportion of a blockchain network's total active stake controlled, on that network, by the issuer together with every affiliate reported on that network. S",
+              "Proposed by Auditchain Labs; not required by the proposed rule. The proportion of a blockchain network's total active stake controlled, on that network, by the "
+            ]
+          }
+        },
+        {
+          "key": "('regca:CombinedHashPowerSharePercentageOnNetwork', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "The proportion of a blockchain network's total hash rate contributed, on that network, by the issuer together with every affiliate reported on that network. Sto",
+              "Proposed by Auditchain Labs; not required by the proposed rule. The proportion of a blockchain network's total hash rate contributed, on that network, by the is"
+            ]
+          }
+        },
+        {
+          "key": "('regca:CombinedValidatorSlotsControlledOnNetwork', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "The number of validator slots on a blockchain network controlled by the issuer together with every affiliate reported on that network.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. The number of validator slots on a blockchain network controlled by the issuer together with eve"
+            ]
+          }
+        },
+        {
+          "key": "('regca:IssuerCouldFulfillObligationsIfNetworkDisruptedIndicator', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Whether the issuer could continue to meet its obligations under the covered investment contract if a network on which it participates were disrupted.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Whether the issuer could continue to meet its obligations under the covered investment contract "
+            ]
+          }
+        },
+        {
+          "key": "('regca:NetworkCongestionAffectsBothOperationsIndicator', 'Documentation', 'en')",
+          "fields": [
+            "Label"
+          ],
+          "examples": {
+            "Label": [
+              "Whether congestion on a network would affect both the issuer's network participation and its obligations under the covered investment contract.",
+              "Proposed by Auditchain Labs; not required by the proposed rule. Whether congestion on a network would affect both the issuer's network participation and its obl"
+            ]
+          }
+        }
+      ]
+    },
+    "References": {
+      "M1_records": 2619,
+      "M2_records": 2229,
+      "only_in_M1": 402,
+      "only_in_M2": 10,
+      "differing_content": 0,
+      "differing_sequence_only": 2206,
+      "only_in_M2_keys": [
+        "('regca:FilingAnchorTable', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', '17 CFR 228.103(b)(7); 91 FR 54608', 'Verbatim: \"mechanisms for generating and destroying subject crypto assets, and methods to verify the subject crypto asset\\'s transaction history\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')",
+        "('regca:FilingAnchorTable', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', 'Release at 237; 91 FR 54580', 'Verbatim: \"would allow Commission staff to more efficiently process, aggregate, and analyze the reported information about the issuers and offerings\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')",
+        "('regca:FilingAnchorIdentifierTypedAxis', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', '17 CFR 228.103(b)(7); 91 FR 54608', 'Verbatim: \"mechanisms for generating and destroying subject crypto assets, and methods to verify the subject crypto asset\\'s transaction history\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')",
+        "('regca:FilingAnchorIdentifierTypedAxis', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', 'Release at 237; 91 FR 54580', 'Verbatim: \"would allow Commission staff to more efficiently process, aggregate, and analyze the reported information about the issuers and offerings\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')",
+        "('regca:FilingAnchorLineItems', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', '17 CFR 228.103(b)(7); 91 FR 54608', 'Verbatim: \"mechanisms for generating and destroying subject crypto assets, and methods to verify the subject crypto asset\\'s transaction history\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')",
+        "('regca:FilingAnchorLineItems', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', 'Release at 237; 91 FR 54580', 'Verbatim: \"would allow Commission staff to more efficiently process, aggregate, and analyze the reported information about the issuers and offerings\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')",
+        "('regca:FilingMerkleRootMethod', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', 'Release at 237; 91 FR 54580', 'Verbatim: \"would allow Commission staff to more efficiently process, aggregate, and analyze the reported information about the issuers and offerings\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')",
+        "('regca:FilingMerkleRootMethodDomain', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', 'Release at 237; 91 FR 54580', 'Verbatim: \"would allow Commission staff to more efficiently process, aggregate, and analyze the reported information about the issuers and offerings\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')",
+        "('regca:FilingMerkleTreeVersion1Member', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', 'Release at 237; 91 FR 54580', 'Verbatim: \"would allow Commission staff to more efficiently process, aggregate, and analyze the reported information about the issuers and offerings\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')",
+        "('regca:BlockchainNetworkIdentifier', 'Regulation Crypto Assets (proposed), Release Nos. 33-11434; 34-106150, File No. S7-2026-27, 91 FR 54510 (Aug. 21, 2026)', '17 CFR 228.103(b)(7); 91 FR 54608', 'Verbatim: \"mechanisms for generating and destroying subject crypto assets, and methods to verify the subject crypto asset\\'s transaction history\"', 'https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets')"
+      ],
+      "differences": []
+    },
+    "Structures": {
+      "M1_records": 66,
+      "M2_records": 55,
+      "only_in_M1": 11,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 54,
+      "only_in_M2_keys": [],
+      "differences": []
+    },
+    "Associations": {
+      "M1_records": 1394,
+      "M2_records": 1061,
+      "only_in_M1": 333,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 37,
+      "only_in_M2_keys": [],
+      "differences": []
+    },
+    "Rules-Consistency": {
+      "M1_records": 3,
+      "M2_records": 3,
+      "only_in_M1": 0,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 0,
+      "only_in_M2_keys": [],
+      "differences": []
+    },
+    "Rules-RollForward": {
+      "M1_records": 2,
+      "M2_records": 2,
+      "only_in_M1": 0,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 2,
+      "only_in_M2_keys": [],
+      "differences": []
+    },
+    "Rules-Derivation": {
+      "M1_records": 4,
+      "M2_records": 4,
+      "only_in_M1": 0,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 4,
+      "only_in_M2_keys": [],
+      "differences": []
+    },
+    "Rules-Nonstandard": {
+      "M1_records": 489,
+      "M2_records": 212,
+      "only_in_M1": 277,
+      "only_in_M2": 0,
+      "differing_content": 4,
+      "differing_sequence_only": 207,
+      "only_in_M2_keys": [],
+      "differences": [
+        {
+          "key": "REGCA_REQ_1CRYPTO_ResponsibleSignatureDate",
+          "fields": [
+            "Commentary",
+            "Rule"
+          ],
+          "examples": {
+            "Commentary": [
+              "Form 1-CRYPTO requires regca:ResponsibleSignatureDate (Date signed), or an entry for it in the omission register stating why it is not applicable or not reasona",
+              "Form 1-CRYPTO requires regca:ResponsibleSignatureDate (Date signed). It cannot be omitted. Proposed by Auditchain Labs; not required by the proposed rule. Not r"
+            ],
+            "Rule": [
+              "<gen:link xlink:type=\"extended\" xlink:role=\"http://www.xbrl.org/2003/role/link\" xmlns:gen=\"http://xbrl.org/2008/generic\" xmlns:xlink=\"http://www.w3.org/1999/xli",
+              "<gen:link xlink:type=\"extended\" xlink:role=\"http://www.xbrl.org/2003/role/link\" xmlns:gen=\"http://xbrl.org/2008/generic\" xmlns:xlink=\"http://www.w3.org/1999/xli"
+            ]
+          }
+        },
+        {
+          "key": "REGCA_COVER_01",
+          "fields": [
+            "Commentary",
+            "Rule"
+          ],
+          "examples": {
+            "Commentary": [
+              "Exactly one document type is selected on the cover page.",
+              "Exactly one document type is selected on the cover page. The rule is evaluated on every filing that reports the issuer's name, the document date, the filing's m"
+            ],
+            "Rule": [
+              "<gen:link xlink:type=\"extended\" xlink:role=\"http://www.xbrl.org/2003/role/link\" xmlns:gen=\"http://xbrl.org/2008/generic\" xmlns:xlink=\"http://www.w3.org/1999/xli",
+              "<gen:link xlink:type=\"extended\" xlink:role=\"http://www.xbrl.org/2003/role/link\" xmlns:gen=\"http://xbrl.org/2008/generic\" xmlns:xlink=\"http://www.w3.org/1999/xli"
+            ]
+          }
+        },
+        {
+          "key": "REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot",
+          "fields": [
+            "Commentary",
+            "Rule"
+          ],
+          "examples": {
+            "Commentary": [
+              "Form 1-CRYPTO requires regca:PreviousFilingMerkleRoot (Merkle root of the issuer's previous filing). It cannot be omitted. Proposed by Auditchain Labs; not requ",
+              "Form 1-CRYPTO requires regca:PreviousFilingMerkleRoot (Merkle root of the issuer's previous filing), or, in the issuer's first filing under Regulation Crypto As"
+            ],
+            "Rule": [
+              "<gen:link xlink:type=\"extended\" xlink:role=\"http://www.xbrl.org/2003/role/link\" xmlns:gen=\"http://xbrl.org/2008/generic\" xmlns:xlink=\"http://www.w3.org/1999/xli",
+              "<gen:link xlink:type=\"extended\" xlink:role=\"http://www.xbrl.org/2003/role/link\" xmlns:gen=\"http://xbrl.org/2008/generic\" xmlns:xlink=\"http://www.w3.org/1999/xli"
+            ]
+          }
+        },
+        {
+          "key": "REGCA_REQ_1CRYPTO_PreviousFilingDate",
+          "fields": [
+            "Commentary",
+            "Rule"
+          ],
+          "examples": {
+            "Commentary": [
+              "Form 1-CRYPTO requires regca:PreviousFilingDate (Date of the issuer's previous filing). It cannot be omitted. Proposed by Auditchain Labs; not required by the p",
+              "Form 1-CRYPTO requires regca:PreviousFilingDate (Date of the issuer's previous filing), or, in the issuer's first filing under Regulation Crypto Assets, an entr"
+            ],
+            "Rule": [
+              "<gen:link xlink:type=\"extended\" xlink:role=\"http://www.xbrl.org/2003/role/link\" xmlns:gen=\"http://xbrl.org/2008/generic\" xmlns:xlink=\"http://www.w3.org/1999/xli",
+              "<gen:link xlink:type=\"extended\" xlink:role=\"http://www.xbrl.org/2003/role/link\" xmlns:gen=\"http://xbrl.org/2008/generic\" xmlns:xlink=\"http://www.w3.org/1999/xli"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

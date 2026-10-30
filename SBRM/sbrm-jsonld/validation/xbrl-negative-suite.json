@@ -1,0 +1,81 @@
+{
+  "run": {
+    "tool": "sbrm-regca-build 1.0",
+    "run_at": "2026-10-30T12:52:47+00:00",
+    "inputs": {
+      "M1": {
+        "file": "Reg CA Complete Model 2026-10-18.json",
+        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+      },
+      "M2": {
+        "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+        "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1"
+      }
+    }
+  },
+  "cases": [
+    {
+      "mutant": "Assets at 2027-06-30 +1",
+      "unsatisfied_assertions": [
+        "REGCA_BS_01"
+      ],
+      "processor_message_codes": [
+        "calc11e:inconsistentCalculationUsingRounding"
+      ],
+      "ok": true
+    },
+    {
+      "mutant": "IssuerName fact removed",
+      "unsatisfied_assertions": [
+        "REGCA_PRIOR_07B",
+        "REGCA_REQ_1CRYPTO_IssuerName"
+      ],
+      "processor_message_codes": [],
+      "ok": true
+    },
+    {
+      "mutant": "cash at 2027-06-30 +1",
+      "unsatisfied_assertions": [
+        "REGCA_RF_CASH_01_XML"
+      ],
+      "processor_message_codes": [
+        "calc11e:inconsistentCalculationUsingRounding"
+      ],
+      "ok": true
+    },
+    {
+      "mutant": "stake share +0.01, beyond the 0.0001 tolerance",
+      "unsatisfied_assertions": [
+        "REGCA_BNP_AGG_01",
+        "REGCA_BNP_D_01_XML"
+      ],
+      "processor_message_codes": [],
+      "ok": true
+    },
+    {
+      "mutant": "stake share +0.00005, within the tolerance (must NOT fire)",
+      "unsatisfied_assertions": [],
+      "processor_message_codes": [],
+      "ok": true
+    },
+    {
+      "mutant": "DocumentType set to a member of another domain",
+      "unsatisfied_assertions": [],
+      "processor_message_codes": [
+        "enum2ie:InvalidEnumerationValue"
+      ],
+      "ok": true
+    },
+    {
+      "mutant": "extra axis on a fact in a closed hypercube",
+      "unsatisfied_assertions": [
+        "REGCA_BNP_EX_05"
+      ],
+      "processor_message_codes": [
+        "xbrldie:PrimaryItemDimensionallyInvalidError"
+      ],
+      "ok": true
+    }
+  ],
+  "all_ok": true
+}

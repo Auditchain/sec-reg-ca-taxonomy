@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log>
+<entry code="info" level="info">
+ <message>[info] loaded in 3.10 secs at 2026-10-30T11:59:18 - https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd </message>
+ <ref href="https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd"/></entry>
+<entry code="info" level="info">
+ <message>[info] validated in 6.66 secs - https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd </message>
+ <ref href="https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd"/></entry>
+<entry code="info:profileActivity" level="info">
+ <message activity="... assertion and formula checks and compilation" time="3.201">[info:profileActivity] ... assertion and formula checks and compilation 3.201 secs
+ - entrypoint.xsd </message>
+ <ref href="entrypoint.xsd"/></entry>
+<entry code="info" level="info">
+ <message>[info] formula validation only in 3.25 secs - https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd </message>
+ <ref href="https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd"/></entry>
+</log>

@@ -1,0 +1,431 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix regca: <http://luca.pacioli.ai/report#> .
+@prefix regca-1crypto: <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/expression/REGCA_BNP_D_01> a sh:NodeShape ;
+    rdfs:label "REGCA_BNP_D_01: regca:EstimatedStakeSharePercentage = regca:EffectiveStakeControlledOnNetwork div regca:TotalActiveStakeOnNetwork" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/expr/REGCA_BNP_D_01> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "REGCA_BNP_D_01: reported {?reported} but regca:EstimatedStakeSharePercentage = regca:EffectiveStakeControlledOnNetwork div regca:TotalActiveStakeOnNetwork gives {?computed} (tolerance 0.0001 from the rule’s XBRL Formula twin)" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?reported ?computed WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?reported ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  ?f1 a regca:EffectiveStakeControlledOnNetwork ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v2 .
+  FILTER NOT EXISTS { $this ?ax3 ?av4 . ?ax3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f1 ?ax3 ?av4 } }
+  FILTER NOT EXISTS { ?f1 ?bx5 ?bv6 . ?bx5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx5 ?bv6 } }
+  ?f7 a regca:TotalActiveStakeOnNetwork ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v8 .
+  FILTER NOT EXISTS { $this ?ax9 ?av10 . ?ax9 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f7 ?ax9 ?av10 } }
+  FILTER NOT EXISTS { ?f7 ?bx11 ?bv12 . ?bx11 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx11 ?bv12 } }
+  FILTER (?v8 > 0)
+  BIND ((?v2 / ?v8) AS ?computed)
+  FILTER (ABS(?reported * ?v8 - ?v2) > 0.0001 * ?v8)
+}""" ] ;
+    sh:targetClass regca:EstimatedStakeSharePercentage .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/expression/REGCA_BNP_D_02> a sh:NodeShape ;
+    rdfs:label "REGCA_BNP_D_02: regca:EstimatedHashPowerSharePercentage = regca:HashRateContributedToNetwork div regca:TotalNetworkHashRate" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/expr/REGCA_BNP_D_02> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "REGCA_BNP_D_02: reported {?reported} but regca:EstimatedHashPowerSharePercentage = regca:HashRateContributedToNetwork div regca:TotalNetworkHashRate gives {?computed} (tolerance 0.0001 from the rule’s XBRL Formula twin)" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?reported ?computed WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?reported ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  ?f1 a regca:HashRateContributedToNetwork ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v2 .
+  FILTER NOT EXISTS { $this ?ax3 ?av4 . ?ax3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f1 ?ax3 ?av4 } }
+  FILTER NOT EXISTS { ?f1 ?bx5 ?bv6 . ?bx5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx5 ?bv6 } }
+  ?f7 a regca:TotalNetworkHashRate ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v8 .
+  FILTER NOT EXISTS { $this ?ax9 ?av10 . ?ax9 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f7 ?ax9 ?av10 } }
+  FILTER NOT EXISTS { ?f7 ?bx11 ?bv12 . ?bx11 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx11 ?bv12 } }
+  FILTER (?v8 > 0)
+  BIND ((?v2 / ?v8) AS ?computed)
+  FILTER (ABS(?reported * ?v8 - ?v2) > 0.0001 * ?v8)
+}""" ] ;
+    sh:targetClass regca:EstimatedHashPowerSharePercentage .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/expression/REGCA_BNP_D_03> a sh:NodeShape ;
+    rdfs:label "REGCA_BNP_D_03: regca:AffiliateEstimatedStakeSharePercentage = regca:AffiliateEffectiveStakeControlledOnNetwork div regca:TotalActiveStakeOnNetwork[regca:AffiliateIdentifierTypedAxis = absent]" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/expr/REGCA_BNP_D_03> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "REGCA_BNP_D_03: reported {?reported} but regca:AffiliateEstimatedStakeSharePercentage = regca:AffiliateEffectiveStakeControlledOnNetwork div regca:TotalActiveStakeOnNetwork[regca:AffiliateIdentifierTypedAxis = absent] gives {?computed} (tolerance 0.0001 from the rule’s XBRL Formula twin)" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?reported ?computed WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?reported ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  ?f1 a regca:AffiliateEffectiveStakeControlledOnNetwork ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v2 .
+  FILTER NOT EXISTS { $this ?ax3 ?av4 . ?ax3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f1 ?ax3 ?av4 } }
+  FILTER NOT EXISTS { ?f1 ?bx5 ?bv6 . ?bx5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx5 ?bv6 } }
+  ?f7 a regca:TotalActiveStakeOnNetwork ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v8 .
+  FILTER NOT EXISTS { ?f7 regca:AffiliateIdentifierTypedAxis ?any13 }
+  FILTER NOT EXISTS { $this ?ax9 ?av10 . ?ax9 a sbrm-mm:TypedDimension . FILTER (?ax9 != regca:AffiliateIdentifierTypedAxis) FILTER NOT EXISTS { ?f7 ?ax9 ?av10 } }
+  FILTER NOT EXISTS { ?f7 ?bx11 ?bv12 . ?bx11 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx11 ?bv12 } }
+  FILTER (?v8 > 0)
+  BIND ((?v2 / ?v8) AS ?computed)
+  FILTER (ABS(?reported * ?v8 - ?v2) > 0.0001 * ?v8)
+}""" ] ;
+    sh:targetClass regca:AffiliateEstimatedStakeSharePercentage .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/expression/REGCA_BNP_D_04> a sh:NodeShape ;
+    rdfs:label "REGCA_BNP_D_04: regca:AffiliateEstimatedHashPowerSharePercentage = regca:AffiliateHashRateContributedToNetwork div regca:TotalNetworkHashRate[regca:AffiliateIdentifierTypedAxis = absent]" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/expr/REGCA_BNP_D_04> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "REGCA_BNP_D_04: reported {?reported} but regca:AffiliateEstimatedHashPowerSharePercentage = regca:AffiliateHashRateContributedToNetwork div regca:TotalNetworkHashRate[regca:AffiliateIdentifierTypedAxis = absent] gives {?computed} (tolerance 0.0001 from the rule’s XBRL Formula twin)" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?reported ?computed WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?reported ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  ?f1 a regca:AffiliateHashRateContributedToNetwork ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v2 .
+  FILTER NOT EXISTS { $this ?ax3 ?av4 . ?ax3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f1 ?ax3 ?av4 } }
+  FILTER NOT EXISTS { ?f1 ?bx5 ?bv6 . ?bx5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx5 ?bv6 } }
+  ?f7 a regca:TotalNetworkHashRate ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v8 .
+  FILTER NOT EXISTS { ?f7 regca:AffiliateIdentifierTypedAxis ?any13 }
+  FILTER NOT EXISTS { $this ?ax9 ?av10 . ?ax9 a sbrm-mm:TypedDimension . FILTER (?ax9 != regca:AffiliateIdentifierTypedAxis) FILTER NOT EXISTS { ?f7 ?ax9 ?av10 } }
+  FILTER NOT EXISTS { ?f7 ?bx11 ?bv12 . ?bx11 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx11 ?bv12 } }
+  FILTER (?v8 > 0)
+  BIND ((?v2 / ?v8) AS ?computed)
+  FILTER (ABS(?reported * ?v8 - ?v2) > 0.0001 * ?v8)
+}""" ] ;
+    sh:targetClass regca:AffiliateEstimatedHashPowerSharePercentage .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/expression/REGCA_BNP_TIE_01> a sh:NodeShape ;
+    rdfs:label "REGCA_BNP_TIE_01: $BlockchainNetworkParticipationNetIncome = $BlockchainNetworkParticipationRevenue - $BlockchainNetworkParticipationExpenses" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/expr/REGCA_BNP_TIE_01> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "REGCA_BNP_TIE_01: reported {?reported} but $BlockchainNetworkParticipationNetIncome = $BlockchainNetworkParticipationRevenue - $BlockchainNetworkParticipationExpenses gives {?computed}" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?reported ?computed WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?reported ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  ?f1 a regca:BlockchainNetworkParticipationRevenue ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v2 .
+  FILTER NOT EXISTS { $this ?ax3 ?av4 . ?ax3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f1 ?ax3 ?av4 } }
+  FILTER NOT EXISTS { ?f1 ?bx5 ?bv6 . ?bx5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx5 ?bv6 } }
+  ?f7 a regca:BlockchainNetworkParticipationExpenses ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v8 .
+  FILTER NOT EXISTS { $this ?ax9 ?av10 . ?ax9 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f7 ?ax9 ?av10 } }
+  FILTER NOT EXISTS { ?f7 ?bx11 ?bv12 . ?bx11 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx11 ?bv12 } }
+  BIND ((?v2 - ?v8) AS ?computed)
+  FILTER (?computed != ?reported)
+}""" ] ;
+    sh:targetClass regca:BlockchainNetworkParticipationNetIncome .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/expression/REGCA_C_BS_01> a sh:NodeShape ;
+    rdfs:label "REGCA_C_BS_01: $Assets = $LiabilitiesAndEquity" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/expr/REGCA_C_BS_01> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "REGCA_C_BS_01: reported {?reported} but $Assets = $LiabilitiesAndEquity gives {?computed}" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?reported ?computed WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?reported ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  ?f1 a regca:LiabilitiesAndEquity ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v2 .
+  FILTER NOT EXISTS { $this ?ax3 ?av4 . ?ax3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f1 ?ax3 ?av4 } }
+  FILTER NOT EXISTS { ?f1 ?bx5 ?bv6 . ?bx5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx5 ?bv6 } }
+  BIND (?v2 AS ?computed)
+  FILTER (?computed != ?reported)
+}""" ] ;
+    sh:targetClass regca:Assets .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/expression/REGCA_C_OFFER_01> a sh:NodeShape ;
+    rdfs:label "REGCA_C_OFFER_01: $AggregateOfferingPrice = $UnitsOfCoveredInvestmentContractsOffered * $PurchasePricePerUnit" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/expr/REGCA_C_OFFER_01> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "REGCA_C_OFFER_01: reported {?reported} but $AggregateOfferingPrice = $UnitsOfCoveredInvestmentContractsOffered * $PurchasePricePerUnit gives {?computed}" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?reported ?computed WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?reported ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  ?f1 a regca:UnitsOfCoveredInvestmentContractsOffered ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v2 .
+  FILTER NOT EXISTS { $this ?ax3 ?av4 . ?ax3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f1 ?ax3 ?av4 } }
+  FILTER NOT EXISTS { ?f1 ?bx5 ?bv6 . ?bx5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx5 ?bv6 } }
+  ?f7 a regca:PurchasePricePerUnit ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?v8 .
+  FILTER NOT EXISTS { $this ?ax9 ?av10 . ?ax9 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?f7 ?ax9 ?av10 } }
+  FILTER NOT EXISTS { ?f7 ?bx11 ?bv12 . ?bx11 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx11 ?bv12 } }
+  BIND ((?v2 * ?v8) AS ?computed)
+  FILTER (?computed != ?reported)
+}""" ] ;
+    sh:targetClass regca:AggregateOfferingPrice .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollforward/regca-31-economics/SubjectCryptoAssetSupplyOutstanding> a sh:NodeShape ;
+    rdfs:label "Roll-forward regca:SubjectCryptoAssetSupplyOutstanding (regca-31-economics)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-31-economics#rollforward-SubjectCryptoAssetSupplyOutstanding> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:SubjectCryptoAssetSupplyOutstanding: opening {?opening} plus net change {?netChange} does not equal closing {?closing}" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?opening ?closing (SUM(?signed) AS ?netChange) WHERE {
+  $this cmns-dt:hasTime ?closingDate ; sbrm-rev:isReportedBy ?entity ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?closing .
+  ?duration cmns-dt:hasEndDate ?closingDate ; cmns-dt:hasStartDate/cmns-dt:hasDateValue ?startDate .
+  ?open a regca:SubjectCryptoAssetSupplyOutstanding ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime/cmns-dt:hasDateValue ?openDate ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?opening .
+  FILTER (STR(xsd:dateTime(CONCAT(STR(?startDate), "T00:00:00")) - xsd:dateTime(CONCAT(STR(?openDate), "T00:00:00"))) = "P1D")
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?open ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?open ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  { ?change a regca:SubjectCryptoAssetUnitsGenerated . BIND (1 AS ?weight) } UNION { ?change a regca:SubjectCryptoAssetUnitsDestroyed . BIND (-1 AS ?weight) }
+  ?change sbrm-rev:isReportedBy ?entity ; cmns-dt:hasDatePeriod ?duration ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?changeValue .
+  FILTER NOT EXISTS { $this ?ax5 ?av6 . ?ax5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?change ?ax5 ?av6 } }
+  FILTER NOT EXISTS { ?change ?bx7 ?bv8 . ?bx7 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx7 ?bv8 } }
+  BIND (?changeValue * ?weight AS ?signed)
+}
+GROUP BY $this ?opening ?closing ?duration
+HAVING (?opening + SUM(?signed) != ?closing)""" ] ;
+    sh:targetClass regca:SubjectCryptoAssetSupplyOutstanding .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollforward/regca-73-cash-flows/CashAndCashEquivalents> a sh:NodeShape ;
+    rdfs:label "Roll-forward regca:CashAndCashEquivalents (regca-73-cash-flows)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-73-cash-flows#rollforward-CashAndCashEquivalents> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:CashAndCashEquivalents: opening {?opening} plus net change {?netChange} does not equal closing {?closing}" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?opening ?closing (SUM(?signed) AS ?netChange) WHERE {
+  $this cmns-dt:hasTime ?closingDate ; sbrm-rev:isReportedBy ?entity ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?closing .
+  ?duration cmns-dt:hasEndDate ?closingDate ; cmns-dt:hasStartDate/cmns-dt:hasDateValue ?startDate .
+  ?open a regca:CashAndCashEquivalents ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime/cmns-dt:hasDateValue ?openDate ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?opening .
+  FILTER (STR(xsd:dateTime(CONCAT(STR(?startDate), "T00:00:00")) - xsd:dateTime(CONCAT(STR(?openDate), "T00:00:00"))) = "P1D")
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?open ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?open ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  { ?change a regca:CashAndCashEquivalentsPeriodIncreaseDecrease . BIND (1 AS ?weight) }
+  ?change sbrm-rev:isReportedBy ?entity ; cmns-dt:hasDatePeriod ?duration ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?changeValue .
+  FILTER NOT EXISTS { $this ?ax5 ?av6 . ?ax5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?change ?ax5 ?av6 } }
+  FILTER NOT EXISTS { ?change ?bx7 ?bv8 . ?bx7 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx7 ?bv8 } }
+  BIND (?changeValue * ?weight AS ?signed)
+}
+GROUP BY $this ?opening ?closing ?duration
+HAVING (?opening + SUM(?signed) != ?closing)""" ] ;
+    sh:targetClass regca:CashAndCashEquivalents .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollforward/regca-74-changes-in-equity/Equity> a sh:NodeShape ;
+    rdfs:label "Roll-forward regca:Equity (regca-74-changes-in-equity)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-74-changes-in-equity#rollforward-Equity> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:Equity: opening {?opening} plus net change {?netChange} does not equal closing {?closing}" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?opening ?closing (SUM(?signed) AS ?netChange) WHERE {
+  $this cmns-dt:hasTime ?closingDate ; sbrm-rev:isReportedBy ?entity ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?closing .
+  ?duration cmns-dt:hasEndDate ?closingDate ; cmns-dt:hasStartDate/cmns-dt:hasDateValue ?startDate .
+  ?open a regca:Equity ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime/cmns-dt:hasDateValue ?openDate ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?opening .
+  FILTER (STR(xsd:dateTime(CONCAT(STR(?startDate), "T00:00:00")) - xsd:dateTime(CONCAT(STR(?openDate), "T00:00:00"))) = "P1D")
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?open ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?open ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  { ?change a regca:NetIncomeLoss . BIND (1 AS ?weight) } UNION { ?change a regca:OtherComprehensiveIncomeLoss . BIND (1 AS ?weight) } UNION { ?change a regca:ProceedsFromIssuanceOfEquityRecognizedInEquity . BIND (1 AS ?weight) } UNION { ?change a regca:OtherChangesInEquity . BIND (1 AS ?weight) }
+  ?change sbrm-rev:isReportedBy ?entity ; cmns-dt:hasDatePeriod ?duration ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?changeValue .
+  FILTER NOT EXISTS { $this ?ax5 ?av6 . ?ax5 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?change ?ax5 ?av6 } }
+  FILTER NOT EXISTS { ?change ?bx7 ?bv8 . ?bx7 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx7 ?bv8 } }
+  BIND (?changeValue * ?weight AS ?signed)
+}
+GROUP BY $this ?opening ?closing ?duration
+HAVING (?opening + SUM(?signed) != ?closing)""" ] ;
+    sh:targetClass regca:Equity .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-22-offering/EstimatedNetOfferingProceeds> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:EstimatedNetOfferingProceeds (regca-22-offering)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-22-offering#rollup-EstimatedNetOfferingProceeds> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:EstimatedNetOfferingProceeds ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-22-offering" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:AggregateOfferingPrice . BIND (1 AS ?weight) } UNION { ?input a regca:EstimatedOfferingExpenses . BIND (-1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:EstimatedNetOfferingProceeds .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-60-form-1-crypto-part-i/AggregateOfferingPriceAndAggregateSalesTotal> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:AggregateOfferingPriceAndAggregateSalesTotal (regca-60-form-1-crypto-part-i)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-60-form-1-crypto-part-i#rollup-AggregateOfferingPriceAndAggregateSalesTotal> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:AggregateOfferingPriceAndAggregateSalesTotal ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-60-form-1-crypto-part-i" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:AggregateOfferingPriceAttributableToIssuer . BIND (1 AS ?weight) } UNION { ?input a regca:AggregateOfferingPriceAttributableToSellingSecurityholders . BIND (1 AS ?weight) } UNION { ?input a regca:AggregateSalesUnderQualifiedOfferingStatementsPrior12Months . BIND (1 AS ?weight) } UNION { ?input a regca:AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements . BIND (1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:AggregateOfferingPriceAndAggregateSalesTotal .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-71-balance-sheet/Assets> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:Assets (regca-71-balance-sheet)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-71-balance-sheet#rollup-Assets> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:Assets ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-71-balance-sheet" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:CashAndCashEquivalents . BIND (1 AS ?weight) } UNION { ?input a regca:CryptoAssets . BIND (1 AS ?weight) } UNION { ?input a regca:AccountsReceivableNet . BIND (1 AS ?weight) } UNION { ?input a regca:PropertyAndEquipmentNet . BIND (1 AS ?weight) } UNION { ?input a regca:IntangibleAssetsNetExcludingCryptoAssets . BIND (1 AS ?weight) } UNION { ?input a regca:OtherAssets . BIND (1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:Assets .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-71-balance-sheet/Equity> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:Equity (regca-71-balance-sheet)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-71-balance-sheet#rollup-Equity> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:Equity ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-71-balance-sheet" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:ContributedCapital . BIND (1 AS ?weight) } UNION { ?input a regca:RetainedEarningsAccumulatedDeficit . BIND (1 AS ?weight) } UNION { ?input a regca:AccumulatedOtherComprehensiveIncome . BIND (1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:Equity .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-71-balance-sheet/Liabilities> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:Liabilities (regca-71-balance-sheet)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-71-balance-sheet#rollup-Liabilities> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:Liabilities ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-71-balance-sheet" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:AccountsPayableAndAccruedLiabilities . BIND (1 AS ?weight) } UNION { ?input a regca:ContractLiabilities . BIND (1 AS ?weight) } UNION { ?input a regca:Debt . BIND (1 AS ?weight) } UNION { ?input a regca:ObligationToDeliverSubjectCryptoAsset . BIND (1 AS ?weight) } UNION { ?input a regca:OtherLiabilities . BIND (1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:Liabilities .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-71-balance-sheet/LiabilitiesAndEquity> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:LiabilitiesAndEquity (regca-71-balance-sheet)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-71-balance-sheet#rollup-LiabilitiesAndEquity> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:LiabilitiesAndEquity ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-71-balance-sheet" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:Liabilities . BIND (1 AS ?weight) } UNION { ?input a regca:Equity . BIND (1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:LiabilitiesAndEquity .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-72-comprehensive-income/ComprehensiveIncomeLoss> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:ComprehensiveIncomeLoss (regca-72-comprehensive-income)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-72-comprehensive-income#rollup-ComprehensiveIncomeLoss> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:ComprehensiveIncomeLoss ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-72-comprehensive-income" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:NetIncomeLoss . BIND (1 AS ?weight) } UNION { ?input a regca:OtherComprehensiveIncomeLoss . BIND (1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:ComprehensiveIncomeLoss .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-72-comprehensive-income/IncomeLossBeforeIncomeTaxes> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:IncomeLossBeforeIncomeTaxes (regca-72-comprehensive-income)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-72-comprehensive-income#rollup-IncomeLossBeforeIncomeTaxes> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:IncomeLossBeforeIncomeTaxes ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-72-comprehensive-income" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:OperatingIncomeLoss . BIND (1 AS ?weight) } UNION { ?input a regca:GainLossOnRemeasurementOfCryptoAssets . BIND (1 AS ?weight) } UNION { ?input a regca:OtherNonoperatingIncomeExpense . BIND (1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:IncomeLossBeforeIncomeTaxes .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-72-comprehensive-income/NetIncomeLoss> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:NetIncomeLoss (regca-72-comprehensive-income)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-72-comprehensive-income#rollup-NetIncomeLoss> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:NetIncomeLoss ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-72-comprehensive-income" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:IncomeLossBeforeIncomeTaxes . BIND (1 AS ?weight) } UNION { ?input a regca:IncomeTaxExpenseBenefit . BIND (-1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:NetIncomeLoss .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-72-comprehensive-income/OperatingIncomeLoss> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:OperatingIncomeLoss (regca-72-comprehensive-income)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-72-comprehensive-income#rollup-OperatingIncomeLoss> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:OperatingIncomeLoss ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-72-comprehensive-income" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:Revenues . BIND (1 AS ?weight) } UNION { ?input a regca:CostOfRevenue . BIND (-1 AS ?weight) } UNION { ?input a regca:OperatingExpenses . BIND (-1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:OperatingIncomeLoss .
+
+<http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/shape/rollup/regca-73-cash-flows/CashAndCashEquivalentsPeriodIncreaseDecrease> a sh:NodeShape ;
+    rdfs:label "Roll-up regca:CashAndCashEquivalentsPeriodIncreaseDecrease (regca-73-cash-flows)" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/fragment/regca-73-cash-flows#rollup-CashAndCashEquivalentsPeriodIncreaseDecrease> ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "regca:CashAndCashEquivalentsPeriodIncreaseDecrease ({?total}) does not equal the sum of its inputs ({?sumOfInputs}) in regca-73-cash-flows" ;
+            sh:prefixes regca-1crypto:shapes ;
+            sh:select """SELECT $this ?total (SUM(?signed) AS ?sumOfInputs) WHERE {
+  $this sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?total ; sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period .
+  { ?input a regca:NetCashProvidedByUsedInOperatingActivities . BIND (1 AS ?weight) } UNION { ?input a regca:NetCashProvidedByUsedInInvestingActivities . BIND (1 AS ?weight) } UNION { ?input a regca:NetCashProvidedByUsedInFinancingActivities . BIND (1 AS ?weight) } UNION { ?input a regca:EffectOfExchangeRateChangesOnCash . BIND (1 AS ?weight) }
+  ?input sbrm-rev:isReportedBy ?entity ; cmns-dt:hasTime|cmns-dt:hasDatePeriod ?period ; sbrm-rst:hasFactValue/cmns-qtu:hasNumericValue ?inputValue .
+  FILTER NOT EXISTS { $this ?ax1 ?av2 . ?ax1 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { ?input ?ax1 ?av2 } }
+  FILTER NOT EXISTS { ?input ?bx3 ?bv4 . ?bx3 a sbrm-mm:TypedDimension . FILTER NOT EXISTS { $this ?bx3 ?bv4 } }
+  BIND (?inputValue * ?weight AS ?signed)
+}
+GROUP BY $this ?total
+HAVING (SUM(?signed) != ?total)""" ] ;
+    sh:targetClass regca:CashAndCashEquivalentsPeriodIncreaseDecrease .
+
+regca-1crypto:shapes a owl:Ontology ;
+    rdfs:label "SHACL shapes for the numeric concept arrangement patterns" ;
+    prov:wasDerivedFrom <http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/definition/layer-b> ;
+    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
+            sh:prefix "xsd" ],
+        [ sh:namespace "http://luca.pacioli.ai/report#"^^xsd:anyURI ;
+            sh:prefix "regca" ],
+        [ sh:namespace "https://www.omg.org/spec/SBRM/ReportStructure/"^^xsd:anyURI ;
+            sh:prefix "sbrm-rst" ],
+        [ sh:namespace "https://www.omg.org/spec/SBRM/ReportingEnvelope/"^^xsd:anyURI ;
+            sh:prefix "sbrm-rev" ],
+        [ sh:namespace "https://accounting.auditchain.finance/sbrm/2026/metamodel/"^^xsd:anyURI ;
+            sh:prefix "sbrm-mm" ],
+        [ sh:namespace "https://www.omg.org/spec/Commons/DatesAndTimes/"^^xsd:anyURI ;
+            sh:prefix "cmns-dt" ],
+        [ sh:namespace "https://www.omg.org/spec/Commons/QuantitiesAndUnits/"^^xsd:anyURI ;
+            sh:prefix "cmns-qtu" ] .
+

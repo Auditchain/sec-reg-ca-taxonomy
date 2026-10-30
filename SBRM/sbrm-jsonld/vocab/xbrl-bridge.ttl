@@ -1,0 +1,219 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xbrl-role: <http://www.xbrl.org/2003/role/> .
+@prefix xbrlb: <https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/> .
+@prefix xbrli: <http://www.xbrl.org/2003/instance#> .
+
+xbrli:pure a owl:NamedIndividual ;
+    rdfs:isDefinedBy <https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html> .
+
+xbrl-role:commentaryRef a owl:NamedIndividual ;
+    rdfs:isDefinedBy <https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html> .
+
+xbrl-role:periodEndLabel a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html> .
+
+xbrl-role:periodStartLabel a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html> .
+
+xbrlb:DerivedLayer a owl:Class ;
+    rdfs:comment "Named graph holding Layer B: SBRM semantics derived deterministically from Layer A." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:ImportedTaxonomy a owl:Class ;
+    rdfs:comment "An XBRL taxonomy imported by the base model (a BaseInformation Import record)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:Label a owl:Class ;
+    rdfs:comment "A base Labels record (element, language, role, text)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:LosslessLayer a owl:Class ;
+    rdfs:comment "Named graph holding Layer A: every base record, losslessly, as SBRM nodes." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:aspectFilter a owl:DatatypeProperty ;
+    rdfs:comment "Aspect filter on an expression operand, kept as written (for example \"axis = absent\")." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:associationRole a owl:DatatypeProperty ;
+    rdfs:comment "Base AssociationRole." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:basedOnSourceFact a owl:ObjectProperty ;
+    rdfs:comment "Base derivation-rule BasedOnSourceFact." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:calculationArcrole a owl:DatatypeProperty ;
+    rdfs:comment "Base CalculationArcrole." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:calculationPolarity a owl:DatatypeProperty ;
+    rdfs:comment "Base CalculationPolarity." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:calculationSpecification a owl:DatatypeProperty ;
+    rdfs:comment "Base CalculationSpecification." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:calculationWeight a owl:DatatypeProperty ;
+    rdfs:comment "Base CalculationWeight." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:calendarPeriodAspect a owl:DatatypeProperty ;
+    rdfs:comment "Base CalendarPeriodAspect text." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:closed a owl:DatatypeProperty ;
+    rdfs:comment "Base Closed flag." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:code a owl:DatatypeProperty ;
+    rdfs:comment "BaseInformation Code (Local or Import)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:conceptAspect a owl:ObjectProperty ;
+    rdfs:comment "Base rule ConceptAspect." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:contextElement a owl:DatatypeProperty ;
+    rdfs:comment "XBRL hypercube context element." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:decimals a owl:DatatypeProperty ;
+    rdfs:comment "Base Rounding when it is not an integer (for example INF, meaning exact)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:derivedFact a owl:ObjectProperty ;
+    rdfs:comment "Base derivation-rule DerivedFact." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:dimensionOrder a owl:ObjectProperty ;
+    rdfs:comment "Order of a fact's typed-axis rows in Facts-Dimensions (an rdf:List of axes)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:enumerationDomain a owl:ObjectProperty ;
+    rdfs:comment "Value domain of an extensible-enumeration concept (base Terms.Domain)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:extendedLinkRole a owl:DatatypeProperty ;
+    rdfs:comment "XBRL extended link role IRI, kept as text." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:extendedLinkRoleSchemaLocation a owl:DatatypeProperty ;
+    rdfs:comment "Schema location of an extended link role." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:fieldOrder a owl:DatatypeProperty ;
+    rdfs:comment "Exact key order of a base record, or of a section by default (an rdf:List of field names)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:fromElement a owl:ObjectProperty ;
+    rdfs:comment "Base AssociationFromName." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:hasExecutableForm a owl:ObjectProperty ;
+    rdfs:comment "Links a declarative rule to its XBRL Formula twin." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:headUsable a owl:DatatypeProperty ;
+    rdfs:comment "XBRL enumeration head-usable flag (base Terms.HeadUsable)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:identifierScheme a owl:DatatypeProperty ;
+    rdfs:comment "Identifier scheme of a party identifier." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:importsTaxonomy a owl:ObjectProperty ;
+    rdfs:comment "Links the model to an imported XBRL taxonomy." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:jsonLexical a owl:DatatypeProperty ;
+    rdfs:comment "Source text of a JSON number whose form is not an xsd:decimal lexical form." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:jsonValueKind a owl:DatatypeProperty ;
+    rdfs:comment "JSON type of a fact value when it differs from the default for its datatype." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:labelOf a owl:ObjectProperty ;
+    rdfs:comment "Element a label record belongs to." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:labelRole a owl:DatatypeProperty ;
+    rdfs:comment "Base label role (Standard, Documentation, PeriodStart, PeriodEnd)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:namespaceIdentifier a owl:DatatypeProperty ;
+    rdfs:comment "XBRL namespace identifier." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:namespacePrefix a owl:DatatypeProperty ;
+    rdfs:comment "XBRL namespace prefix." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:precondition a owl:ObjectProperty ;
+    rdfs:comment "Precondition expression of a derivation rule." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:preferredLabelRole a owl:DatatypeProperty ;
+    rdfs:comment "Base PreferredLabelRole." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:referenceOf a owl:ObjectProperty ;
+    rdfs:comment "Element a reference record belongs to." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:reportingEntityAspect a owl:DatatypeProperty ;
+    rdfs:comment "Base ReportingEntityAspect text." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:ruleType a owl:DatatypeProperty ;
+    rdfs:comment "Base RuleType." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:schemaLocation a owl:DatatypeProperty ;
+    rdfs:comment "XBRL schema location." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:sectionName a owl:DatatypeProperty ;
+    rdfs:comment "Name of a base model section." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:sections a owl:DatatypeProperty ;
+    rdfs:comment "The base model sections in file order, each with its default field order." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:sourceFile a owl:DatatypeProperty ;
+    rdfs:comment "File name of the base model." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:sourceIndex a owl:DatatypeProperty ;
+    rdfs:comment "Array position of the record in its base section." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:sourceSha256 a owl:DatatypeProperty ;
+    rdfs:comment "SHA-256 of the base model file." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:structureIdentifier a owl:DatatypeProperty ;
+    rdfs:comment "Base StructureIdentifier." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:structureType a owl:DatatypeProperty ;
+    rdfs:comment "Base association StructureType (Presentation, Definition, Calculation, ExtensibleEnumerations)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:typedDomainRef a owl:DatatypeProperty ;
+    rdfs:comment "XBRL typed-domain reference of a typed dimension (base Terms.Domain)." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb:unitToken a owl:DatatypeProperty ;
+    rdfs:comment "Base Units token." ;
+    rdfs:isDefinedBy xbrlb: .
+
+xbrlb: a owl:Ontology ;
+    rdfs:label "XBRL bridge vocabulary" ;
+    dct:description "Carry-through terms for base-model fields that are XBRL- or serialization-specific and have no SBRM meaning, kept so the conversion is lossless and XBRL can be regenerated. Also declares the XBRL 2.1 IRIs the outputs use as RDF terms." .
+

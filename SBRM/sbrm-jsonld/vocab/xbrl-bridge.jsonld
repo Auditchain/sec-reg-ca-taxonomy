@@ -1,0 +1,519 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "doco": "http://purl.org/spar/doco/",
+    "sbrm-rev": "https://www.omg.org/spec/SBRM/ReportingEnvelope/",
+    "sbrm-rst": "https://www.omg.org/spec/SBRM/ReportStructure/",
+    "sbrm-frst": "https://www.omg.org/spec/SBRM/FinancialReportElements/",
+    "cmns-av": "https://www.omg.org/spec/Commons/AnnotationVocabulary/",
+    "cmns-cls": "https://www.omg.org/spec/Commons/Classifiers/",
+    "cmns-col": "https://www.omg.org/spec/Commons/Collections/",
+    "cmns-cxtdsg": "https://www.omg.org/spec/Commons/ContextualDesignators/",
+    "cmns-doc": "https://www.omg.org/spec/Commons/Documents/",
+    "cmns-docc": "https://www.omg.org/spec/Commons/DocumentComponents/",
+    "cmns-dsg": "https://www.omg.org/spec/Commons/Designators/",
+    "cmns-dt": "https://www.omg.org/spec/Commons/DatesAndTimes/",
+    "cmns-pts": "https://www.omg.org/spec/Commons/PartiesAndSituations/",
+    "cmns-qtu": "https://www.omg.org/spec/Commons/QuantitiesAndUnits/",
+    "cmns-rlcmp": "https://www.omg.org/spec/Commons/RolesAndCompositions/",
+    "cmns-txt": "https://www.omg.org/spec/Commons/TextDatatype/",
+    "sbrm-mm": "https://accounting.auditchain.finance/sbrm/2026/metamodel/",
+    "xbrlb": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/",
+    "regca": "http://luca.pacioli.ai/report#",
+    "iso4217": "http://www.xbrl.org/2003/iso4217#",
+    "xbrli": "http://www.xbrl.org/2003/instance#",
+    "xbrl-role": "http://www.xbrl.org/2003/role/",
+    "regca-complete": "http://luca.pacioli.ai/report/sbrm/complete-2026-10-18/",
+    "regca-1crypto": "http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/",
+    "owl:imports": {
+      "@type": "@id"
+    },
+    "rdfs:subClassOf": {
+      "@type": "@id"
+    },
+    "rdfs:isDefinedBy": {
+      "@type": "@id"
+    },
+    "dct:publisher": {
+      "@type": "@id"
+    },
+    "dct:type": {
+      "@type": "@id"
+    },
+    "dct:source": {
+      "@type": "@id"
+    },
+    "dct:conformsTo": {
+      "@type": "@id"
+    },
+    "prov:wasDerivedFrom": {
+      "@type": "@id"
+    },
+    "cmns-cxtdsg:appliesTo": {
+      "@type": "@id"
+    },
+    "cmns-cls:isClassifiedBy": {
+      "@type": "@id"
+    },
+    "cmns-col:hasMember": {
+      "@type": "@id"
+    },
+    "cmns-col:compliesWith": {
+      "@type": "@id"
+    },
+    "cmns-dsg:isDefinedIn": {
+      "@type": "@id"
+    },
+    "cmns-dt:hasTime": {
+      "@type": "@id"
+    },
+    "cmns-dt:hasDatePeriod": {
+      "@type": "@id"
+    },
+    "cmns-dt:hasStartDate": {
+      "@type": "@id"
+    },
+    "cmns-dt:hasEndDate": {
+      "@type": "@id"
+    },
+    "cmns-qtu:hasMeasurementUnit": {
+      "@type": "@id"
+    },
+    "cmns-rlcmp:isPlayedBy": {
+      "@type": "@id"
+    },
+    "sbrm-rev:isReportedBy": {
+      "@type": "@id"
+    },
+    "sbrm-rev:hasReportDate": {
+      "@type": "@id"
+    },
+    "sbrm-rst:hasReportElement": {
+      "@type": "@id"
+    },
+    "sbrm-frst:hasOperator": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasDataType": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasPart": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasPartElement": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasLineItems": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasDimension": {
+      "@type": "@id"
+    },
+    "sbrm-mm:memberElement": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasTotal": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasNumber": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasBeginningBalance": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasEndingBalance": {
+      "@type": "@id"
+    },
+    "sbrm-mm:asNumber": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasConcept": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasConceptArrangementPattern": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasReportLevelRule": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasFactSet": {
+      "@type": "@id"
+    },
+    "xbrlb:enumerationDomain": {
+      "@type": "@id"
+    },
+    "xbrlb:labelOf": {
+      "@type": "@id"
+    },
+    "xbrlb:referenceOf": {
+      "@type": "@id"
+    },
+    "xbrlb:fromElement": {
+      "@type": "@id"
+    },
+    "xbrlb:conceptAspect": {
+      "@type": "@id"
+    },
+    "xbrlb:derivedFact": {
+      "@type": "@id"
+    },
+    "xbrlb:basedOnSourceFact": {
+      "@type": "@id"
+    },
+    "xbrlb:importsTaxonomy": {
+      "@type": "@id"
+    },
+    "xbrlb:hasExecutableForm": {
+      "@type": "@id"
+    },
+    "owl:inverseOf": {
+      "@type": "@id"
+    },
+    "sbrm-mm:correspondsToMetamodelElement": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasFragment": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "xbrlb:dimensionOrder": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "xbrlb:fieldOrder": {
+      "@container": "@list"
+    },
+    "xbrlb:sections": {
+      "@container": "@list"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/",
+      "@type": "owl:Ontology",
+      "rdfs:label": "XBRL bridge vocabulary",
+      "dct:description": "Carry-through terms for base-model fields that are XBRL- or serialization-specific and have no SBRM meaning, kept so the conversion is lossless and XBRL can be regenerated. Also declares the XBRL 2.1 IRIs the outputs use as RDF terms."
+    },
+    {
+      "@id": "xbrlb:DerivedLayer",
+      "@type": "owl:Class",
+      "rdfs:comment": "Named graph holding Layer B: SBRM semantics derived deterministically from Layer A.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:ImportedTaxonomy",
+      "@type": "owl:Class",
+      "rdfs:comment": "An XBRL taxonomy imported by the base model (a BaseInformation Import record).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:Label",
+      "@type": "owl:Class",
+      "rdfs:comment": "A base Labels record (element, language, role, text).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:LosslessLayer",
+      "@type": "owl:Class",
+      "rdfs:comment": "Named graph holding Layer A: every base record, losslessly, as SBRM nodes.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:aspectFilter",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Aspect filter on an expression operand, kept as written (for example \"axis = absent\").",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:associationRole",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base AssociationRole.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:basedOnSourceFact",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Base derivation-rule BasedOnSourceFact.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:calculationArcrole",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base CalculationArcrole.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:calculationPolarity",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base CalculationPolarity.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:calculationSpecification",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base CalculationSpecification.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:calculationWeight",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base CalculationWeight.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:calendarPeriodAspect",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base CalendarPeriodAspect text.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:closed",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base Closed flag.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:code",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "BaseInformation Code (Local or Import).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:conceptAspect",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Base rule ConceptAspect.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:contextElement",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "XBRL hypercube context element.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:decimals",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base Rounding when it is not an integer (for example INF, meaning exact).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:derivedFact",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Base derivation-rule DerivedFact.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:dimensionOrder",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Order of a fact's typed-axis rows in Facts-Dimensions (an rdf:List of axes).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:enumerationDomain",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Value domain of an extensible-enumeration concept (base Terms.Domain).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:extendedLinkRole",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "XBRL extended link role IRI, kept as text.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:extendedLinkRoleSchemaLocation",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Schema location of an extended link role.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:fieldOrder",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Exact key order of a base record, or of a section by default (an rdf:List of field names).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:fromElement",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Base AssociationFromName.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:hasExecutableForm",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Links a declarative rule to its XBRL Formula twin.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:headUsable",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "XBRL enumeration head-usable flag (base Terms.HeadUsable).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:identifierScheme",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Identifier scheme of a party identifier.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:importsTaxonomy",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Links the model to an imported XBRL taxonomy.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:jsonLexical",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Source text of a JSON number whose form is not an xsd:decimal lexical form.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:jsonValueKind",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "JSON type of a fact value when it differs from the default for its datatype.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:labelOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Element a label record belongs to.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:labelRole",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base label role (Standard, Documentation, PeriodStart, PeriodEnd).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:namespaceIdentifier",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "XBRL namespace identifier.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:namespacePrefix",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "XBRL namespace prefix.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:precondition",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Precondition expression of a derivation rule.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:preferredLabelRole",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base PreferredLabelRole.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:referenceOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "Element a reference record belongs to.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:reportingEntityAspect",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base ReportingEntityAspect text.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:ruleType",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base RuleType.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:schemaLocation",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "XBRL schema location.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:sectionName",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Name of a base model section.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:sections",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "The base model sections in file order, each with its default field order.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:sourceFile",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "File name of the base model.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:sourceIndex",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Array position of the record in its base section.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:sourceSha256",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "SHA-256 of the base model file.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:structureIdentifier",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base StructureIdentifier.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:structureType",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base association StructureType (Presentation, Definition, Calculation, ExtensibleEnumerations).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:typedDomainRef",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "XBRL typed-domain reference of a typed dimension (base Terms.Domain).",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrlb:unitToken",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Base Units token.",
+      "rdfs:isDefinedBy": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/"
+    },
+    {
+      "@id": "xbrl-role:periodStartLabel",
+      "@type": "owl:AnnotationProperty",
+      "rdfs:isDefinedBy": "https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html"
+    },
+    {
+      "@id": "xbrl-role:periodEndLabel",
+      "@type": "owl:AnnotationProperty",
+      "rdfs:isDefinedBy": "https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html"
+    },
+    {
+      "@id": "xbrl-role:commentaryRef",
+      "@type": "owl:NamedIndividual",
+      "rdfs:isDefinedBy": "https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html"
+    },
+    {
+      "@id": "xbrli:pure",
+      "@type": "owl:NamedIndividual",
+      "rdfs:isDefinedBy": "https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31+corrected-errata-2013-02-20.html"
+    }
+  ]
+}

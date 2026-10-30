@@ -1,0 +1,137 @@
+{
+  "what": "The SBRM entry point package in the GitHub SBRM folder: LucaSuite's export of the SBRM Reg CA Taxonomy model, compared with the published taxonomy (taxonomy/2026-10-18) and validated by Arelle.",
+  "package": {
+    "source": "LucaSuite entry point export of the model 'SBRM Reg CA Taxonomy' (with the October 18 changes)",
+    "github": "https://github.com/Auditchain/sec-reg-ca-taxonomy/tree/main/SBRM",
+    "entry_point": "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd",
+    "files": {
+      "SBRM/entrypoint.xsd": {
+        "bytes": 2007,
+        "sha256": "61cc8c0d60cb30bb41da606c7c37a8b94ade8b95d9868220bd5682befa7714b1",
+        "git_blob": "8507cb241af77fd91bcf4f199fbe5d71986d143f",
+        "identical_to_taxonomy_2026_10_18": true
+      },
+      "SBRM/report.xsd": {
+        "bytes": 226137,
+        "sha256": "eb79842d699889359166576e7a20225ec10ba7d54f3850aefbffa426a5d94547",
+        "git_blob": "94d2e20e266b5f97fb83d6cbb33ec46e27c6bb95",
+        "identical_to_taxonomy_2026_10_18": false,
+        "line_differences": [
+          "LucaSuite generation timestamp",
+          "namespace declarations (same set, other order)"
+        ]
+      },
+      "SBRM/roles.xsd": {
+        "bytes": 47104,
+        "sha256": "671405eafc2d3fc22087d9d2595ce412caa4634ed0e213d962e391a2adfb37fb",
+        "git_blob": "922b37e447b6e8272f3a01eb9b68d0fbcfb7eaa4",
+        "identical_to_taxonomy_2026_10_18": true
+      },
+      "SBRM/report-cal.xml": {
+        "bytes": 23044,
+        "sha256": "4e98420d3e813c0dd635d331d74862f4b833cd63fe8bdeefe418ecabaf92b8f3",
+        "git_blob": "6cc6b4bd4cb94d09b930db8bcb278673da53724a",
+        "identical_to_taxonomy_2026_10_18": false,
+        "line_differences": [
+          "LucaSuite generation timestamp"
+        ]
+      },
+      "SBRM/report-def.xml": {
+        "bytes": 292048,
+        "sha256": "69b10f71296f7bde33b30bde7e78ffa7559aad74397b083ba2f57d1676fa1bc9",
+        "git_blob": "8b29794989bd638ff16725b7522815e28e3f43ba",
+        "identical_to_taxonomy_2026_10_18": false,
+        "line_differences": [
+          "LucaSuite generation timestamp"
+        ]
+      },
+      "SBRM/report-pre.xml": {
+        "bytes": 466329,
+        "sha256": "8110a150694f9ec131f58374aa5eb452332e06c7c248e5904eb2570ac756e404",
+        "git_blob": "0103b2be122b8bf693c1ea2bc308f4149db7b0cc",
+        "identical_to_taxonomy_2026_10_18": false,
+        "line_differences": [
+          "LucaSuite generation timestamp"
+        ]
+      },
+      "SBRM/report-lab.xml": {
+        "bytes": 1585455,
+        "sha256": "f9953393957278260e892b192852978fc1eb8e6fb31c4a4a9fe7e777157d6530",
+        "git_blob": "3a8de67bf861919118c4a70de17c78fdf0ab947f",
+        "identical_to_taxonomy_2026_10_18": false,
+        "line_differences": [
+          "LucaSuite generation timestamp"
+        ]
+      },
+      "SBRM/report-ref.xml": {
+        "bytes": 2997366,
+        "sha256": "12c3b3ee56f0d92cd6ec542fe38898a02bf3742c2080008ba8c5e8171f454241",
+        "git_blob": "b6a66f8a9bf31465a68f34aa56c6622059707e27",
+        "identical_to_taxonomy_2026_10_18": false,
+        "line_differences": [
+          "LucaSuite generation timestamp"
+        ]
+      },
+      "SBRM/report-for.xml": {
+        "bytes": 2359165,
+        "sha256": "99eeeed168669fc74219a60ac88b79a3e44a0ae4ce61ccdd26be668b1127e362",
+        "git_blob": "6d82c3f153ece0797a7b2e8cd39d6344791ec112",
+        "identical_to_taxonomy_2026_10_18": false,
+        "line_differences": [
+          "namespace declarations (same set, other order)"
+        ]
+      },
+      "SBRM/META-INF/taxonomyPackage.xml": {
+        "bytes": 669,
+        "sha256": "8ff9b54b5d0d065bb7b1f3d86228dc9aca493110fef9c7b61feba74f6cca2ea6",
+        "git_blob": "b69a15da51dc8426cb9a4f781dacc55b91952c01"
+      },
+      "SBRM/README.txt": {
+        "bytes": 209,
+        "sha256": "7c5de2e42e00dc2b632e80987485807a7f4badbd5eea579067e1ef5b9098b4f7",
+        "git_blob": "dbaefc8c2579a4183aadbd2a935adb00113bfdf1"
+      }
+    }
+  },
+  "compared_with_taxonomy_2026_10_18": {
+    "elements": {
+      "package": 1011,
+      "published": 1011,
+      "identical": true
+    },
+    "schema_imports": {
+      "count": 17,
+      "identical_as_a_set": true
+    },
+    "label_relationships": {
+      "package": 2324,
+      "published": 2324,
+      "identical": true,
+      "compared_on": "element, label role, language and text"
+    },
+    "reference_relationships": {
+      "package": 2629,
+      "published": 2629,
+      "identical": true,
+      "compared_on": "element, reference role and every reference part"
+    },
+    "assertions": {
+      "package": 493,
+      "published": 493,
+      "identical": true
+    },
+    "formula_resources_and_arcs_identical": true
+  },
+  "arelle": {
+    "version": "2.47.3",
+    "validated": "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd",
+    "options": "--validate --formula validate (XBRL 2.1, Dimensions, formula linkbase compile)",
+    "log": "arelle-sbrm-package.xml",
+    "entries_by_level": {
+      "info": 4
+    },
+    "errors": 0,
+    "warnings": 0
+  },
+  "ok": true
+}
