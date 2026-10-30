@@ -17,7 +17,7 @@ The package follows the XBRL Taxonomy Packages 1.0 specification. Its catalog ma
 
 ## SBRM version
 
-The Complete Model as built through the OMG Standard Business Report Model (SBRM 1.0 beta 1, dtc/25-04-01). The model was converted to SBRM JSON-LD and imported into LucaSuite from that conversion. LucaSuite then exported it as the entry point package in [`SBRM/`](SBRM/). In LucaSuite it is a separate reporting framework, with the model type SBRM.
+The Complete Model as built through the OMG Standard Business Report Model (SBRM 1.0 beta 1, dtc/25-04-01). The model was converted to SBRM JSON-LD and imported into LucaSuite from that conversion, and the October 18 changes were then made to it in LucaSuite. LucaSuite exported the result as the entry point package in [`SBRM/`](SBRM/). In LucaSuite it is a separate reporting framework, with the model type SBRM.
 
 | | |
 |---|---|
@@ -25,12 +25,7 @@ The Complete Model as built through the OMG Standard Business Report Model (SBRM
 | Namespace | `http://luca.pacioli.ai/report` |
 | Prefix | `regca` |
 
-It was built from the Complete Model as it stood on October 17, 2026, so it does not include the October 18 changes listed under Changes:
-- the 88 documentation labels added and the 29 extended;
-- the ten references added to seven filing provenance elements;
-- the corrections to eight rules: `REGCA_COVER_01`, the three signature-date rules and the four previous-filing rules.
-
-Its elements, tables and relationships (`report.xsd`, `roles.xsd` and the presentation, definition and calculation linkbases) are those of version 2026-10-18. The files differ only in LucaSuite's generation timestamp and, in `report.xsd`, in the order of the namespace declarations. It loads and validates with no errors in Arelle.
+It has the same elements, tables, labels, references, relationships and rules as version 2026-10-18, including the October 18 changes listed under Changes. The files differ only in LucaSuite's generation timestamps and in the order of namespace declarations, schema imports, and label and reference links. It loads and validates with no errors in Arelle.
 
 ## Forms covered
 

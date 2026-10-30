@@ -5123,7 +5123,7 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_period" complement="false" cover="true" order="5"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_S103_ResponsibleSignatureDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#StartupRule103DisclosureMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('ResponsibleSignatureDate', 'regca:ResponsibleSignatureDate'))"/>
+    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_S103_ResponsibleSignatureDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#StartupRule103DisclosureMember' or count($X) gt 0"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_DocumentType" bindAsSequence="false"/>
     <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_DocumentType" name="DocumentType" order="1"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_DocumentType_concept">
@@ -5156,22 +5156,6 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_typed2" complement="false" cover="true" order="3"/>
     <pf:period xlink:type="resource" xlink:label="f_X_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_period" complement="false" cover="true" order="4"/>
-    <variable:factVariable xlink:type="resource" xlink:label="v_Omitted" bindAsSequence="true" fallbackValue="()"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Omitted" name="Omitted" order="3"/>
-    <cf:conceptName xlink:type="resource" xlink:label="f_Omitted_concept">
-      <cf:concept>
-        <cf:qname>regca:OmittedDisclosureRequirement</cf:qname>
-      </cf:concept>
-    </cf:conceptName>
-    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_concept" complement="false" cover="true" order="1"/>
-    <df:typedDimension xlink:type="resource" xlink:label="f_Omitted_typed1">
-      <df:dimension>
-        <df:qname>regca:OmittedDisclosureItemIdentifierTypedAxis</df:qname>
-      </df:dimension>
-    </df:typedDimension>
-    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_typed1" complement="false" cover="true" order="2"/>
-    <pf:period xlink:type="resource" xlink:label="f_Omitted_period" test="true()"/>
-    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_period" complement="false" cover="true" order="3"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
     <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1CRYPTO_ExemptionRelied" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
@@ -11279,7 +11263,7 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Amend" xlink:to="f_Amend_period" complement="false" cover="true" order="2"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1CRYPTO_ResponsibleSignatureDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('ResponsibleSignatureDate', 'regca:ResponsibleSignatureDate')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1CRYPTO_ResponsibleSignatureDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_DocumentType" bindAsSequence="false"/>
     <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_DocumentType" name="DocumentType" order="1"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_DocumentType_concept">
@@ -11312,24 +11296,8 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_typed2" complement="false" cover="true" order="3"/>
     <pf:period xlink:type="resource" xlink:label="f_X_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_period" complement="false" cover="true" order="4"/>
-    <variable:factVariable xlink:type="resource" xlink:label="v_Omitted" bindAsSequence="true" fallbackValue="()"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Omitted" name="Omitted" order="3"/>
-    <cf:conceptName xlink:type="resource" xlink:label="f_Omitted_concept">
-      <cf:concept>
-        <cf:qname>regca:OmittedDisclosureRequirement</cf:qname>
-      </cf:concept>
-    </cf:conceptName>
-    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_concept" complement="false" cover="true" order="1"/>
-    <df:typedDimension xlink:type="resource" xlink:label="f_Omitted_typed1">
-      <df:dimension>
-        <df:qname>regca:OmittedDisclosureItemIdentifierTypedAxis</df:qname>
-      </df:dimension>
-    </df:typedDimension>
-    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_typed1" complement="false" cover="true" order="2"/>
-    <pf:period xlink:type="resource" xlink:label="f_Omitted_period" test="true()"/>
-    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_period" complement="false" cover="true" order="3"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_SubType" bindAsSequence="false" fallbackValue="()"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_SubType" name="SubType" order="4"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_SubType" name="SubType" order="3"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_SubType_concept">
       <cf:concept>
         <cf:qname>regca:OfferingStatementSubmissionType</cf:qname>
@@ -11339,7 +11307,7 @@
     <pf:period xlink:type="resource" xlink:label="f_SubType_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_SubType" xlink:to="f_SubType_period" complement="false" cover="true" order="2"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_SupplementOnly" bindAsSequence="false" fallbackValue="()"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_SupplementOnly" name="SupplementOnly" order="5"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_SupplementOnly" name="SupplementOnly" order="4"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_SupplementOnly_concept">
       <cf:concept>
         <cf:qname>regca:OfferingCircularSupplementOnlyIndicator</cf:qname>
@@ -11349,7 +11317,7 @@
     <pf:period xlink:type="resource" xlink:label="f_SupplementOnly_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_SupplementOnly" xlink:to="f_SupplementOnly_period" complement="false" cover="true" order="2"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_PartIIIOnly" bindAsSequence="false" fallbackValue="()"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_PartIIIOnly" name="PartIIIOnly" order="6"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_PartIIIOnly" name="PartIIIOnly" order="5"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_PartIIIOnly_concept">
       <cf:concept>
         <cf:qname>regca:AmendmentRelatesSolelyToPartIIIIndicator</cf:qname>
@@ -11359,7 +11327,7 @@
     <pf:period xlink:type="resource" xlink:label="f_PartIIIOnly_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_PartIIIOnly" xlink:to="f_PartIIIOnly_period" complement="false" cover="true" order="2"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_Amend" bindAsSequence="false" fallbackValue="()"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Amend" name="Amend" order="7"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Amend" name="Amend" order="6"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_Amend_concept">
       <cf:concept>
         <cf:qname>regca:AmendmentIndicator</cf:qname>
@@ -14286,7 +14254,7 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Amend" xlink:to="f_Amend_period" complement="false" cover="true" order="2"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1KC_ResponsibleSignatureDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1KCMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('ResponsibleSignatureDate', 'regca:ResponsibleSignatureDate')) or string($ReportType) eq 'http://luca.pacioli.ai/report#SpecialFinancialReportMember' or string($Amend) eq 'true'"/>
+    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1KC_ResponsibleSignatureDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1KCMember' or count($X) gt 0 or string($ReportType) eq 'http://luca.pacioli.ai/report#SpecialFinancialReportMember' or string($Amend) eq 'true'"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_DocumentType" bindAsSequence="false"/>
     <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_DocumentType" name="DocumentType" order="1"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_DocumentType_concept">
@@ -14319,24 +14287,8 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_typed2" complement="false" cover="true" order="3"/>
     <pf:period xlink:type="resource" xlink:label="f_X_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_period" complement="false" cover="true" order="4"/>
-    <variable:factVariable xlink:type="resource" xlink:label="v_Omitted" bindAsSequence="true" fallbackValue="()"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Omitted" name="Omitted" order="3"/>
-    <cf:conceptName xlink:type="resource" xlink:label="f_Omitted_concept">
-      <cf:concept>
-        <cf:qname>regca:OmittedDisclosureRequirement</cf:qname>
-      </cf:concept>
-    </cf:conceptName>
-    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_concept" complement="false" cover="true" order="1"/>
-    <df:typedDimension xlink:type="resource" xlink:label="f_Omitted_typed1">
-      <df:dimension>
-        <df:qname>regca:OmittedDisclosureItemIdentifierTypedAxis</df:qname>
-      </df:dimension>
-    </df:typedDimension>
-    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_typed1" complement="false" cover="true" order="2"/>
-    <pf:period xlink:type="resource" xlink:label="f_Omitted_period" test="true()"/>
-    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_period" complement="false" cover="true" order="3"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_ReportType" bindAsSequence="false" fallbackValue="()"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_ReportType" name="ReportType" order="4"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_ReportType" name="ReportType" order="3"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_ReportType_concept">
       <cf:concept>
         <cf:qname>regca:PeriodicReportType</cf:qname>
@@ -14346,7 +14298,7 @@
     <pf:period xlink:type="resource" xlink:label="f_ReportType_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_ReportType" xlink:to="f_ReportType_period" complement="false" cover="true" order="2"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_Amend" bindAsSequence="false" fallbackValue="()"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Amend" name="Amend" order="5"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Amend" name="Amend" order="4"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_Amend_concept">
       <cf:concept>
         <cf:qname>regca:AmendmentIndicator</cf:qname>
@@ -14357,9 +14309,28 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Amend" xlink:to="f_Amend_period" complement="false" cover="true" order="2"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_COVER_01" aspectModel="dimensional" implicitFiltering="true" test="count($DocumentTypes) eq 1"/>
-    <variable:factVariable xlink:type="resource" xlink:label="v_DocumentTypes" bindAsSequence="true"/>
-    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_DocumentTypes" name="DocumentTypes" order="1"/>
+    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_COVER_01" aspectModel="dimensional" implicitFiltering="true" test="count(distinct-values(for $d in $DocumentTypes return tokenize(normalize-space(string($d)), ' '))) eq 1"/>
+    <variable:factVariable xlink:type="resource" xlink:label="v_Filing" bindAsSequence="true" matches="true"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Filing" name="Filing" order="1"/>
+    <cf:conceptName xlink:type="resource" xlink:label="f_Filing_concept">
+      <cf:concept>
+        <cf:qname>regca:IssuerName</cf:qname>
+      </cf:concept>
+      <cf:concept>
+        <cf:qname>regca:DocumentDate</cf:qname>
+      </cf:concept>
+      <cf:concept>
+        <cf:qname>regca:FilingMerkleRoot</cf:qname>
+      </cf:concept>
+      <cf:concept>
+        <cf:qname>regca:TaxonomyEntryPointAddress</cf:qname>
+      </cf:concept>
+    </cf:conceptName>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Filing" xlink:to="f_Filing_concept" complement="false" cover="true" order="1"/>
+    <pf:period xlink:type="resource" xlink:label="f_Filing_period" test="true()"/>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Filing" xlink:to="f_Filing_period" complement="false" cover="true" order="2"/>
+    <variable:factVariable xlink:type="resource" xlink:label="v_DocumentTypes" bindAsSequence="true" matches="true" fallbackValue="()"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_DocumentTypes" name="DocumentTypes" order="2"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_DocumentTypes_concept">
       <cf:concept>
         <cf:qname>regca:DocumentType</cf:qname>
@@ -20914,7 +20885,7 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Cap" xlink:to="f_Cap_typed1" complement="false" cover="true" order="2"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_S103_PreviousFilingMerkleRoot" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#StartupRule103DisclosureMember' or count($X) gt 0"/>
+    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_S103_PreviousFilingMerkleRoot" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#StartupRule103DisclosureMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PreviousFilingMerkleRoot', 'regca:PreviousFilingMerkleRoot'))"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_DocumentType" bindAsSequence="false"/>
     <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_DocumentType" name="DocumentType" order="1"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_DocumentType_concept">
@@ -20935,9 +20906,25 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_concept" complement="false" cover="true" order="1"/>
     <pf:period xlink:type="resource" xlink:label="f_X_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_period" complement="false" cover="true" order="2"/>
+    <variable:factVariable xlink:type="resource" xlink:label="v_Omitted" bindAsSequence="true" fallbackValue="()"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Omitted" name="Omitted" order="3"/>
+    <cf:conceptName xlink:type="resource" xlink:label="f_Omitted_concept">
+      <cf:concept>
+        <cf:qname>regca:OmittedDisclosureRequirement</cf:qname>
+      </cf:concept>
+    </cf:conceptName>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_concept" complement="false" cover="true" order="1"/>
+    <df:typedDimension xlink:type="resource" xlink:label="f_Omitted_typed1">
+      <df:dimension>
+        <df:qname>regca:OmittedDisclosureItemIdentifierTypedAxis</df:qname>
+      </df:dimension>
+    </df:typedDimension>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_typed1" complement="false" cover="true" order="2"/>
+    <pf:period xlink:type="resource" xlink:label="f_Omitted_period" test="true()"/>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_period" complement="false" cover="true" order="3"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_S103_PreviousFilingDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#StartupRule103DisclosureMember' or count($X) gt 0"/>
+    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_S103_PreviousFilingDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#StartupRule103DisclosureMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PreviousFilingDate', 'regca:PreviousFilingDate'))"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_DocumentType" bindAsSequence="false"/>
     <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_DocumentType" name="DocumentType" order="1"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_DocumentType_concept">
@@ -20958,6 +20945,22 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_concept" complement="false" cover="true" order="1"/>
     <pf:period xlink:type="resource" xlink:label="f_X_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_period" complement="false" cover="true" order="2"/>
+    <variable:factVariable xlink:type="resource" xlink:label="v_Omitted" bindAsSequence="true" fallbackValue="()"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Omitted" name="Omitted" order="3"/>
+    <cf:conceptName xlink:type="resource" xlink:label="f_Omitted_concept">
+      <cf:concept>
+        <cf:qname>regca:OmittedDisclosureRequirement</cf:qname>
+      </cf:concept>
+    </cf:conceptName>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_concept" complement="false" cover="true" order="1"/>
+    <df:typedDimension xlink:type="resource" xlink:label="f_Omitted_typed1">
+      <df:dimension>
+        <df:qname>regca:OmittedDisclosureItemIdentifierTypedAxis</df:qname>
+      </df:dimension>
+    </df:typedDimension>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_typed1" complement="false" cover="true" order="2"/>
+    <pf:period xlink:type="resource" xlink:label="f_Omitted_period" test="true()"/>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_period" complement="false" cover="true" order="3"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
     <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_S103_FilingMerkleRoot" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#StartupRule103DisclosureMember' or count($X) gt 0"/>
@@ -21029,7 +21032,7 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_period" complement="false" cover="true" order="2"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
+    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PreviousFilingMerkleRoot', 'regca:PreviousFilingMerkleRoot'))"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_DocumentType" bindAsSequence="false"/>
     <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_DocumentType" name="DocumentType" order="1"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_DocumentType_concept">
@@ -21050,9 +21053,25 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_concept" complement="false" cover="true" order="1"/>
     <pf:period xlink:type="resource" xlink:label="f_X_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_period" complement="false" cover="true" order="2"/>
+    <variable:factVariable xlink:type="resource" xlink:label="v_Omitted" bindAsSequence="true" fallbackValue="()"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Omitted" name="Omitted" order="3"/>
+    <cf:conceptName xlink:type="resource" xlink:label="f_Omitted_concept">
+      <cf:concept>
+        <cf:qname>regca:OmittedDisclosureRequirement</cf:qname>
+      </cf:concept>
+    </cf:conceptName>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_concept" complement="false" cover="true" order="1"/>
+    <df:typedDimension xlink:type="resource" xlink:label="f_Omitted_typed1">
+      <df:dimension>
+        <df:qname>regca:OmittedDisclosureItemIdentifierTypedAxis</df:qname>
+      </df:dimension>
+    </df:typedDimension>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_typed1" complement="false" cover="true" order="2"/>
+    <pf:period xlink:type="resource" xlink:label="f_Omitted_period" test="true()"/>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_period" complement="false" cover="true" order="3"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1CRYPTO_PreviousFilingDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
+    <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1CRYPTO_PreviousFilingDate" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PreviousFilingDate', 'regca:PreviousFilingDate'))"/>
     <variable:factVariable xlink:type="resource" xlink:label="v_DocumentType" bindAsSequence="false"/>
     <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_DocumentType" name="DocumentType" order="1"/>
     <cf:conceptName xlink:type="resource" xlink:label="f_DocumentType_concept">
@@ -21073,6 +21092,22 @@
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_concept" complement="false" cover="true" order="1"/>
     <pf:period xlink:type="resource" xlink:label="f_X_period" test="true()"/>
     <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_X" xlink:to="f_X_period" complement="false" cover="true" order="2"/>
+    <variable:factVariable xlink:type="resource" xlink:label="v_Omitted" bindAsSequence="true" fallbackValue="()"/>
+    <variable:variableArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="assertion" xlink:to="v_Omitted" name="Omitted" order="3"/>
+    <cf:conceptName xlink:type="resource" xlink:label="f_Omitted_concept">
+      <cf:concept>
+        <cf:qname>regca:OmittedDisclosureRequirement</cf:qname>
+      </cf:concept>
+    </cf:conceptName>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_concept" complement="false" cover="true" order="1"/>
+    <df:typedDimension xlink:type="resource" xlink:label="f_Omitted_typed1">
+      <df:dimension>
+        <df:qname>regca:OmittedDisclosureItemIdentifierTypedAxis</df:qname>
+      </df:dimension>
+    </df:typedDimension>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_typed1" complement="false" cover="true" order="2"/>
+    <pf:period xlink:type="resource" xlink:label="f_Omitted_period" test="true()"/>
+    <variable:variableFilterArc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="v_Omitted" xlink:to="f_Omitted_period" complement="false" cover="true" order="3"/>
   </gen:link>
   <gen:link xmlns:gen="http://xbrl.org/2008/generic" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:variable="http://xbrl.org/2008/variable" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:regca="http://luca.pacioli.ai/report" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
     <va:valueAssertion xlink:type="resource" xlink:label="assertion" id="REGCA_REQ_1CRYPTO_FilingMerkleRoot" aspectModel="dimensional" implicitFiltering="true" test="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
