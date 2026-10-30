@@ -24,6 +24,9 @@
     "cmns-qtu": "https://www.omg.org/spec/Commons/QuantitiesAndUnits/",
     "cmns-rlcmp": "https://www.omg.org/spec/Commons/RolesAndCompositions/",
     "cmns-txt": "https://www.omg.org/spec/Commons/TextDatatype/",
+    "cmns-lang": "https://www.omg.org/spec/Commons/Languages/",
+    "mvf": "https://www.omg.org/spec/MVF/MultipleVocabularyFacility/",
+    "lcc-639-1": "https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/",
     "sbrm-mm": "https://accounting.auditchain.finance/sbrm/2026/metamodel/",
     "xbrlb": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/",
     "regca": "http://luca.pacioli.ai/report#",
@@ -177,6 +180,21 @@
       "@type": "@id"
     },
     "sbrm-mm:correspondsToMetamodelElement": {
+      "@type": "@id"
+    },
+    "mvf:hasMVFEntry": {
+      "@type": "@id"
+    },
+    "cmns-col:isIncludedIn": {
+      "@type": "@id"
+    },
+    "cmns-dsg:denotes": {
+      "@type": "@id"
+    },
+    "cmns-lang:hasLanguage": {
+      "@type": "@id"
+    },
+    "owl:sameAs": {
       "@type": "@id"
     },
     "sbrm-mm:hasFragment": {

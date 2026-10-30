@@ -1,11 +1,11 @@
 {
   "run": {
     "tool": "sbrm-regca-build 1.0",
-    "run_at": "2026-10-30T12:52:47+00:00",
+    "run_at": "2026-10-30T18:02:58+00:00",
     "inputs": {
       "M1": {
-        "file": "Reg CA Complete Model 2026-10-18.json",
-        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+        "file": "Reg CA Complete Model of Record 2026-10-18.json",
+        "sha256": "7ce7270d3d55faa9683081e705695c1002594868f1d62a67dd397e5ad8d9b51f"
       },
       "M2": {
         "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
@@ -19,7 +19,7 @@
   "round_trip": {
     "M1": {
       "byte_exact": true,
-      "bytes": 5660955,
+      "bytes": 5688878,
       "layer_b_regenerated": true
     },
     "M2": {
@@ -31,12 +31,12 @@
   "json_ld": {
     "parse": {
       "complete-2026-10-18/regca-complete.definition.jsonld": {
-        "rdflib_quads": 67665,
-        "pyld_quads": 67665
+        "rdflib_quads": 84994,
+        "pyld_quads": 84994
       },
       "form-1-crypto-second-offering/regca-1-crypto.definition.jsonld": {
-        "rdflib_quads": 52842,
-        "pyld_quads": 52842
+        "rdflib_quads": 65565,
+        "pyld_quads": 65565
       },
       "form-1-crypto-second-offering/regca-1-crypto.report.jsonld": {
         "rdflib_quads": 14293,
@@ -165,6 +165,29 @@
       "stake share +0.00005, within the 0.0001 tolerance (must NOT fire)": true
     }
   },
+  "ontology_linking": {
+    "ok": true,
+    "failures": [],
+    "complete-2026-10-18": {
+      "report_elements": 975,
+      "mvf_entries": 975,
+      "vocabulary_entries": 1950,
+      "xbrl_elements_resolved": 975,
+      "semantic_references": 1674,
+      "mvf_restriction_violation_count": 0,
+      "problem_count": 0
+    },
+    "form-1-crypto-second-offering": {
+      "report_elements": 733,
+      "mvf_entries": 733,
+      "vocabulary_entries": 1466,
+      "xbrl_elements_resolved": 733,
+      "semantic_references": 1422,
+      "mvf_restriction_violation_count": 0,
+      "problem_count": 0
+    },
+    "controls_caught": "5/5"
+  },
   "xbrl_generated": {
     "M1": {
       "elements": 975,
@@ -211,20 +234,20 @@
       "differing_sequence_only": 0
     },
     "Labels": {
-      "M1_records": 1261,
+      "M1_records": 1349,
       "M2_records": 1031,
       "only_in_M1": 318,
-      "only_in_M2": 88,
-      "differing_content": 29,
+      "only_in_M2": 0,
+      "differing_content": 0,
       "differing_sequence_only": 0
     },
     "References": {
-      "M1_records": 2619,
+      "M1_records": 2629,
       "M2_records": 2229,
       "only_in_M1": 402,
-      "only_in_M2": 10,
+      "only_in_M2": 0,
       "differing_content": 0,
-      "differing_sequence_only": 2206
+      "differing_sequence_only": 2216
     },
     "Structures": {
       "M1_records": 66,
@@ -271,8 +294,8 @@
       "M2_records": 212,
       "only_in_M1": 277,
       "only_in_M2": 0,
-      "differing_content": 4,
-      "differing_sequence_only": 207
+      "differing_content": 0,
+      "differing_sequence_only": 211
     }
   },
   "lucasuite": {
@@ -285,8 +308,8 @@
       "stored_rows": {
         "BaseInformation": 7,
         "ReportElement": 975,
-        "Labels": 1261,
-        "References": 2619,
+        "Labels": 1349,
+        "References": 2629,
         "Structures": 66,
         "Associations": 1394,
         "Rules": 498
@@ -308,13 +331,18 @@
       }
     },
     "imported_schemas_fetched": 6,
-    "controls_caught": "11/11"
+    "controls_caught": "10/10"
+  },
+  "xbrl_ingestion": {
+    "ok": true,
+    "failures": [],
+    "seconds": 42.0
   },
   "inputs_unchanged": true,
   "outputs": {
-    "complete-2026-10-18/regca-complete.definition.jsonld": 8228308,
-    "form-1-crypto-second-offering/regca-1-crypto.definition.jsonld": 5814695,
-    "form-1-crypto-second-offering/regca-1-crypto.report.jsonld": 1126954
+    "complete-2026-10-18/regca-complete.definition.jsonld": 10088187,
+    "form-1-crypto-second-offering/regca-1-crypto.definition.jsonld": 7169571,
+    "form-1-crypto-second-offering/regca-1-crypto.report.jsonld": 1127445
   },
   "postbuild_arelle": {
     "ok": true,
@@ -363,6 +391,6 @@
     },
     "assumption_holds": true
   },
-  "seconds": 194.0,
+  "seconds": 299.0,
   "failures": []
 }

@@ -1,11 +1,11 @@
 {
   "run": {
     "tool": "sbrm-regca-build 1.0",
-    "run_at": "2026-10-30T12:52:47+00:00",
+    "run_at": "2026-10-30T18:02:58+00:00",
     "inputs": {
       "M1": {
-        "file": "Reg CA Complete Model 2026-10-18.json",
-        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+        "file": "Reg CA Complete Model of Record 2026-10-18.json",
+        "sha256": "7ce7270d3d55faa9683081e705695c1002594868f1d62a67dd397e5ad8d9b51f"
       },
       "M2": {
         "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
@@ -15,9 +15,9 @@
   },
   "results": {
     "M1": {
-      "original": "Reg CA Complete Model 2026-10-18.json",
-      "original_bytes": 5660955,
-      "rebuilt_bytes": 5660955,
+      "original": "Reg CA Complete Model of Record 2026-10-18.json",
+      "original_bytes": 5688878,
+      "rebuilt_bytes": 5688878,
       "byte_exact": true,
       "structural_difference": null,
       "record_counts": {
@@ -30,12 +30,12 @@
           "rebuilt": 975
         },
         "Labels": {
-          "base": 1261,
-          "rebuilt": 1261
+          "base": 1349,
+          "rebuilt": 1349
         },
         "References": {
-          "base": 2619,
-          "rebuilt": 2619
+          "base": 2629,
+          "rebuilt": 2629
         },
         "Structures": {
           "base": 66,

@@ -1,0 +1,992 @@
+{
+  "run": {
+    "tool": "sbrm-regca-xbrl-ingest 1.0",
+    "run_at": "2026-10-30T18:06:07+00:00",
+    "seconds": 42.0,
+    "inputs": {
+      "entry_point": "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd",
+      "entry_point_package": {
+        "entrypoint.xsd": "61cc8c0d60cb30bb41da606c7c37a8b94ade8b95d9868220bd5682befa7714b1",
+        "report-lab.xml": "f9953393957278260e892b192852978fc1eb8e6fb31c4a4a9fe7e777157d6530",
+        "report.xsd": "eb79842d699889359166576e7a20225ec10ba7d54f3850aefbffa426a5d94547",
+        "report-ref.xml": "12c3b3ee56f0d92cd6ec542fe38898a02bf3742c2080008ba8c5e8171f454241",
+        "report-pre.xml": "8110a150694f9ec131f58374aa5eb452332e06c7c248e5904eb2570ac756e404",
+        "roles.xsd": "671405eafc2d3fc22087d9d2595ce412caa4634ed0e213d962e391a2adfb37fb",
+        "report-cal.xml": "4e98420d3e813c0dd635d331d74862f4b833cd63fe8bdeefe418ecabaf92b8f3",
+        "report-def.xml": "69b10f71296f7bde33b30bde7e78ffa7559aad74397b083ba2f57d1676fa1bc9",
+        "report-for.xml": "99eeeed168669fc74219a60ac88b79a3e44a0ae4ce61ccdd26be668b1127e362"
+      },
+      "package_files_same_as_served_now": {
+        "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/entrypoint.xsd": true,
+        "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/report-lab.xml": true,
+        "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/report.xsd": true,
+        "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/report-ref.xml": true,
+        "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/report-pre.xml": true,
+        "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/roles.xsd": true,
+        "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/report-cal.xml": true,
+        "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/report-def.xml": true,
+        "https://raw.githubusercontent.com/Auditchain/sec-reg-ca-taxonomy/main/SBRM/report-for.xml": true
+      },
+      "instance": {
+        "file": "xbrl/form-1-crypto-second-offering/instance.xml",
+        "sha256": "7fee5d35b88c507602d44fa63aa02ccb4b7fa806e7c6310969942d9bc51f8c92"
+      },
+      "model_of_record_taxonomy": {
+        "file": "Reg CA Complete Model of Record 2026-10-18.json",
+        "sha256": "7ce7270d3d55faa9683081e705695c1002594868f1d62a67dd397e5ad8d9b51f"
+      },
+      "model_of_record_report": {
+        "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+        "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1"
+      },
+      "original_sbrm_report": {
+        "form-1-crypto-second-offering/regca-1-crypto.definition.jsonld": "803790055afffbb5901006bb899d10ace8ab740ed268a29dfd74a780626e6f12",
+        "form-1-crypto-second-offering/regca-1-crypto.report.jsonld": "32f3363b490974b74f9d1b588de4b0e947fcb0dd0dcda1f7638eb26b2d790371"
+      }
+    }
+  },
+  "ok": true,
+  "failures": [],
+  "taxonomy_ingestion": {
+    "conformance_point": "XBRL taxonomy ingestion: convert an XBRL-compliant taxonomy to an SBRM report definition",
+    "arelle_messages": [],
+    "arc_mapping": {
+      "arcs_in_package_linkbases": {
+        "http://www.xbrl.org/2003/arcrole/concept-label": 2324,
+        "http://www.xbrl.org/2003/arcrole/concept-reference": 2629,
+        "http://www.xbrl.org/2003/arcrole/parent-child": 766,
+        "https://xbrl.org/2023/arcrole/summation-item": 38,
+        "http://xbrl.org/int/dim/arcrole/all": 43,
+        "http://xbrl.org/int/dim/arcrole/hypercube-dimension": 51,
+        "http://xbrl.org/int/dim/arcrole/domain-member": 496,
+        "http://xbrl.org/arcrole/2008/element-label": 5,
+        "http://xbrl.org/arcrole/2008/variable-set": 1745,
+        "http://xbrl.org/arcrole/2008/variable-filter": 3788
+      },
+      "arcs_mapped": {
+        "http://www.xbrl.org/2003/arcrole/concept-label": 2324,
+        "http://www.xbrl.org/2003/arcrole/concept-reference": 2629,
+        "http://www.xbrl.org/2003/arcrole/parent-child": 766,
+        "http://xbrl.org/int/dim/arcrole/all": 43,
+        "http://xbrl.org/int/dim/arcrole/hypercube-dimension": 51,
+        "http://xbrl.org/int/dim/arcrole/domain-member": 496,
+        "https://xbrl.org/2023/arcrole/summation-item": 38,
+        "http://xbrl.org/arcrole/2008/element-label": 5,
+        "http://xbrl.org/arcrole/2008/variable-set": 1745,
+        "http://xbrl.org/arcrole/2008/variable-filter": 3788
+      },
+      "all_arcs_mapped": true
+    },
+    "formula_links_mapped": {
+      "declarative": 5,
+      "nonstandard": 489
+    },
+    "labels_of_non_report_elements_skipped": 0,
+    "standard_labels_written_twice_by_the_export": 975,
+    "mapping_conventions": [
+      "BaseInformation: the model schema gives the namespace, prefix and location; its imports other than XBRL specification schemas and package-local schemas are the model imports",
+      "Terms: category from the substitution group, the domain item type and abstract (LineItems when the source of an all arc); Datatype from the item type; a typed-domain element is the Domain of its TypedDimension; enum2 domain, headUsable and linkrole give Domain, HeadUsable and ExtendedLinkRole, the default linkrole <ns>/role/<prefix>_<Domain> mapping to an empty field",
+      "Labels: the export writes each standard label twice (from the labels and from the term); the repeat is the term's",
+      "Structures: the package role types except enumeration-domain roles (those an enum2:linkrole names)",
+      "Associations: grouped by structure (Presentation, Definition, Calculation), then the enumeration domains; Sequence is the arc order; use=\"optional\" and priority=\"1\" are the export's values for empty fields; ExtendedLinkRoleSchemaLocation names the role in the model schema (the package declares role types in roles.xsd, which the model schema imports)",
+      "Rules: a formula link in a structure's link role is its consistency rule, or roll-forward rule when a variable has an instant-duration filter, ConceptAspect being the first variable's concept; a link in the standard link role is a nonstandard rule, its XML written in the base serialization",
+      "Facts: entity \" | <identifier>\" for the LEI scheme; period instant or \"start | end\"; unit ISO 4217 code or Pure; Rounding from decimals; JSON numbers for numeric items and for typed-domain values of numeric type"
+    ],
+    "outputs": {
+      "base_information": {
+        "file": "xbrl-ingestion/complete-2026-10-18/regca-complete.from-xbrl.json",
+        "sha256": "e3a37a6ad08668d5f2c2855f5c29db8ad4f4ee892152408ba3b4c2b4def16903"
+      },
+      "regca-complete.definition.jsonld": {
+        "file": "xbrl-ingestion/complete-2026-10-18/regca-complete.definition.jsonld",
+        "sha256": "746c4926e7eac020d2d2bd5dc3f530f8002cb1916ee3f574ab3927234f458158"
+      }
+    },
+    "checks": {
+      "V-1_round_trip_byte_exact": true,
+      "V-2_json_ld_parse": {
+        "regca-complete.definition.jsonld": {
+          "rdflib_quads": 83290,
+          "pyld_quads": 83290
+        }
+      },
+      "V-3_vocabulary_closure": {
+        "regca-complete.definition.jsonld": {
+          "unknown_terms": {},
+          "omg_terms_not_in_pinned_files": [],
+          "used_omg_terms_referenced_but_never_declared": [
+            "https://www.omg.org/spec/SBRM/FinancialReportElements/hasOperator"
+          ],
+          "literal_range_violations": {},
+          "ok": true
+        }
+      },
+      "V-7_definition_closure": {
+        "regca_iris_used": 975,
+        "declared": 975,
+        "undeclared": [],
+        "undeclared_count": 0,
+        "ok": true
+      },
+      "V-2_json_ld_parse_ok": true,
+      "ok": true
+    },
+    "correspondence_with_model_of_record": {
+      "BaseInformation": {
+        "ingested": 7,
+        "source": 7,
+        "matched": 7,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 6,
+        "same_position": 2,
+        "same_field_order": 7,
+        "fields": {
+          "Code": {
+            "match": 7,
+            "differ": 0
+          },
+          "NamespacePrefix": {
+            "match": 7,
+            "differ": 0
+          },
+          "NamespaceIdentifier": {
+            "match": 7,
+            "differ": 0
+          },
+          "SchemaLocation": {
+            "match": 7,
+            "differ": 0
+          },
+          "DefaultLanguage": {
+            "match": 7,
+            "differ": 0
+          },
+          "TaxonomyDescription": {
+            "match": 6,
+            "differ": 1
+          }
+        }
+      },
+      "Terms": {
+        "ingested": 975,
+        "source": 975,
+        "matched": 975,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 975,
+        "same_position": 291,
+        "same_field_order": 975,
+        "fields": {
+          "Prefix": {
+            "match": 975,
+            "differ": 0
+          },
+          "ReportElementCategory": {
+            "match": 975,
+            "differ": 0
+          },
+          "StandardLabel": {
+            "match": 975,
+            "differ": 0
+          },
+          "ReportElementName": {
+            "match": 975,
+            "differ": 0
+          },
+          "Datatype": {
+            "match": 975,
+            "differ": 0
+          },
+          "CalendarPeriodType": {
+            "match": 975,
+            "differ": 0
+          },
+          "BalanceType": {
+            "match": 975,
+            "differ": 0
+          },
+          "Domain": {
+            "match": 975,
+            "differ": 0
+          },
+          "HeadUsable": {
+            "match": 975,
+            "differ": 0
+          },
+          "ExtendedLinkRole": {
+            "match": 975,
+            "differ": 0
+          }
+        }
+      },
+      "Labels": {
+        "ingested": 1349,
+        "source": 1349,
+        "matched": 1349,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 1349,
+        "same_position": 981,
+        "same_field_order": 1349,
+        "fields": {
+          "ReportElementName": {
+            "match": 1349,
+            "differ": 0
+          },
+          "Language": {
+            "match": 1349,
+            "differ": 0
+          },
+          "LabelRole": {
+            "match": 1349,
+            "differ": 0
+          },
+          "Label": {
+            "match": 1349,
+            "differ": 0
+          }
+        }
+      },
+      "References": {
+        "ingested": 2629,
+        "source": 2629,
+        "matched": 2629,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 392,
+        "same_position": 392,
+        "same_field_order": 2596,
+        "fields": {
+          "ReportElementName": {
+            "match": 2629,
+            "differ": 0
+          },
+          "ReferenceRole": {
+            "match": 2629,
+            "differ": 0
+          },
+          "Publisher": {
+            "match": 2629,
+            "differ": 0
+          },
+          "Name": {
+            "match": 2629,
+            "differ": 0
+          },
+          "Number": {
+            "match": 2629,
+            "differ": 0
+          },
+          "Paragraph": {
+            "match": 2629,
+            "differ": 0
+          },
+          "URI": {
+            "match": 2629,
+            "differ": 0
+          },
+          "URIDate": {
+            "match": 2629,
+            "differ": 0
+          },
+          "Sequence": {
+            "match": 392,
+            "differ": 2237
+          }
+        }
+      },
+      "Structures": {
+        "ingested": 66,
+        "source": 66,
+        "matched": 66,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 66,
+        "same_position": 66,
+        "same_field_order": 66,
+        "fields": {
+          "StructureIdentifier": {
+            "match": 66,
+            "differ": 0
+          },
+          "StructureTitle": {
+            "match": 66,
+            "differ": 0
+          },
+          "Sequence": {
+            "match": 66,
+            "differ": 0
+          }
+        }
+      },
+      "Associations": {
+        "ingested": 1394,
+        "source": 1394,
+        "matched": 1394,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 1394,
+        "same_position": 1394,
+        "same_field_order": 1394,
+        "fields": {
+          "StructureType": {
+            "match": 1394,
+            "differ": 0
+          },
+          "StructureIdentifier": {
+            "match": 1394,
+            "differ": 0
+          },
+          "ExtendedLinkRole": {
+            "match": 1394,
+            "differ": 0
+          },
+          "ExtendedLinkRoleSchemaLocation": {
+            "match": 1394,
+            "differ": 0
+          },
+          "AssociationFromName": {
+            "match": 1394,
+            "differ": 0
+          },
+          "AssociationRole": {
+            "match": 1394,
+            "differ": 0
+          },
+          "AssociationToName": {
+            "match": 1394,
+            "differ": 0
+          },
+          "TargetRole": {
+            "match": 1394,
+            "differ": 0
+          },
+          "ContextElement": {
+            "match": 1394,
+            "differ": 0
+          },
+          "Closed": {
+            "match": 1394,
+            "differ": 0
+          },
+          "Usable": {
+            "match": 1394,
+            "differ": 0
+          },
+          "Priority": {
+            "match": 1394,
+            "differ": 0
+          },
+          "Use": {
+            "match": 1394,
+            "differ": 0
+          },
+          "CalculationPolarity": {
+            "match": 1394,
+            "differ": 0
+          },
+          "CalculationWeight": {
+            "match": 1394,
+            "differ": 0
+          },
+          "CalculationArcrole": {
+            "match": 1394,
+            "differ": 0
+          },
+          "CalculationSpecification": {
+            "match": 1394,
+            "differ": 0
+          },
+          "CalculationPriority": {
+            "match": 1394,
+            "differ": 0
+          },
+          "CalculationUse": {
+            "match": 1394,
+            "differ": 0
+          },
+          "PreferredLabelRole": {
+            "match": 1394,
+            "differ": 0
+          },
+          "Sequence": {
+            "match": 1394,
+            "differ": 0
+          }
+        }
+      },
+      "Rules-Consistency": {
+        "ingested": 3,
+        "source": 3,
+        "matched": 3,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 0,
+        "same_position": 3,
+        "same_field_order": 3,
+        "fields": {
+          "RuleType": {
+            "match": 3,
+            "differ": 0
+          },
+          "RuleCode": {
+            "match": 3,
+            "differ": 0
+          },
+          "Rule": {
+            "match": 3,
+            "differ": 0
+          },
+          "StructureIdentifier": {
+            "match": 3,
+            "differ": 0
+          },
+          "ConceptAspect": {
+            "match": 3,
+            "differ": 0
+          },
+          "Sequence": {
+            "match": 3,
+            "differ": 0
+          },
+          "Commentary": {
+            "match": 0,
+            "differ": 3
+          }
+        }
+      },
+      "Rules-RollForward": {
+        "ingested": 2,
+        "source": 2,
+        "matched": 2,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 0,
+        "same_position": 2,
+        "same_field_order": 2,
+        "fields": {
+          "RuleType": {
+            "match": 2,
+            "differ": 0
+          },
+          "RuleCode": {
+            "match": 2,
+            "differ": 0
+          },
+          "Rule": {
+            "match": 2,
+            "differ": 0
+          },
+          "StructureIdentifier": {
+            "match": 2,
+            "differ": 0
+          },
+          "ConceptAspect": {
+            "match": 2,
+            "differ": 0
+          },
+          "Sequence": {
+            "match": 2,
+            "differ": 0
+          },
+          "Commentary": {
+            "match": 0,
+            "differ": 2
+          }
+        }
+      },
+      "Rules-Derivation": {
+        "ingested": 0,
+        "source": 4,
+        "matched": 0,
+        "only_in_source": 4,
+        "only_ingested": 0,
+        "records_identical": 0,
+        "same_position": 0,
+        "same_field_order": 0,
+        "fields": {
+          "RuleType": {
+            "match": 0,
+            "differ": 0
+          },
+          "RuleCode": {
+            "match": 0,
+            "differ": 0
+          },
+          "Rule": {
+            "match": 0,
+            "differ": 0
+          },
+          "Precondition": {
+            "match": 0,
+            "differ": 0
+          },
+          "DerivedFact": {
+            "match": 0,
+            "differ": 0
+          },
+          "BasedOnSourceFact": {
+            "match": 0,
+            "differ": 0
+          },
+          "Commentary": {
+            "match": 0,
+            "differ": 0
+          },
+          "Sequence": {
+            "match": 0,
+            "differ": 0
+          }
+        }
+      },
+      "Rules-Nonstandard": {
+        "ingested": 489,
+        "source": 489,
+        "matched": 489,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 0,
+        "same_position": 334,
+        "same_field_order": 449,
+        "fields": {
+          "RuleType": {
+            "match": 489,
+            "differ": 0
+          },
+          "RuleCode": {
+            "match": 488,
+            "differ": 1
+          },
+          "Rule": {
+            "match": 489,
+            "differ": 0
+          },
+          "Sequence": {
+            "match": 334,
+            "differ": 155
+          },
+          "Commentary": {
+            "match": 0,
+            "differ": 489
+          }
+        },
+        "rule_xml_text_identical": 489,
+        "rule_xml_canonically_equal": 489
+      }
+    },
+    "sbrm_graph_against_model_of_record_conversion": {
+      "iris_renamed_by_sequence_or_rule_code": 2239,
+      "layer_a": {
+        "nodes_ingested": 6937,
+        "nodes_source": 6941,
+        "identical": 3148,
+        "differing": 3789,
+        "differing_properties": {
+          "xbrlb:sourceIndex": 3449,
+          "sbrm-mm:sequence": 2392,
+          "cmns-av:explanatoryNote": 494,
+          "xbrlb:fieldOrder": 73,
+          "@type": 4,
+          "xbrlb:sourceFile": 1,
+          "dct:description": 1,
+          "xbrlb:sourceSha256": 1,
+          "xbrlb:sections": 1,
+          "dct:identifier": 1
+        },
+        "only_ingested": [],
+        "only_source": [
+          "regca-complete:rule/REGCA_BNP_D_01",
+          "regca-complete:rule/REGCA_BNP_D_02",
+          "regca-complete:rule/REGCA_BNP_D_03",
+          "regca-complete:rule/REGCA_BNP_D_04"
+        ]
+      },
+      "layer_b": {
+        "nodes_ingested": 4058,
+        "nodes_source": 4066,
+        "identical": 4055,
+        "differing": 3,
+        "differing_properties": {
+          "cmns-col:hasMember": 2,
+          "rdfs:label": 1,
+          "sbrm-mm:hasReportLevelRule": 1
+        },
+        "only_ingested": [],
+        "only_source": [
+          "regca-complete:expr/REGCA_BNP_D_01",
+          "regca-complete:expr/REGCA_BNP_D_02",
+          "regca-complete:expr/REGCA_BNP_D_03",
+          "regca-complete:expr/REGCA_BNP_D_04",
+          "regca-complete:rule/REGCA_BNP_D_01",
+          "regca-complete:rule/REGCA_BNP_D_02",
+          "regca-complete:rule/REGCA_BNP_D_03",
+          "regca-complete:rule/REGCA_BNP_D_04"
+        ]
+      }
+    },
+    "not_carried_by_xbrl": [
+      {
+        "section": "BaseInformation",
+        "field": "TaxonomyDescription",
+        "records": 1,
+        "cause": "no XBRL construct carries the model description"
+      },
+      {
+        "section": "BaseInformation",
+        "field": "(record order)",
+        "records": 5,
+        "cause": "XBRL does not order schema imports; ingestion keeps the order of report.xsd"
+      },
+      {
+        "section": "Terms",
+        "field": "(record order)",
+        "records": 684,
+        "cause": "XBRL does not order element declarations; ingestion keeps the order of report.xsd"
+      },
+      {
+        "section": "Labels",
+        "field": "(record order)",
+        "records": 368,
+        "cause": "XBRL does not order labels; ingestion keeps linkbase order"
+      },
+      {
+        "section": "References",
+        "field": "Sequence",
+        "records": 2237,
+        "cause": "the base numbers references by record position, which XBRL does not carry; ingestion numbers them in linkbase order"
+      },
+      {
+        "section": "References",
+        "field": "(record order)",
+        "records": 2237,
+        "cause": "XBRL does not order references; ingestion keeps linkbase order"
+      },
+      {
+        "section": "References",
+        "field": "(field order)",
+        "records": 33,
+        "cause": "JSON key order of a record is not an XBRL property"
+      },
+      {
+        "section": "Rules-Consistency",
+        "field": "Commentary",
+        "records": 3,
+        "cause": "rule commentary is not exported to the formula linkbase"
+      },
+      {
+        "section": "Rules-RollForward",
+        "field": "Commentary",
+        "records": 2,
+        "cause": "rule commentary is not exported to the formula linkbase"
+      },
+      {
+        "section": "Rules-Derivation",
+        "field": "(records)",
+        "records": 4,
+        "cause": "derivation rules are exported only as their XML twins among the nonstandard rules"
+      },
+      {
+        "section": "Rules-Nonstandard",
+        "field": "RuleCode",
+        "records": 1,
+        "cause": "a link that holds only parameters has no identifier; ingestion names it"
+      },
+      {
+        "section": "Rules-Nonstandard",
+        "field": "Sequence",
+        "records": 155,
+        "cause": "XBRL does not order formula links; ingestion numbers them in linkbase order"
+      },
+      {
+        "section": "Rules-Nonstandard",
+        "field": "Commentary",
+        "records": 489,
+        "cause": "rule commentary is not exported to the formula linkbase"
+      },
+      {
+        "section": "Rules-Nonstandard",
+        "field": "(record order)",
+        "records": 155,
+        "cause": "XBRL does not order formula links; ingestion keeps linkbase order"
+      },
+      {
+        "section": "Rules-Nonstandard",
+        "field": "(field order)",
+        "records": 40,
+        "cause": "JSON key order of a record is not an XBRL property"
+      }
+    ],
+    "unexplained_differences": []
+  },
+  "report_ingestion": {
+    "conformance_point": "XBRL report ingestion: convert an XBRL-compliant report to an SBRM report",
+    "arelle_messages": [],
+    "definition_sections_from": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+    "outputs": {
+      "base_information": {
+        "file": "xbrl-ingestion/form-1-crypto-second-offering/regca-1-crypto.from-xbrl.json",
+        "sha256": "4d6b4fec5394095f5d07c26a8fe1b142a030bdd129004323ae6c7159c2e6927c"
+      },
+      "regca-1-crypto.definition.jsonld": {
+        "file": "xbrl-ingestion/form-1-crypto-second-offering/regca-1-crypto.definition.jsonld",
+        "sha256": "44288a53a9e938c1ba91b9529668b01f4221689f09003e08bd65c0bf597082f7"
+      },
+      "regca-1-crypto.report.jsonld": {
+        "file": "xbrl-ingestion/form-1-crypto-second-offering/regca-1-crypto.report.jsonld",
+        "sha256": "e967e89011166034b90839cfd7f0700f9ce129dad1b488c7b1a672322fc660e3"
+      }
+    },
+    "checks": {
+      "V-1_round_trip_byte_exact": true,
+      "V-2_json_ld_parse": {
+        "regca-1-crypto.definition.jsonld": {
+          "rdflib_quads": 65565,
+          "pyld_quads": 65565
+        },
+        "regca-1-crypto.report.jsonld": {
+          "rdflib_quads": 14270,
+          "pyld_quads": 14270
+        }
+      },
+      "V-3_vocabulary_closure": {
+        "regca-1-crypto.definition.jsonld": {
+          "unknown_terms": {},
+          "omg_terms_not_in_pinned_files": [],
+          "used_omg_terms_referenced_but_never_declared": [
+            "https://www.omg.org/spec/SBRM/FinancialReportElements/hasOperator"
+          ],
+          "literal_range_violations": {},
+          "ok": true
+        },
+        "regca-1-crypto.report.jsonld": {
+          "unknown_terms": {},
+          "omg_terms_not_in_pinned_files": [],
+          "used_omg_terms_referenced_but_never_declared": [],
+          "literal_range_violations": {},
+          "ok": true
+        }
+      },
+      "V-7_definition_closure": {
+        "regca_iris_used": 733,
+        "declared": 733,
+        "undeclared": [],
+        "undeclared_count": 0,
+        "ok": true
+      },
+      "V-2_json_ld_parse_ok": true,
+      "V-8_structure": {
+        "ok": true,
+        "facts": 1169,
+        "errors": 0,
+        "by_check": {}
+      },
+      "V-9_rules": {
+        "ok": true,
+        "patterns": {
+          "Roll-ups (calculation)": {
+            "pass": 20,
+            "fail": 0,
+            "not_evaluable": 1,
+            "not_applicable": 0
+          },
+          "Roll-forward SubjectCryptoAssetSupplyOutstanding": {
+            "pass": 0,
+            "fail": 0,
+            "not_evaluable": 1,
+            "not_applicable": 0
+          },
+          "Roll-forward CashAndCashEquivalents": {
+            "pass": 2,
+            "fail": 0,
+            "not_evaluable": 0,
+            "not_applicable": 0
+          },
+          "Roll-forward Equity": {
+            "pass": 2,
+            "fail": 0,
+            "not_evaluable": 0,
+            "not_applicable": 0
+          },
+          "REGCA_BNP_D_01": {
+            "pass": 2,
+            "fail": 0,
+            "not_evaluable": 0,
+            "not_applicable": 1
+          },
+          "REGCA_BNP_D_02": {
+            "pass": 0,
+            "fail": 0,
+            "not_evaluable": 0,
+            "not_applicable": 3
+          },
+          "REGCA_BNP_D_03": {
+            "pass": 2,
+            "fail": 0,
+            "not_evaluable": 0,
+            "not_applicable": 1
+          },
+          "REGCA_BNP_D_04": {
+            "pass": 0,
+            "fail": 0,
+            "not_evaluable": 0,
+            "not_applicable": 3
+          },
+          "REGCA_BNP_TIE_01": {
+            "pass": 3,
+            "fail": 0,
+            "not_evaluable": 0,
+            "not_applicable": 0
+          },
+          "REGCA_C_BS_01": {
+            "pass": 2,
+            "fail": 0,
+            "not_evaluable": 0,
+            "not_applicable": 0
+          },
+          "REGCA_C_OFFER_01": {
+            "pass": 1,
+            "fail": 0,
+            "not_evaluable": 0,
+            "not_applicable": 0
+          }
+        }
+      },
+      "ok": true,
+      "V-9_same_results_as_original_report": true
+    },
+    "correspondence_with_model_of_record": {
+      "Facts": {
+        "ingested": 1169,
+        "source": 1169,
+        "matched": 1169,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 0,
+        "same_position": 1169,
+        "same_field_order": 1169,
+        "fields": {
+          "ReportingEntityAspect": {
+            "match": 0,
+            "differ": 1169
+          },
+          "CalendarPeriodAspect": {
+            "match": 1169,
+            "differ": 0
+          },
+          "ConceptAspect": {
+            "match": 1169,
+            "differ": 0
+          },
+          "FactValue": {
+            "match": 1146,
+            "differ": 23
+          },
+          "Units": {
+            "match": 1169,
+            "differ": 0
+          },
+          "Rounding": {
+            "match": 1169,
+            "differ": 0
+          },
+          "FactID": {
+            "match": 1169,
+            "differ": 0
+          },
+          "Sequence": {
+            "match": 9,
+            "differ": 1160
+          }
+        }
+      },
+      "Facts-Dimensions": {
+        "ingested": 1086,
+        "source": 1086,
+        "matched": 1086,
+        "only_in_source": 0,
+        "only_ingested": 0,
+        "records_identical": 1086,
+        "same_position": 1086,
+        "same_field_order": 1086,
+        "fields": {
+          "FactID": {
+            "match": 1086,
+            "differ": 0
+          },
+          "Dimension": {
+            "match": 1086,
+            "differ": 0
+          },
+          "Member": {
+            "match": 1086,
+            "differ": 0
+          },
+          "Value": {
+            "match": 1086,
+            "differ": 0
+          },
+          "Sequence": {
+            "match": 1086,
+            "differ": 0
+          }
+        }
+      }
+    },
+    "fact_value_differences": {
+      "string fact written as a JSON number in the source": 20,
+      "same number, source written in exponent notation": 3
+    },
+    "facts_against_original_sbrm_report": {
+      "ingested": 1169,
+      "source": 1169,
+      "matched_by_fact_id": 1169,
+      "corresponding_on_every_aspect": 1169,
+      "per_aspect": {
+        "class": 1169,
+        "period": 1169,
+        "entity": 1169,
+        "value": 1169,
+        "unit": 1169,
+        "decimals": 1169,
+        "typed_dimensions": 1169
+      },
+      "json_form_only_differences": {
+        "xbrlb:jsonValueKind": 20,
+        "xbrlb:jsonLexical": 3
+      }
+    },
+    "report_layer_b_against_original": {
+      "nodes_ingested": 50,
+      "nodes_source": 50,
+      "identical": 49,
+      "differing": 1,
+      "differing_properties": {
+        "rdfs:label": 1
+      },
+      "only_ingested": [],
+      "only_source": []
+    },
+    "not_carried_by_xbrl": [
+      {
+        "section": "Facts",
+        "field": "ReportingEntityAspect",
+        "records": 1169,
+        "cause": "the entity name token; an XBRL context carries only the identifier scheme and value"
+      },
+      {
+        "section": "Facts",
+        "field": "FactValue",
+        "records": 23,
+        "cause": "JSON form of the value: string facts written as JSON numbers, and exponent notation of numbers"
+      },
+      {
+        "section": "Facts",
+        "field": "Sequence",
+        "records": 1160,
+        "cause": "XBRL facts have no sequence number; ingestion numbers them in document order"
+      }
+    ],
+    "unexplained_differences": []
+  }
+}

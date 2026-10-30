@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-30T12:55:02+00:00",
+  "run_at": "2026-10-30T18:06:49+00:00",
   "arelle_version": "2.47.3",
   "models": {
     "complete-2026-10-18": {
@@ -7,8 +7,8 @@
         "report.xsd": 257664,
         "definition.xml": 246872,
         "calculation.xml": 16410,
-        "label.xml": 656722,
-        "formula.xml": 2286700
+        "label.xml": 680167,
+        "formula.xml": 2289412
       },
       "stale_or_missing_files": [],
       "taxonomy": {

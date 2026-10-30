@@ -1,11 +1,11 @@
 {
   "run": {
     "tool": "sbrm-regca-build 1.0",
-    "run_at": "2026-10-30T12:52:47+00:00",
+    "run_at": "2026-10-30T18:02:58+00:00",
     "inputs": {
       "M1": {
-        "file": "Reg CA Complete Model 2026-10-18.json",
-        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+        "file": "Reg CA Complete Model of Record 2026-10-18.json",
+        "sha256": "7ce7270d3d55faa9683081e705695c1002594868f1d62a67dd397e5ad8d9b51f"
       },
       "M2": {
         "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
@@ -118,7 +118,7 @@
           "expression/REGCA_C_OFFER_01",
           "rollup/regca-22-offering/EstimatedNetOfferingProceeds"
         ],
-        "example_message": "regca:EstimatedNetOfferingProceeds (38693750) does not equal the sum of its inputs (38693751) in regca-22-offering",
+        "example_message": "REGCA_C_OFFER_01: reported 41875001 but $AggregateOfferingPrice = $UnitsOfCoveredInvestmentContractsOffered * $PurchasePricePerUnit gives 41875000",
         "ok": true
       },
       {

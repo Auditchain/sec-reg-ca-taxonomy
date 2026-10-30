@@ -1,6 +1,6 @@
 # Reg CA models in SBRM JSON-LD
 
-These files express two Regulation Crypto Assets base-information models in the OMG *Standard Business Report Model* ([SBRM 1.0 beta 1](https://www.omg.org/spec/SBRM), dtc/25-04-01), as JSON-LD. They are built to the specification *Regulation Crypto Assets in the Standard Business Report Model* (version 2.0), which also gives the conformance evidence and the testing data in `validation/`.
+These files express two Regulation Crypto Assets base-information models in the OMG *Standard Business Report Model* (SBRM 1.0 beta 1, dtc/25-04-01), as JSON-LD. They are built to the specification *Regulation Crypto Assets (Reg CA) in the Standard Business Report Model (SBRM)*, version 2.0.
 
 | File | What it is |
 |---|---|
@@ -10,19 +10,20 @@ These files express two Regulation Crypto Assets base-information models in the 
 | `*/*.shapes.ttl` | **SHACL shapes** generated from each definition's numeric patterns, one SPARQL-based shape per roll-up, roll-forward and arithmetic expression (SBRM §7.3). M1 has 22 and Form 1-CRYPTO has 21. |
 | `xbrl/complete-2026-10-18/` | **XBRL taxonomy generated from the complete-model SBRM definition**: `report.xsd`, plus definition, Calc 1.1, label and formula linkbases (975 elements; all 489 XBRL Formula rules, verbatim) |
 | `xbrl/form-1-crypto-second-offering/` | **XBRL taxonomy and instance generated from the Form 1-CRYPTO SBRM outputs**: the same set of files (212 formula rules), plus `instance.xml` (1,169 facts, 193 contexts) |
+| `xbrl-ingestion/complete-2026-10-18/` | **XBRL taxonomy ingestion**: the SBRM version's published XBRL taxonomy (`../entrypoint.xsd`) converted into base information (`regca-complete.from-xbrl.json`) and an SBRM report definition |
+| `xbrl-ingestion/form-1-crypto-second-offering/` | **XBRL report ingestion**: the Form 1-CRYPTO XBRL instance converted into base information and an SBRM report definition and report |
 | `lucasuite/regca-complete.json`, `lucasuite/regca-1-crypto.json` | **The files to import into LucaSuite**: each model in LucaSuite's base-information JSON, rebuilt from its JSON-LD (see *Importing into LucaSuite*) |
 | `vocab/sbrm-mm-bridge.jsonld` (+ `.ttl`) | Terms for SBRM metamodel elements that the SBRM OWL ontologies do not define, each citing its `xmi:id` in the published `metamodel.xmi` |
 | `vocab/xbrl-bridge.jsonld` (+ `.ttl`) | XBRL-specific carry-through terms, kept so the conversion is lossless |
 | `context/sbrm-regca.context.jsonld` | The JSON-LD context. Every output also includes it inline, so each file stands alone. |
-| `validation/` | The testing data: machine-readable results of every check (`summary.json` gives the overview) |
+| `validation/` | Machine-readable results of every check (`summary.json` gives the overview) |
 | `reports/cross-model-drift.md` | Every difference between the two models' shared definitions |
 | `observations/SBRM-beta1-observations.md` | Issues found in SBRM 1.0 beta 1 while building this |
-
-The OMG files the build validates against (the four SBRM ontologies, `metamodel.xmi` and the OMG Commons ontologies) and the SPAR ontologies are not copied here. They are published at <https://www.omg.org/spec/SBRM/machine-readable>, <https://www.omg.org/spec/Commons> and <http://www.sparontologies.net/>. `validation/vocabulary-closure.json` records the SHA-256 of each file used.
+| `vendor/` | Not copied into this repository: the OMG and SPAR vocabulary files the build validates against. They are at their publishers' addresses, and `validation/vocabulary-closure.json` records the SHA-256 of each one. |
 
 ## Importing into LucaSuite
 
-LucaSuite cannot import JSON-LD yet. Its import takes `.json`, `.xlsx` and `.zip` files only, and rejects anything else as "Unsupported file type". So the build also writes each model in the base-information JSON that LucaSuite imports, rebuilt from the JSON-LD:
+LucaSuite holds each model as base information. The build writes each model's base information, rebuilt from its JSON-LD:
 
 | Upload | Model |
 |---|---|
@@ -43,7 +44,7 @@ Through the API, send the file as the multipart field `import` to `POST /api/imp
 - **File type:** both are accepted.
 - **Model validator:** it passes, including a fetch of each of the six imported XBRL schemas. All six return HTTP 200 with the namespace the model declares.
 - **What LucaSuite would store:** every row of both files, with nothing skipped or merged.
-- **Controls:** 11 deliberately broken copies are each reported. The first is the JSON-LD itself.
+- **Controls:** 10 deliberately broken copies are each reported.
 
 One change LucaSuite makes on import loses nothing here. It stores the `Facts-Dimensions` rows on their facts and drops their `Sequence` column, which in these files is just the row number.
 
@@ -57,7 +58,8 @@ Each file holds two named graphs:
   - enumeration value domains;
   - one concept arrangement pattern per fragment (Set, Roll Up, Roll Forward, Arithmetic Expression or TextBlock);
   - the report definition node;
-  - for the filing, the report node and its fact sets.
+  - for the filing, the report node and its fact sets;
+  - an MVF entry for every report element, which links it to its labels, its references and its element in the published XBRL taxonomy (report ontology linking).
 
 Following SBRM's Financial Report Design Approach (§7.3), every concept is an OWL class, and each fact is an instance of its concept class:
 
@@ -85,11 +87,12 @@ No term is minted in an `omg.org` namespace. The `sbrm-mm:` and `xbrlb:` namespa
 
 | Check | Result |
 |---|---|
-| Round trip (rebuild each input from Layer A) | **Byte-exact** for both models: 5,660,955 and 4,476,837 bytes |
+| Round trip (rebuild each input from Layer A) | **Byte-exact** for both models: 5,688,878 and 4,476,837 bytes |
 | Layer B regenerated from the rebuilt input | Identical |
-| JSON-LD processing (rdflib and pyld) | Both parse every file and agree on the quad counts: 67,665 / 52,842 / 14,293 |
+| JSON-LD processing (rdflib and pyld) | Both parse every file and agree on the quad counts: 84,994 / 65,565 / 14,293 |
 | Vocabulary closure | Every property and class is declared in the pinned SBRM, Commons or SPAR files, the bridge vocabularies, or the model itself |
 | Bridge provenance | All 56 cited `xmi:id`s resolve in `metamodel.xmi`; no bridge term duplicates an ontology term |
+| **Report ontology linking** (OMG MVF, `validation/ontology-linking.json`) | Every report element has one MVF entry and two vocabulary entries: 975 and 1,950 in the complete model, 733 and 1,466 in Form 1-CRYPTO. Every entry's XBRL element resolves in the published `SBRM/report.xsd`. 0 MVF restriction violations. All 5 broken copies are reported. |
 | Filing structure (1,169 facts) | 0 errors: period types, value types, units, enumeration domains, dimensional validity, fact-set membership |
 | Required elements for Form 1-CRYPTO | 93 of 93 present |
 | Roll-ups | 20 pass, 0 fail; 1 not evaluable (the total is reported but none of its items are) |
@@ -99,17 +102,49 @@ No term is minted in an `omg.org` namespace. The `sbrm-mm:` and `xbrlb:` namespa
 | All 211 XBRL Formula assertions (Arelle) | **0 failed.** Required-element rules: 93 passed. Executable twins of the declarative rules: 7 passed, 1 not evaluated (supply). Other rules: **91 passed, 19 not evaluated**: conditional rules (price ranges, amendments, supplements, solicitations, incorporation by reference, business-day deadlines, foreign currency) whose facts do not occur in this filing. `REGCA_PARAM_REGISTER` holds parameters only. |
 | Arelle negative suite | 7 of 7. Mutated instances produce the expected Calc 1.1 inconsistency, unsatisfied assertions, `enum2ie:InvalidEnumerationValue` and `xbrldie:PrimaryItemDimensionallyInvalidError`. A ratio change inside the model's 0.0001 tolerance correctly fires nothing. |
 | Negative suite | All 10 deliberately broken copies are rejected, each naming the rule broken |
-| **LucaSuite import** (a replay of LucaSuite's importer, `validation/lucasuite-preflight.json`) | Both `lucasuite/` files are byte-identical to their base models. Both pass LucaSuite's model validator, including the six imported XBRL schemas (HTTP 200, namespaces match). Every row is stored: 7 / 975 / 1,261 / 2,619 / 66 / 1,394 / 498 for the complete model, and 7 / 733 / 1,031 / 2,229 / 55 / 1,061 / 221 plus 1,169 facts, carrying all 1,086 dimension rows, for Form 1-CRYPTO. All 11 broken copies are reported. |
-| **LucaSuite models, checked row by row** (`validation/lucasuite-import-verification.json`) | Every stored row of every list in the two LucaSuite models, with every field, matches its source. *SBRM Reg CA Taxonomy* matches `lucasuite/regca-complete.json` as imported, and, after the October 18 changes made in LucaSuite, the complete model of record of October 18. *SBRM SEC Reg CA Form 1-CRYPTO* matches `lucasuite/regca-1-crypto.json`, including all 1,169 facts and their 1,086 dimension rows. |
-| **SBRM entry point package** (`validation/sbrm-package-checks.json`, `validation/arelle-sbrm-package.xml`) | The package LucaSuite exported to `SBRM/` has the content of `taxonomy/2026-10-18`: the same 1,011 element definitions, 2,324 label relationships, 2,629 references and 493 assertions. Arelle validates it, loaded from its public entry point, with 0 errors and 0 warnings. |
+| **LucaSuite import** (a replay of LucaSuite's importer, `validation/lucasuite-preflight.json`) | Both `lucasuite/` files are byte-identical to their base models. Both pass LucaSuite's model validator, including the six imported XBRL schemas (HTTP 200, namespaces match). Every row is stored: 7 / 975 / 1,349 / 2,629 / 66 / 1,394 / 498 for the complete model, and 7 / 733 / 1,031 / 2,229 / 55 / 1,061 / 221 plus 1,169 facts, carrying all 1,086 dimension rows, for Form 1-CRYPTO. All 10 broken copies are reported. |
+| **XBRL ingestion** (`validation/xbrl-ingestion.json`) | Arelle loads the published taxonomy and the Form 1-CRYPTO instance with 0 errors. The ingested documents pass the round trip, JSON-LD, closure and, for the report, structure and rule checks. Every record and fact matches its source: 975 elements, 1,349 labels, 2,629 references, 66 structures, 1,394 associations, 494 of 498 rules (the 4 derivation rules travel as their XBRL Formula twins) and 1,169 facts with 1,086 dimension rows. Every remaining difference has a stated cause, and none is unexplained. |
 | SHACL (pyshacl) | The filing **conforms** to all 21 shapes. As a positive control, each shape evaluates exactly the instances the validator above evaluates (20 roll-up totals, 4 roll-forward periods, 10 expression instances), so the conformance is not vacuous. |
 | SHACL negative suite | 7 of 7 behave as expected. Each of 6 broken copies fires exactly the expected shapes (for example, equity +1 fires the equity roll-forward and the Equity and Liabilities-and-Equity roll-ups). A ratio change inside the model's own 0.0001 tolerance correctly fires nothing. |
 | Determinism | Two builds produce byte-identical files |
 | Inputs | Unchanged (SHA-256 checked before and after) |
 
-## How these files were produced
+## Rebuilding
 
-One build converts both models, generates the vocabularies and the SHACL shapes, proves the round trips, runs every check, generates the XBRL, writes the LucaSuite import files and, last, validates every XBRL file with Arelle. It runs conversion twice, to check determinism, and exits non-zero if any check fails. `validation/build-log.txt` is its console output and `validation/summary.json` its record. The build tools are described in the specification and are not part of this folder.
+With any Python 3.12, run from the `tools` folder:
+
+```
+python build.py
+python inventory.py
+```
+
+There is nothing to install by hand. If the Python you run lacks the pinned packages in `tools/requirements.txt`, `build.py`:
+1. creates its own virtual environment at `~/.venvs/sbrm-regca` (set `SBRM_VENV` to use another folder);
+2. installs the pinned packages there;
+3. re-runs itself inside that environment.
+
+Later runs reuse the environment, and any Python already installed on the machine is left untouched.
+
+**The Windows path limit.** Arelle installs a file 115 characters below `site-packages`. On Windows without long-path support, the environment folder therefore has to be short: at most 117 characters, after an 8-character reserve. The build checks this *before* creating anything. A folder that is too long is refused with a message giving the limit, so a half-installed environment can't happen. The default folder, `~/.venvs/sbrm-regca`, leaves 96 characters of headroom.
+
+`build.py` runs the whole pipeline:
+- conversion, twice, to check determinism;
+- the vocabularies and the SHACL shapes;
+- the round trips;
+- all validation, including SHACL;
+- the report ontology linking check, which fetches the published `SBRM/report.xsd`, so it needs internet access;
+- XBRL generation and the Arelle instance mutants;
+- the drift report;
+- the LucaSuite import files and their check, which fetches the six imported XBRL schemas, so it needs internet access;
+- the XBRL ingestion of the published SBRM taxonomy and of the Form 1-CRYPTO instance;
+- last, the **post-build Arelle validation** of every XBRL file it wrote.
+
+It exits non-zero if any check fails. A build takes about five minutes, mostly Arelle. The very first run adds about a minute to create the environment. To re-validate the XBRL files, or to rewrite and re-check the LucaSuite files, at any time without rebuilding:
+
+```
+python postbuild.py
+python lucasuite.py
+```
 
 To run the shapes against any data graph with another SHACL engine, load the report and its definition together. The shapes need the definition's typed-axis declarations to compare dimensions.
 
@@ -119,16 +154,15 @@ To run the shapes against any data graph with another SHACL engine, load the rep
 - Generating XBRL required two choices the base model does not state: typed-dimension domains are declared `xs:integer` (every value is an integer row key), and the entity identifier scheme is the ISO 17442 LEI scheme.
 - Turtle exists for the vocabularies and the SHACL shapes; the large definition and report files are JSON-LD only.
 - Topics are not built, because the base models hold no topic information.
-- LucaSuite imports the `lucasuite/` JSON files, not the JSON-LD. The import check replays LucaSuite's rules from its source (the 1 June 2026 snapshot) and does not run LucaSuite itself. A LucaSuite release that changes those rules needs the check updated.
+- The import check replays LucaSuite's rules from its source (the 1 June 2026 snapshot) and does not run LucaSuite itself. The models LucaSuite holds are checked row by row separately (`validation/lucasuite-import-verification.json`). A LucaSuite release that changes those rules needs the check updated.
 - `regca:` and model IRIs are identifiers and do not dereference.
-- `complete-2026-10-18/` is built from the complete model of October 17, 2026. The October 18 changes were made later, in LucaSuite: 88 documentation labels added and 29 extended, ten references added, and corrections to eight rules. They are in the LucaSuite model *SBRM Reg CA Taxonomy* and in the entry point package in `SBRM/`, but not in `complete-2026-10-18/`. The Form 1-CRYPTO files are built from the model of record of October 18, so they include the changes that concern Form 1-CRYPTO.
-- The two models' shared definitions therefore differ: 29 labels differ, 88 labels and 10 references exist only in the Form 1-CRYPTO model, and 4 rules differ. These are the October 18 changes. Each output reflects its own model. See `reports/cross-model-drift.md`.
+- The Form 1-CRYPTO model's definitions are an exact subset of the complete model's, apart from the model description and the sequence numbers, which each model assigns within itself. See `reports/cross-model-drift.md`.
 
 ## Key inventory
 
 <!-- inventory:begin -->
 
-Generated by `tools/inventory.py` from 3 output files. 138 distinct JSON keys and 429 distinct classes; 0 unattributed.
+Generated by `tools/inventory.py` from 3 output files. 148 distinct JSON keys and 434 distinct classes; 0 unattributed.
 
 **JSON keys (properties)**
 
@@ -143,22 +177,31 @@ Generated by `tools/inventory.py` from 3 output files. 138 distinct JSON keys an
 | OMG Commons (imported by SBRM) | `cmns-av:explanatoryNote` | 719 |
 | OMG Commons (imported by SBRM) | `cmns-cls:isClassifiedBy` | 2 |
 | OMG Commons (imported by SBRM) | `cmns-col:compliesWith` | 47 |
-| OMG Commons (imported by SBRM) | `cmns-col:hasMember` | 307 |
+| OMG Commons (imported by SBRM) | `cmns-col:hasMember` | 309 |
+| OMG Commons (imported by SBRM) | `cmns-col:isIncludedIn` | 5,124 |
 | OMG Commons (imported by SBRM) | `cmns-cxtdsg:appliesTo` | 10 |
-| OMG Commons (imported by SBRM) | `cmns-doc:refersTo` | 4,848 |
-| OMG Commons (imported by SBRM) | `cmns-docc:hasTextualContent` | 4,848 |
-| OMG Commons (imported by SBRM) | `cmns-dsg:isDefinedIn` | 1 |
+| OMG Commons (imported by SBRM) | `cmns-doc:refersTo` | 4,858 |
+| OMG Commons (imported by SBRM) | `cmns-docc:hasTextualContent` | 4,858 |
+| OMG Commons (imported by SBRM) | `cmns-dsg:denotes` | 3,416 |
+| OMG Commons (imported by SBRM) | `cmns-dsg:hasDescription` | 660 |
+| OMG Commons (imported by SBRM) | `cmns-dsg:hasTextualName` | 3,422 |
+| OMG Commons (imported by SBRM) | `cmns-dsg:isDefinedIn` | 3,417 |
 | OMG Commons (imported by SBRM) | `cmns-dt:hasDatePeriod` | 162 |
 | OMG Commons (imported by SBRM) | `cmns-dt:hasDateValue` | 6 |
 | OMG Commons (imported by SBRM) | `cmns-dt:hasEndDate` | 2 |
 | OMG Commons (imported by SBRM) | `cmns-dt:hasStartDate` | 2 |
 | OMG Commons (imported by SBRM) | `cmns-dt:hasTime` | 1,007 |
+| OMG Commons (imported by SBRM) | `cmns-lang:hasLanguage` | 4 |
 | OMG Commons (imported by SBRM) | `cmns-qtu:describesActualExpression` | 727 |
 | OMG Commons (imported by SBRM) | `cmns-qtu:hasExpression` | 719 |
 | OMG Commons (imported by SBRM) | `cmns-qtu:hasMeasurementUnit` | 284 |
 | OMG Commons (imported by SBRM) | `cmns-qtu:hasNumericValue` | 284 |
 | OMG Commons (imported by SBRM) | `cmns-rlcmp:isPlayedBy` | 1 |
 | OMG Commons (imported by SBRM) | `cmns-txt:hasTextValue` | 509 |
+| OMG Multiple Vocabulary Facility (report ontology linking) | `mvf:hasDescriptiveReference` | 1,710 |
+| OMG Multiple Vocabulary Facility (report ontology linking) | `mvf:hasMVFEntry` | 1,708 |
+| OMG Multiple Vocabulary Facility (report ontology linking) | `mvf:hasSemanticReference` | 1,708 |
+| OMG Multiple Vocabulary Facility (report ontology linking) | `mvf:isPreferred` | 1,708 |
 | SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:asNestedExpression` | 12 |
 | SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:asNumber` | 40 |
 | SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:hasBeginningBalance` | 6 |
@@ -183,23 +226,24 @@ Generated by `tools/inventory.py` from 3 output files. 138 distinct JSON keys an
 | SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:id` | 22 |
 | SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:isAdded` | 88 |
 | SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:memberElement` | 1,011 |
-| SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:sequence` | 10,459 |
-| W3C / DCMI | `dct:bibliographicCitation` | 4,848 |
+| SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:sequence` | 10,469 |
+| W3C / DCMI | `dct:bibliographicCitation` | 4,858 |
 | W3C / DCMI | `dct:conformsTo` | 701 |
-| W3C / DCMI | `dct:date` | 4,848 |
+| W3C / DCMI | `dct:date` | 4,858 |
 | W3C / DCMI | `dct:description` | 2 |
 | W3C / DCMI | `dct:identifier` | 1,889 |
 | W3C / DCMI | `dct:language` | 14 |
-| W3C / DCMI | `dct:publisher` | 4,848 |
-| W3C / DCMI | `dct:source` | 1,704 |
-| W3C / DCMI | `dct:title` | 4,848 |
-| W3C / DCMI | `dct:type` | 4,848 |
+| W3C / DCMI | `dct:publisher` | 4,858 |
+| W3C / DCMI | `dct:source` | 1,708 |
+| W3C / DCMI | `dct:title` | 4,858 |
+| W3C / DCMI | `dct:type` | 4,858 |
 | W3C / DCMI | `owl:imports` | 2 |
+| W3C / DCMI | `owl:sameAs` | 2 |
 | W3C / DCMI | `prov:wasDerivedFrom` | 49 |
-| W3C / DCMI | `rdf:value` | 2,668 |
-| W3C / DCMI | `rdfs:label` | 1,887 |
+| W3C / DCMI | `rdf:value` | 2,756 |
+| W3C / DCMI | `rdfs:label` | 1,889 |
 | W3C / DCMI | `rdfs:subClassOf` | 1,013 |
-| W3C / DCMI | `skos:definition` | 572 |
+| W3C / DCMI | `skos:definition` | 660 |
 | XBRL 2.1 | `xbrl-role:periodEndLabel` | 6 |
 | XBRL 2.1 | `xbrl-role:periodStartLabel` | 6 |
 | XBRL bridge (carry-through) | `xbrlb:aspectFilter` | 4 |
@@ -228,20 +272,20 @@ Generated by `tools/inventory.py` from 3 output files. 138 distinct JSON keys an
 | XBRL bridge (carry-through) | `xbrlb:importsTaxonomy` | 2 |
 | XBRL bridge (carry-through) | `xbrlb:jsonLexical` | 3 |
 | XBRL bridge (carry-through) | `xbrlb:jsonValueKind` | 20 |
-| XBRL bridge (carry-through) | `xbrlb:labelOf` | 2,292 |
-| XBRL bridge (carry-through) | `xbrlb:labelRole` | 2,292 |
+| XBRL bridge (carry-through) | `xbrlb:labelOf` | 2,380 |
+| XBRL bridge (carry-through) | `xbrlb:labelRole` | 2,380 |
 | XBRL bridge (carry-through) | `xbrlb:namespaceIdentifier` | 14 |
 | XBRL bridge (carry-through) | `xbrlb:namespacePrefix` | 14 |
 | XBRL bridge (carry-through) | `xbrlb:precondition` | 8 |
 | XBRL bridge (carry-through) | `xbrlb:preferredLabelRole` | 12 |
-| XBRL bridge (carry-through) | `xbrlb:referenceOf` | 4,848 |
+| XBRL bridge (carry-through) | `xbrlb:referenceOf` | 4,858 |
 | XBRL bridge (carry-through) | `xbrlb:reportingEntityAspect` | 1 |
 | XBRL bridge (carry-through) | `xbrlb:ruleType` | 719 |
 | XBRL bridge (carry-through) | `xbrlb:schemaLocation` | 14 |
 | XBRL bridge (carry-through) | `xbrlb:sectionName` | 22 |
 | XBRL bridge (carry-through) | `xbrlb:sections` | 2 |
 | XBRL bridge (carry-through) | `xbrlb:sourceFile` | 2 |
-| XBRL bridge (carry-through) | `xbrlb:sourceIndex` | 13,326 |
+| XBRL bridge (carry-through) | `xbrlb:sourceIndex` | 13,424 |
 | XBRL bridge (carry-through) | `xbrlb:sourceSha256` | 2 |
 | XBRL bridge (carry-through) | `xbrlb:structureIdentifier` | 121 |
 | XBRL bridge (carry-through) | `xbrlb:structureType` | 2,455 |
@@ -268,13 +312,18 @@ Generated by `tools/inventory.py` from 3 output files. 138 distinct JSON keys an
 | SBRM ontology (OMG, normative) | `sbrm-rst:NumericFactValue` | 149 |
 | SBRM ontology (OMG, normative) | `sbrm-rst:ReportDefinition` | 2 |
 | SBRM ontology (OMG, normative) | `sbrm-rst:ValueDomain` | 61 |
-| OMG Commons (imported by SBRM) | `cmns-doc:Reference` | 4,848 |
+| OMG Commons (imported by SBRM) | `cmns-doc:Reference` | 4,858 |
 | OMG Commons (imported by SBRM) | `cmns-dt:ExplicitDate` | 6 |
 | OMG Commons (imported by SBRM) | `cmns-dt:ExplicitDatePeriod` | 2 |
+| OMG Commons (imported by SBRM) | `cmns-lang:NaturalLanguage` | 2 |
 | OMG Commons (imported by SBRM) | `cmns-pts:Party` | 1 |
 | OMG Commons (imported by SBRM) | `cmns-qtu:Expression` | 727 |
 | OMG Commons (imported by SBRM) | `cmns-qtu:MeasurementUnit` | 1 |
 | SPAR DoCO (imported by SBRM) | `doco:Section` | 158 |
+| OMG Multiple Vocabulary Facility (report ontology linking) | `mvf:MVFDictionary` | 2 |
+| OMG Multiple Vocabulary Facility (report ontology linking) | `mvf:MVFEntry` | 1,708 |
+| OMG Multiple Vocabulary Facility (report ontology linking) | `mvf:Vocabulary` | 4 |
+| OMG Multiple Vocabulary Facility (report ontology linking) | `mvf:VocabularyEntry` | 3,416 |
 | SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:AnyURI` | 2 |
 | SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:ArithmeticExpression` | 26 |
 | SBRM metamodel bridge (metamodel.xmi) | `sbrm-mm:ConsistencyRule` | 8 |
@@ -307,13 +356,13 @@ Generated by `tools/inventory.py` from 3 output files. 138 distinct JSON keys an
 | W3C / DCMI | `owl:DatatypeProperty` | 68 |
 | W3C / DCMI | `owl:Ontology` | 2 |
 | W3C / DCMI | `rdf:XMLLiteral` | 701 |
-| W3C / DCMI | `xsd:anyURI` | 36 |
+| W3C / DCMI | `xsd:anyURI` | 1,746 |
 | W3C / DCMI | `xsd:boolean` | 190 |
-| W3C / DCMI | `xsd:date` | 4,889 |
+| W3C / DCMI | `xsd:date` | 4,899 |
 | W3C / DCMI | `xsd:decimal` | 358 |
 | XBRL bridge (carry-through) | `xbrlb:DerivedLayer` | 3 |
 | XBRL bridge (carry-through) | `xbrlb:ImportedTaxonomy` | 12 |
-| XBRL bridge (carry-through) | `xbrlb:Label` | 2,292 |
+| XBRL bridge (carry-through) | `xbrlb:Label` | 2,380 |
 | XBRL bridge (carry-through) | `xbrlb:LosslessLayer` | 3 |
 | Reg CA model (typed axes declared in the definition) | `(any Reg CA concept class, e.g. `regca:Assets`)` | 1,169 |
 
