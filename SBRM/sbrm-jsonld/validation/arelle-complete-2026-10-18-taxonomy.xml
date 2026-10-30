@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log>
+<entry code="info" level="info">
+ <message>[info] loaded in 0.36 secs at 2026-10-30T08:55:03 - sbrm-jsonld\xbrl\complete-2026-10-18\report.xsd </message>
+ <ref href="sbrm-jsonld\xbrl\complete-2026-10-18\report.xsd"/></entry>
+<entry code="info" level="info">
+ <message>[info] validated in 2.47 secs - sbrm-jsonld\xbrl\complete-2026-10-18\report.xsd </message>
+ <ref href="sbrm-jsonld\xbrl\complete-2026-10-18\report.xsd"/></entry>
+<entry code="info:profileActivity" level="info">
+ <message activity="... assertion and formula checks and compilation" time="3.443">[info:profileActivity] ... assertion and formula checks and compilation 3.443 secs
+ - report.xsd </message>
+ <ref href="report.xsd"/></entry>
+<entry code="info" level="info">
+ <message>[info] formula validation only in 3.47 secs - sbrm-jsonld\xbrl\complete-2026-10-18\report.xsd </message>
+ <ref href="sbrm-jsonld\xbrl\complete-2026-10-18\report.xsd"/></entry>
+</log>

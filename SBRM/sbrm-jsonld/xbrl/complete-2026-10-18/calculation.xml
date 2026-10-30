@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xml="http://www.w3.org/XML/1998/namespace" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <link:roleRef roleURI="http://luca.pacioli.ai/report/role/regca-10-startup" xlink:type="simple" xlink:href="report.xsd#regca-10-startup"/>
+  <link:roleRef roleURI="http://luca.pacioli.ai/report/role/regca-22-offering" xlink:type="simple" xlink:href="report.xsd#regca-22-offering"/>
+  <link:roleRef roleURI="http://luca.pacioli.ai/report/role/regca-60-form-1-crypto-part-i" xlink:type="simple" xlink:href="report.xsd#regca-60-form-1-crypto-part-i"/>
+  <link:roleRef roleURI="http://luca.pacioli.ai/report/role/regca-71-balance-sheet" xlink:type="simple" xlink:href="report.xsd#regca-71-balance-sheet"/>
+  <link:roleRef roleURI="http://luca.pacioli.ai/report/role/regca-72-comprehensive-income" xlink:type="simple" xlink:href="report.xsd#regca-72-comprehensive-income"/>
+  <link:roleRef roleURI="http://luca.pacioli.ai/report/role/regca-73-cash-flows" xlink:type="simple" xlink:href="report.xsd#regca-73-cash-flows"/>
+  <link:arcroleRef arcroleURI="https://xbrl.org/2023/arcrole/summation-item" xlink:type="simple" xlink:href="https://www.xbrl.org/2023/calculation-1.1.xsd#summation-item"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://luca.pacioli.ai/report/role/regca-10-startup">
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AmountCountedAgainstStartupOfferingLimit" xlink:label="AmountCountedAgainstStartupOfferingLimit"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AggregateOfferingPriceOfCurrentCoveredTransaction" xlink:label="AggregateOfferingPriceOfCurrentCoveredTransaction"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_GrossProceedsFromPriorAndCurrentCoveredTransactions" xlink:label="GrossProceedsFromPriorAndCurrentCoveredTransactions"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="AmountCountedAgainstStartupOfferingLimit" xlink:to="AggregateOfferingPriceOfCurrentCoveredTransaction" order="1" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="AmountCountedAgainstStartupOfferingLimit" xlink:to="GrossProceedsFromPriorAndCurrentCoveredTransactions" order="2" weight="1"/>
+  </link:calculationLink>
+  <link:calculationLink xlink:type="extended" xlink:role="http://luca.pacioli.ai/report/role/regca-22-offering">
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_EstimatedNetOfferingProceeds" xlink:label="EstimatedNetOfferingProceeds"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AggregateOfferingPrice" xlink:label="AggregateOfferingPrice"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_EstimatedOfferingExpenses" xlink:label="EstimatedOfferingExpenses"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="EstimatedNetOfferingProceeds" xlink:to="AggregateOfferingPrice" order="1" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="EstimatedNetOfferingProceeds" xlink:to="EstimatedOfferingExpenses" order="2" weight="-1"/>
+  </link:calculationLink>
+  <link:calculationLink xlink:type="extended" xlink:role="http://luca.pacioli.ai/report/role/regca-60-form-1-crypto-part-i">
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AggregateOfferingPriceAndAggregateSalesTotal" xlink:label="AggregateOfferingPriceAndAggregateSalesTotal"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AggregateOfferingPriceAttributableToIssuer" xlink:label="AggregateOfferingPriceAttributableToIssuer"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AggregateOfferingPriceAttributableToSellingSecurityholders" xlink:label="AggregateOfferingPriceAttributableToSellingSecurityholders"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AggregateSalesUnderQualifiedOfferingStatementsPrior12Months" xlink:label="AggregateSalesUnderQualifiedOfferingStatementsPrior12Months"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements" xlink:label="AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="AggregateOfferingPriceAndAggregateSalesTotal" xlink:to="AggregateOfferingPriceAttributableToIssuer" order="1" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="AggregateOfferingPriceAndAggregateSalesTotal" xlink:to="AggregateOfferingPriceAttributableToSellingSecurityholders" order="2" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="AggregateOfferingPriceAndAggregateSalesTotal" xlink:to="AggregateSalesUnderQualifiedOfferingStatementsPrior12Months" order="3" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="AggregateOfferingPriceAndAggregateSalesTotal" xlink:to="AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements" order="4" weight="1"/>
+  </link:calculationLink>
+  <link:calculationLink xlink:type="extended" xlink:role="http://luca.pacioli.ai/report/role/regca-71-balance-sheet">
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_Assets" xlink:label="Assets"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_CashAndCashEquivalents" xlink:label="CashAndCashEquivalents"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_CryptoAssets" xlink:label="CryptoAssets"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AccountsReceivableNet" xlink:label="AccountsReceivableNet"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_PropertyAndEquipmentNet" xlink:label="PropertyAndEquipmentNet"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_IntangibleAssetsNetExcludingCryptoAssets" xlink:label="IntangibleAssetsNetExcludingCryptoAssets"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_OtherAssets" xlink:label="OtherAssets"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_Liabilities" xlink:label="Liabilities"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AccountsPayableAndAccruedLiabilities" xlink:label="AccountsPayableAndAccruedLiabilities"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_ContractLiabilities" xlink:label="ContractLiabilities"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_Debt" xlink:label="Debt"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_ObligationToDeliverSubjectCryptoAsset" xlink:label="ObligationToDeliverSubjectCryptoAsset"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_OtherLiabilities" xlink:label="OtherLiabilities"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_Equity" xlink:label="Equity"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_ContributedCapital" xlink:label="ContributedCapital"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_RetainedEarningsAccumulatedDeficit" xlink:label="RetainedEarningsAccumulatedDeficit"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_AccumulatedOtherComprehensiveIncome" xlink:label="AccumulatedOtherComprehensiveIncome"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_LiabilitiesAndEquity" xlink:label="LiabilitiesAndEquity"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Assets" xlink:to="CashAndCashEquivalents" order="1" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Assets" xlink:to="CryptoAssets" order="2" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Assets" xlink:to="AccountsReceivableNet" order="3" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Assets" xlink:to="PropertyAndEquipmentNet" order="4" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Assets" xlink:to="IntangibleAssetsNetExcludingCryptoAssets" order="5" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Assets" xlink:to="OtherAssets" order="6" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Liabilities" xlink:to="AccountsPayableAndAccruedLiabilities" order="7" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Liabilities" xlink:to="ContractLiabilities" order="8" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Liabilities" xlink:to="Debt" order="9" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Liabilities" xlink:to="ObligationToDeliverSubjectCryptoAsset" order="10" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Liabilities" xlink:to="OtherLiabilities" order="11" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Equity" xlink:to="ContributedCapital" order="12" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Equity" xlink:to="RetainedEarningsAccumulatedDeficit" order="13" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="Equity" xlink:to="AccumulatedOtherComprehensiveIncome" order="14" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="LiabilitiesAndEquity" xlink:to="Liabilities" order="15" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="LiabilitiesAndEquity" xlink:to="Equity" order="16" weight="1"/>
+  </link:calculationLink>
+  <link:calculationLink xlink:type="extended" xlink:role="http://luca.pacioli.ai/report/role/regca-72-comprehensive-income">
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_OperatingIncomeLoss" xlink:label="OperatingIncomeLoss"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_Revenues" xlink:label="Revenues"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_CostOfRevenue" xlink:label="CostOfRevenue"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_OperatingExpenses" xlink:label="OperatingExpenses"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_IncomeLossBeforeIncomeTaxes" xlink:label="IncomeLossBeforeIncomeTaxes"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_GainLossOnRemeasurementOfCryptoAssets" xlink:label="GainLossOnRemeasurementOfCryptoAssets"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_OtherNonoperatingIncomeExpense" xlink:label="OtherNonoperatingIncomeExpense"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_NetIncomeLoss" xlink:label="NetIncomeLoss"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_IncomeTaxExpenseBenefit" xlink:label="IncomeTaxExpenseBenefit"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_ComprehensiveIncomeLoss" xlink:label="ComprehensiveIncomeLoss"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_OtherComprehensiveIncomeLoss" xlink:label="OtherComprehensiveIncomeLoss"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="OperatingIncomeLoss" xlink:to="Revenues" order="1" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="OperatingIncomeLoss" xlink:to="CostOfRevenue" order="2" weight="-1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="OperatingIncomeLoss" xlink:to="OperatingExpenses" order="3" weight="-1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="IncomeLossBeforeIncomeTaxes" xlink:to="OperatingIncomeLoss" order="4" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="IncomeLossBeforeIncomeTaxes" xlink:to="GainLossOnRemeasurementOfCryptoAssets" order="5" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="IncomeLossBeforeIncomeTaxes" xlink:to="OtherNonoperatingIncomeExpense" order="6" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="NetIncomeLoss" xlink:to="IncomeLossBeforeIncomeTaxes" order="7" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="NetIncomeLoss" xlink:to="IncomeTaxExpenseBenefit" order="8" weight="-1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="ComprehensiveIncomeLoss" xlink:to="NetIncomeLoss" order="9" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="ComprehensiveIncomeLoss" xlink:to="OtherComprehensiveIncomeLoss" order="10" weight="1"/>
+  </link:calculationLink>
+  <link:calculationLink xlink:type="extended" xlink:role="http://luca.pacioli.ai/report/role/regca-73-cash-flows">
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_CashAndCashEquivalentsPeriodIncreaseDecrease" xlink:label="CashAndCashEquivalentsPeriodIncreaseDecrease"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_NetCashProvidedByUsedInOperatingActivities" xlink:label="NetCashProvidedByUsedInOperatingActivities"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_NetCashProvidedByUsedInInvestingActivities" xlink:label="NetCashProvidedByUsedInInvestingActivities"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_NetCashProvidedByUsedInFinancingActivities" xlink:label="NetCashProvidedByUsedInFinancingActivities"/>
+    <link:loc xlink:type="locator" xlink:href="report.xsd#regca_EffectOfExchangeRateChangesOnCash" xlink:label="EffectOfExchangeRateChangesOnCash"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="CashAndCashEquivalentsPeriodIncreaseDecrease" xlink:to="NetCashProvidedByUsedInOperatingActivities" order="1" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="CashAndCashEquivalentsPeriodIncreaseDecrease" xlink:to="NetCashProvidedByUsedInInvestingActivities" order="2" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="CashAndCashEquivalentsPeriodIncreaseDecrease" xlink:to="NetCashProvidedByUsedInFinancingActivities" order="3" weight="1"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="https://xbrl.org/2023/arcrole/summation-item" xlink:from="CashAndCashEquivalentsPeriodIncreaseDecrease" xlink:to="EffectOfExchangeRateChangesOnCash" order="4" weight="1"/>
+  </link:calculationLink>
+</link:linkbase>

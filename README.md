@@ -27,6 +27,19 @@ The Complete Model as built through the OMG Standard Business Report Model (SBRM
 
 It has the same elements, tables, labels, references, relationships and rules as version 2026-10-18, including the October 18 changes listed under Changes. The files differ only in LucaSuite's generation timestamps and in the order of namespace declarations, schema imports, and label and reference links. It loads and validates with no errors in Arelle.
 
+The SBRM files themselves are in [`SBRM/sbrm-jsonld/`](SBRM/sbrm-jsonld/):
+- **SBRM JSON-LD:**
+  - the report definition of the Complete Model;
+  - the report definition and the report submission of Form 1-CRYPTO, which is a demonstration filing of 1,169 facts;
+  - the JSON-LD context and the bridge vocabularies;
+  - the SHACL shapes.
+- **Other files:**
+  - the base-information JSON that was imported into LucaSuite;
+  - the XBRL generated from the SBRM files;
+  - the testing data (`validation/`).
+
+Its [README](SBRM/sbrm-jsonld/README.md) describes each file.
+
 ## Forms covered
 
 | Form | What it is |
@@ -113,7 +126,7 @@ The method hashes every number as the filing writes it. The filings write number
 
 ## Changes
 
-- **October 30, 2026:** the SBRM version is added in `SBRM/` (see *SBRM version*). Version 2026-10-18 is unchanged.
+- **October 30, 2026:** the SBRM version is added in `SBRM/` (see *SBRM version*), with the SBRM JSON-LD files and their testing data in `SBRM/sbrm-jsonld/`. Version 2026-10-18 is unchanged.
 - **October 18, 2026 (night):** the links from `report.xsd` and `entrypoint.xsd` to the reference linkbase (`report-ref.xml`) now carry XBRL 2.1's standard role, `http://www.xbrl.org/2003/role/referenceLinkbaseRef`, and the title "Reference Links, all". LucaSuite's export had written the non-standard role `http://www.xbrl.org/2003/role/referencesLinkbaseRef` ("References Links, all"). Tools that look for the standard role can now find the 2,629 references; XBRL processors that follow every linkbase reference, such as Arelle, already found them. Only `report.xsd` and `entrypoint.xsd` changed, and the package with them. No element, label, reference, relationship, rule or fact changed, and the merkle roots, transactions and entry point address of the nine sample filings are unchanged.
 - **October 18, 2026 (evening):** two rule corrections and a label correction. `REGCA_COVER_01` now runs on every filing that reports the issuer's name, the document date, the filing's merkle root or the taxonomy entry point address, and fails unless the filing names exactly one form as its document type; before, it ran only when a document type was reported, so a filing that reported none passed every rule. On Forms 1-SU, 1-CRYPTO and 1-KC, the date on which each person signs the answer on prior offerings can no longer be listed in the omission register instead of being reported (`REGCA_REQ_S103_ResponsibleSignatureDate`, `REGCA_REQ_1CRYPTO_ResponsibleSignatureDate` and `REGCA_REQ_1KC_ResponsibleSignatureDate`), just as the person's name, capacity and signature cannot. The 117 concepts of the blockchain network participation schedules now carry the documentation label "Proposed by Auditchain Labs; not required by the proposed rule.", as the headings of their tables already did (88 labels added, 29 extended). Only `report-for.xml` and `report-lab.xml` changed. `report-for.xml` is as exported by LucaSuite from the updated model; `report-lab.xml` has the same lines as LucaSuite's export, with the label links in the order of the previous file and the new ones after them. No element, reference, relationship or fact changed, the number of rules is the same, and the merkle roots, transactions and entry point address of the nine sample filings are unchanged.
 - **October 18, 2026 (later):** a Form 1-CRYPTO or Form 1-SU that is the issuer's first filing under Regulation Crypto Assets can now pass validation. The four rules that require the previous filing's merkle root and date on those forms (`REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot`, `REGCA_REQ_1CRYPTO_PreviousFilingDate`, `REGCA_REQ_S103_PreviousFilingMerkleRoot` and `REGCA_REQ_S103_PreviousFilingDate`) now also accept an entry for the item in the omission register, where the first filing lists it as not applicable. Only `report-for.xml` changed, as exported by LucaSuite from the updated model. No element, label, reference or fact changed, the number of rules is the same, and the merkle roots, transactions and entry point address of the nine sample filings are unchanged.
@@ -135,6 +148,7 @@ The method hashes every number as the filing writes it. The filings write number
 | `taxonomy/2026-10-18/META-INF/` | Taxonomy package metadata and catalog |
 | `packages/sec-reg-ca-taxonomy-2026-10-18.zip` | The taxonomy package |
 | `SBRM/` | The SBRM version: the entry point package exported by LucaSuite (entry point `SBRM/entrypoint.xsd`) |
+| `SBRM/sbrm-jsonld/` | The SBRM JSON-LD files, the base-information JSON imported into LucaSuite, the generated XBRL and the testing data |
 | `tools/regca_merkle.py` | Merkle root of a filing, proofs and chain check |
 | `tools/merkle-method-v1.md` | Specification of the merkle method, version 1 |
 

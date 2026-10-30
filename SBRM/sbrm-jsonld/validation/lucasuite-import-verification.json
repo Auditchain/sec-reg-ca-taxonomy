@@ -1,0 +1,244 @@
+{
+  "what": "The two LucaSuite models of the SBRM exemplars, checked row by row against the files they came from.",
+  "method": {
+    "read": "Every stored row of every list, with every field, read from LucaSuite through GET /luca/base/request/{report}/{list}, the storage read behind LucaSuite's own tables.",
+    "fingerprint": "Each row is canonicalised (keys sorted; strings exact; numbers by value; LucaSuite's own id, list, created_at and updated_at fields left out) and hashed with SHA-256. A list's fingerprint is the SHA-256 of its sorted row hashes, so it changes if any row is missing, added or different in any field. The same canonical form is computed from the source file with LucaSuite's documented import transformations applied.",
+    "lucasuite_import_transformations": [
+      "field renames: StructureIdentifier to NetworkIdentifier, StructureTitle to NetworkTitle and ConceptAspect to Concept (in Rules: StructureIdentifier to Structure, ConceptAspect to Concept)",
+      "each Facts-Dimensions row is stored inside its fact (Facts.Dimensions) without its FactID and Sequence columns (Sequence is the row number in the source files) and with a LucaSuite dimension_id",
+      "CalculationWeight is stored as text: the numbers 1 and -1 become \"1\" and \"-1\" (38 rows in the complete taxonomy, 36 in Form 1-CRYPTO); the value is unchanged"
+    ]
+  },
+  "models": {
+    "SBRM Reg CA Taxonomy": {
+      "report_id": "ac408d76a61c9984077a41efb2ccbe65063aedc070b25b527ec49b787ef00c4155e21c6c",
+      "public_link": "https://luca.pacioli.ai/luca/view/ac408d76a61c9984077a41efb2ccbe65063aedc070b25b527ec49b787ef00c4155e21c6c/index",
+      "imported_from": "sbrm-jsonld/lucasuite/regca-complete.json (rebuilt from the SBRM JSON-LD, byte-identical to the source model)",
+      "at_import": {
+        "compared_with": {
+          "file": "regca-complete.json",
+          "bytes": 5660955,
+          "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+        },
+        "lists": {
+          "BaseInformation": {
+            "rows_in_lucasuite": 7,
+            "rows_expected": 7,
+            "fingerprint_lucasuite": "026a4cffe0e78dea",
+            "fingerprint_expected": "026a4cffe0e78dea",
+            "match": true
+          },
+          "ReportElement": {
+            "rows_in_lucasuite": 975,
+            "rows_expected": 975,
+            "fingerprint_lucasuite": "9e912a31a297ea50",
+            "fingerprint_expected": "9e912a31a297ea50",
+            "match": true
+          },
+          "Labels": {
+            "rows_in_lucasuite": 1261,
+            "rows_expected": 1261,
+            "fingerprint_lucasuite": "8e57c8ca9858219a",
+            "fingerprint_expected": "8e57c8ca9858219a",
+            "match": true
+          },
+          "References": {
+            "rows_in_lucasuite": 2619,
+            "rows_expected": 2619,
+            "fingerprint_lucasuite": "7a154b38ae2606fb",
+            "fingerprint_expected": "7a154b38ae2606fb",
+            "match": true
+          },
+          "Structures": {
+            "rows_in_lucasuite": 66,
+            "rows_expected": 66,
+            "fingerprint_lucasuite": "4ec5d4b1947c6f9e",
+            "fingerprint_expected": "4ec5d4b1947c6f9e",
+            "match": true
+          },
+          "Associations": {
+            "rows_in_lucasuite": 1394,
+            "rows_expected": 1394,
+            "fingerprint_lucasuite": "b2b43a877ccf29ee",
+            "fingerprint_expected": "b2b43a877ccf29ee",
+            "match": true
+          },
+          "Rules": {
+            "rows_in_lucasuite": 498,
+            "rows_expected": 498,
+            "fingerprint_lucasuite": "2403cb12acec390d",
+            "fingerprint_expected": "2403cb12acec390d",
+            "match": true
+          }
+        },
+        "all_match": true
+      },
+      "october_18_changes": {
+        "source": "the complete model of record of 2026-10-18, which differs from regca-complete.json by exactly these rows",
+        "applied_in_lucasuite": {
+          "labels_added": 88,
+          "labels_updated": 29,
+          "references_added": 10,
+          "rules_updated": 8
+        },
+        "rules_updated": [
+          "REGCA_COVER_01",
+          "REGCA_REQ_S103_ResponsibleSignatureDate",
+          "REGCA_REQ_1CRYPTO_ResponsibleSignatureDate",
+          "REGCA_REQ_1KC_ResponsibleSignatureDate",
+          "REGCA_REQ_S103_PreviousFilingMerkleRoot",
+          "REGCA_REQ_S103_PreviousFilingDate",
+          "REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot",
+          "REGCA_REQ_1CRYPTO_PreviousFilingDate"
+        ],
+        "how": "Updated rows were changed in place through LucaSuite's label and rule editors, each after checking that the stored row held exactly the expected old value and that the new value hashed to the value in the model of record. New rows were added through LucaSuite's JSON import. The report keeps its ID and links."
+      },
+      "now": {
+        "compared_with": {
+          "file": "Reg CA Complete Model (model of record, 2026-10-18).json",
+          "bytes": 5688878,
+          "sha256": "7ce7270d3d55faa9683081e705695c1002594868f1d62a67dd397e5ad8d9b51f"
+        },
+        "lists": {
+          "BaseInformation": {
+            "rows_in_lucasuite": 7,
+            "rows_expected": 7,
+            "fingerprint_lucasuite": "026a4cffe0e78dea",
+            "fingerprint_expected": "026a4cffe0e78dea",
+            "match": true
+          },
+          "ReportElement": {
+            "rows_in_lucasuite": 975,
+            "rows_expected": 975,
+            "fingerprint_lucasuite": "9e912a31a297ea50",
+            "fingerprint_expected": "9e912a31a297ea50",
+            "match": true
+          },
+          "Labels": {
+            "rows_in_lucasuite": 1349,
+            "rows_expected": 1349,
+            "fingerprint_lucasuite": "fd563cde41dd4e0e",
+            "fingerprint_expected": "fd563cde41dd4e0e",
+            "match": true
+          },
+          "References": {
+            "rows_in_lucasuite": 2629,
+            "rows_expected": 2629,
+            "fingerprint_lucasuite": "f58cdc6fc9f9483e",
+            "fingerprint_expected": "f58cdc6fc9f9483e",
+            "match": true
+          },
+          "Structures": {
+            "rows_in_lucasuite": 66,
+            "rows_expected": 66,
+            "fingerprint_lucasuite": "4ec5d4b1947c6f9e",
+            "fingerprint_expected": "4ec5d4b1947c6f9e",
+            "match": true
+          },
+          "Associations": {
+            "rows_in_lucasuite": 1394,
+            "rows_expected": 1394,
+            "fingerprint_lucasuite": "b2b43a877ccf29ee",
+            "fingerprint_expected": "b2b43a877ccf29ee",
+            "match": true
+          },
+          "Rules": {
+            "rows_in_lucasuite": 498,
+            "rows_expected": 498,
+            "fingerprint_lucasuite": "773427181d0f28e0",
+            "fingerprint_expected": "773427181d0f28e0",
+            "match": true
+          },
+          "Facts": {
+            "rows_in_lucasuite": 0,
+            "rows_expected": 0,
+            "fingerprint_lucasuite": null,
+            "fingerprint_expected": null,
+            "match": true
+          }
+        },
+        "all_match": true,
+        "measured_at": "2026-10-30T15:58:11Z"
+      }
+    },
+    "SBRM SEC Reg CA Form 1-CRYPTO": {
+      "report_id": "ac408d76a61c9984077a41efb2ccbe65063aedc070b25b527ec49b787ef00c417ac85719",
+      "public_link": "https://luca.pacioli.ai/luca/view/ac408d76a61c9984077a41efb2ccbe65063aedc070b25b527ec49b787ef00c417ac85719/index",
+      "imported_from": "sbrm-jsonld/lucasuite/regca-1-crypto.json (rebuilt from the SBRM JSON-LD, byte-identical to the source model, which is the model of record of 2026-10-18)",
+      "now": {
+        "compared_with": {
+          "file": "regca-1-crypto.json",
+          "bytes": 4476837,
+          "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1"
+        },
+        "lists": {
+          "BaseInformation": {
+            "rows_in_lucasuite": 7,
+            "rows_expected": 7,
+            "fingerprint_lucasuite": "3966704fb7e3000b",
+            "fingerprint_expected": "3966704fb7e3000b",
+            "match": true
+          },
+          "ReportElement": {
+            "rows_in_lucasuite": 733,
+            "rows_expected": 733,
+            "fingerprint_lucasuite": "67a05bfa7bf9a165",
+            "fingerprint_expected": "67a05bfa7bf9a165",
+            "match": true
+          },
+          "Labels": {
+            "rows_in_lucasuite": 1031,
+            "rows_expected": 1031,
+            "fingerprint_lucasuite": "c1dd9e97f2a8073b",
+            "fingerprint_expected": "c1dd9e97f2a8073b",
+            "match": true
+          },
+          "References": {
+            "rows_in_lucasuite": 2229,
+            "rows_expected": 2229,
+            "fingerprint_lucasuite": "1ef32117c7847639",
+            "fingerprint_expected": "1ef32117c7847639",
+            "match": true
+          },
+          "Structures": {
+            "rows_in_lucasuite": 55,
+            "rows_expected": 55,
+            "fingerprint_lucasuite": "537064405bf9ffb1",
+            "fingerprint_expected": "537064405bf9ffb1",
+            "match": true
+          },
+          "Associations": {
+            "rows_in_lucasuite": 1061,
+            "rows_expected": 1061,
+            "fingerprint_lucasuite": "08658ea116d5ab4b",
+            "fingerprint_expected": "08658ea116d5ab4b",
+            "match": true
+          },
+          "Rules": {
+            "rows_in_lucasuite": 221,
+            "rows_expected": 221,
+            "fingerprint_lucasuite": "189e817c3747a14a",
+            "fingerprint_expected": "189e817c3747a14a",
+            "match": true
+          },
+          "Facts": {
+            "rows_in_lucasuite": 1169,
+            "rows_expected": 1169,
+            "fingerprint_lucasuite": "222216f0b4a8d45a",
+            "fingerprint_expected": "222216f0b4a8d45a",
+            "match": true
+          }
+        },
+        "all_match": true,
+        "measured_at": "2026-10-30T15:58:11Z",
+        "facts": {
+          "rows": 1169,
+          "with_dimensions": 934,
+          "dimension_entries": 1086,
+          "reporting_entity": "PacioliLabsInc | 5067001J8OL3RK15TE82"
+        }
+      }
+    }
+  },
+  "all_match": true
+}

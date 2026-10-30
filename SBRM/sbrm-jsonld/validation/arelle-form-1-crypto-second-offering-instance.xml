@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log>
+<entry code="info" level="info">
+ <message>[info] loaded in 0.35 secs at 2026-10-30T08:55:40 - sbrm-jsonld\xbrl\form-1-crypto-second-offering\instance.xml </message>
+ <ref href="sbrm-jsonld\xbrl\form-1-crypto-second-offering\instance.xml"/></entry>
+<entry code="info" level="info">
+ <message>[info] validated in 2.14 secs - sbrm-jsonld\xbrl\form-1-crypto-second-offering\instance.xml </message>
+ <ref href="sbrm-jsonld\xbrl\form-1-crypto-second-offering\instance.xml"/></entry>
+<entry code="info:profileActivity" level="info">
+ <message activity="... assertion and formula checks and compilation" time="1.838">[info:profileActivity] ... assertion and formula checks and compilation 1.838 secs
+ - instance.xml </message>
+ <ref href="instance.xml"/></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_IssuerName" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_IssuerName evaluations : 1 satisfied, 0 not satisfied - formula.xml 100</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_IssuerName" sourceLine="100">
+  <property name="id" value="REGCA_REQ_1CRYPTO_IssuerName"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_ATT_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_ATT_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 7205</message>
+ <ref href="formula.xml#REGCA_BNP_ATT_02" sourceLine="7205">
+  <property name="id" value="REGCA_BNP_ATT_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="xs:date($AttestationDate) le xs:date($Doc)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_RelatedPersonsSubjectToTransferOrResaleRestrictionsIndicator" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_RelatedPersonsSubjectToTransferOrResaleRestrictionsIndicator evaluations : 1 satisfied, 0 not satisfied - formula.xml 2750</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_RelatedPersonsSubjectToTransferOrResaleRestrictionsIndicator" sourceLine="2750">
+  <property name="id" value="REGCA_REQ_1CRYPTO_RelatedPersonsSubjectToTransferOrResaleRestrictionsIndicator"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('RelatedPersonsSubjectToTransferOrResaleRestrictionsIndicator', 'regca:RelatedPersonsSubjectToTransferOrResaleRestrictionsIndicator')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SignatureDate" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SignatureDate evaluations : 1 satisfied, 0 not satisfied - formula.xml 4716</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SignatureDate" sourceLine="4716">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SignatureDate"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PRIOR_04" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PRIOR_04 evaluations : 1 satisfied, 0 not satisfied - formula.xml 7065</message>
+ <ref href="formula.xml#REGCA_PRIOR_04" sourceLine="7065">
+  <property name="id" value="REGCA_PRIOR_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count($Signatures) ge 1"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ResponsibleSignatureDate" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ResponsibleSignatureDate evaluations : 1 satisfied, 0 not satisfied - formula.xml 4996</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ResponsibleSignatureDate" sourceLine="4996">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ResponsibleSignatureDate"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_AMEND_02" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_AMEND_02 evaluations : 0 satisfied, 0 not satisfied - formula.xml 5847</message>
+ <ref href="formula.xml#REGCA_AMEND_02" sourceLine="5847">
+  <property name="id" value="REGCA_AMEND_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($PartIIIOnly) ne 'true' or exists($Note)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_EX_03" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_EX_03 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7566</message>
+ <ref href="formula.xml#REGCA_BNP_EX_03" sourceLine="7566">
+  <property name="id" value="REGCA_BNP_EX_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($NetworkShare) and exists($CombinedShare)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_AssociatedCryptoNetworkMaterialAspects" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_AssociatedCryptoNetworkMaterialAspects evaluations : 1 satisfied, 0 not satisfied - formula.xml 2814</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_AssociatedCryptoNetworkMaterialAspects" sourceLine="2814">
+  <property name="id" value="REGCA_REQ_1CRYPTO_AssociatedCryptoNetworkMaterialAspects"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('AssociatedCryptoNetworkMaterialAspects', 'regca:AssociatedCryptoNetworkMaterialAspects')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SRC_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SRC_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6583</message>
+ <ref href="formula.xml#REGCA_SRC_01" sourceLine="6583">
+  <property name="id" value="REGCA_SRC_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Public) ne 'true' or exists($Url)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PROV_04" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PROV_04 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8611</message>
+ <ref href="formula.xml#REGCA_PROV_04" sourceLine="8611">
+  <property name="id" value="REGCA_PROV_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($Net) and exists($Block) and exists($Date) and exists($Link)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_RF_EQUITY_01_XML" satisfiedCount="2" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_RF_EQUITY_01_XML evaluations : 2 satisfied, 0 not satisfied - formula.xml 5753</message>
+ <ref href="formula.xml#REGCA_RF_EQUITY_01_XML" sourceLine="5753">
+  <property name="id" value="REGCA_RF_EQUITY_01_XML"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Start + $NetIncome + $OCI + $Issued + $Other eq $End"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_EX_04" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_EX_04 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7614</message>
+ <ref href="formula.xml#REGCA_BNP_EX_04" sourceLine="7614">
+  <property name="id" value="REGCA_BNP_EX_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($NetworkShare) and exists($CombinedShare)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PER_03" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PER_03 evaluations : 1 satisfied, 0 not satisfied - formula.xml 7948</message>
+ <ref href="formula.xml#REGCA_BNP_PER_03" sourceLine="7948">
+  <property name="id" value="REGCA_BNP_PER_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($DeclaredAffiliateCount) and $DeclaredAffiliateCount eq count($AffiliatePerimeterRow[string(.) eq 'true'])"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_ORD_01" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_ORD_01 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7225</message>
+ <ref href="formula.xml#REGCA_BNP_ORD_01" sourceLine="7225">
+  <property name="id" value="REGCA_BNP_ORD_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Influence) ne 'true' or exists($Revenue)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PER_05" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PER_05 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7710</message>
+ <ref href="formula.xml#REGCA_BNP_PER_05" sourceLine="7710">
+  <property name="id" value="REGCA_BNP_PER_05"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($AffiliateNetworkRow) ne 'true' or (exists($AffiliateEngaged) and string($AffiliateEngaged) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPL_04" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPL_04 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6295</message>
+ <ref href="formula.xml#REGCA_SUPPL_04" sourceLine="6295">
+  <property name="id" value="REGCA_SUPPL_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($SubType) ne 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or $Units le $QUnits"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_TIER_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_TIER_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5543</message>
+ <ref href="formula.xml#REGCA_F_TIER_02" sourceLine="5543">
+  <property name="id" value="REGCA_F_TIER_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Exemption) ne 'http://luca.pacioli.ai/report#FundraisingExemptionTier2Member' or $Total le $P_tier2Limit"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PRIOR_06" satisfiedCount="2" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PRIOR_06 evaluations : 2 satisfied, 0 not satisfied - formula.xml 7131</message>
+ <ref href="formula.xml#REGCA_PRIOR_06" sourceLine="7131">
+  <property name="id" value="REGCA_PRIOR_06"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($For) ne 'http://luca.pacioli.ai/report#SignsOnBehalfOfResponsibleEntityMember' or (exists($Entity) and exists($Title))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_EX_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_EX_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8140</message>
+ <ref href="formula.xml#REGCA_BNP_EX_02" sourceLine="8140">
+  <property name="id" value="REGCA_BNP_EX_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($AffiliateParticipatesOnSameProtocolIndicator) ne 'true' or count($AffiliateNetworkShare) ge 1"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_EX_05" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_EX_05 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7521</message>
+ <ref href="formula.xml#REGCA_BNP_EX_05" sourceLine="7521">
+  <property name="id" value="REGCA_BNP_EX_05"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($NetworkNativeTokenSymbol)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PER_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PER_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 7894</message>
+ <ref href="formula.xml#REGCA_BNP_PER_01" sourceLine="7894">
+  <property name="id" value="REGCA_BNP_PER_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($AffiliateEngaged) ne 'true' or (normalize-space(string($AffiliateLegalName)) ne '' and normalize-space(string($AffiliateLEI)) ne '' and exists($AffiliateControlDirection) and exists($AffiliateControlBasis))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PER_05C" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PER_05C evaluations : 3 satisfied, 0 not satisfied - formula.xml 7768</message>
+ <ref href="formula.xml#REGCA_BNP_PER_05C" sourceLine="7768">
+  <property name="id" value="REGCA_BNP_PER_05C"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($AffiliateEngaged) and string($AffiliateEngaged) eq 'true'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_HoldingsByRelatedPersonsDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_HoldingsByRelatedPersonsDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 3326</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_HoldingsByRelatedPersonsDescription" sourceLine="3326">
+  <property name="id" value="REGCA_REQ_1CRYPTO_HoldingsByRelatedPersonsDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('HoldingsByRelatedPersonsDescription', 'regca:HoldingsByRelatedPersonsDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SIG_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SIG_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6525</message>
+ <ref href="formula.xml#REGCA_SIG_02" sourceLine="6525">
+  <property name="id" value="REGCA_SIG_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="not(string($DocumentType) = ('http://luca.pacioli.ai/report#Form1CRYPTOMember', 'http://luca.pacioli.ai/report#Form1KCMember', 'http://luca.pacioli.ai/report#StartupRule103DisclosureMember')) or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($DocumentType) eq 'http://luca.pacioli.ai/report#Form1KCMember' and string($Amend) eq 'true') or count(for $c in $Caps return (if (string($c) eq 'http://luca.pacioli.ai/report#DirectorOrGoverningBodyMemberMember') then 1 else ())) gt $Board div 2"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_TIE_02" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_TIE_02 evaluations : 3 satisfied, 0 not satisfied - formula.xml 8285</message>
+ <ref href="formula.xml#REGCA_BNP_TIE_02" sourceLine="8285">
+  <property name="id" value="REGCA_BNP_TIE_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($AffiliateBlockchainNetworkParticipationExpenses) and exists($AffiliateBlockchainNetworkParticipationNetIncome) and $AffiliateBlockchainNetworkParticipationNetIncome eq $AffiliateBlockchainNetworkParticipationRevenue - $AffiliateBlockchainNetworkParticipationExpenses"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PROV_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PROV_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8577</message>
+ <ref href="formula.xml#REGCA_PROV_02" sourceLine="8577">
+  <property name="id" value="REGCA_PROV_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="matches(string($R), '^[0-9a-f]{64}$')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_FX_03" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_FX_03 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6965</message>
+ <ref href="formula.xml#REGCA_FX_03" sourceLine="6965">
+  <property name="id" value="REGCA_FX_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count($USD) eq 0 or sum($USD) le $Total"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PurchasePricePerUnit" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PurchasePricePerUnit evaluations : 1 satisfied, 0 not satisfied - formula.xml 1728</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PurchasePricePerUnit" sourceLine="1728">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PurchasePricePerUnit"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PurchasePricePerUnit', 'regca:PurchasePricePerUnit')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_PARTI_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_PARTI_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6065</message>
+ <ref href="formula.xml#REGCA_F_PARTI_01" sourceLine="6065">
+  <property name="id" value="REGCA_F_PARTI_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($Issuer + $Sellers - $Units * $Price) le $P_monetaryTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PROV_06" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PROV_06 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8681</message>
+ <ref href="formula.xml#REGCA_PROV_06" sourceLine="8681">
+  <property name="id" value="REGCA_PROV_06"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="matches(string($N), '^[a-z0-9\-]{3,8}:[a-zA-Z0-9_\-]{1,32}$')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ExhibitNumber" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ExhibitNumber evaluations : 1 satisfied, 0 not satisfied - formula.xml 1258</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ExhibitNumber" sourceLine="1258">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ExhibitNumber"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('ExhibitNumber', 'regca:ExhibitNumber')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_CashAndCashEquivalentsPeriodIncreaseDecrease" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_CashAndCashEquivalentsPeriodIncreaseDecrease evaluations : 1 satisfied, 0 not satisfied - formula.xml 4494</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_CashAndCashEquivalentsPeriodIncreaseDecrease" sourceLine="4494">
+  <property name="id" value="REGCA_REQ_1CRYPTO_CashAndCashEquivalentsPeriodIncreaseDecrease"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('CashAndCashEquivalentsPeriodIncreaseDecrease', 'regca:CashAndCashEquivalentsPeriodIncreaseDecrease')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_FS_CRYPTO_01" satisfiedCount="2" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_FS_CRYPTO_01 evaluations : 2 satisfied, 0 not satisfied - formula.xml 5797</message>
+ <ref href="formula.xml#REGCA_FS_CRYPTO_01" sourceLine="5797">
+  <property name="id" value="REGCA_FS_CRYPTO_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count($Each) eq 0 or $Crypto ge sum($Each)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SmartContractGovernanceMechanisms" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SmartContractGovernanceMechanisms evaluations : 1 satisfied, 0 not satisfied - formula.xml 3646</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SmartContractGovernanceMechanisms" sourceLine="3646">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SmartContractGovernanceMechanisms"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('SmartContractGovernanceMechanisms', 'regca:SmartContractGovernanceMechanisms')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_IssuerTelephoneNumber" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_IssuerTelephoneNumber evaluations : 1 satisfied, 0 not satisfied - formula.xml 312</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_IssuerTelephoneNumber" sourceLine="312">
+  <property name="id" value="REGCA_REQ_1CRYPTO_IssuerTelephoneNumber"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('IssuerTelephoneNumber', 'regca:IssuerTelephoneNumber')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PermissionsDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PermissionsDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 3710</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PermissionsDescription" sourceLine="3710">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PermissionsDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PermissionsDescription', 'regca:PermissionsDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPLY_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPLY_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5335</message>
+ <ref href="formula.xml#REGCA_SUPPLY_01" sourceLine="5335">
+  <property name="id" value="REGCA_SUPPLY_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Outstanding le $Max"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_FS_AGE_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_FS_AGE_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6657</message>
+ <ref href="formula.xml#REGCA_FS_AGE_02" sourceLine="6657">
+  <property name="id" value="REGCA_FS_AGE_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true') or empty($Qual) or (some $dl in (max(for $a in $BalanceSheets return xs:date(xfi:period-instant(xfi:period($a)) - xs:dayTimeDuration('P1D'))) + xs:yearMonthDuration(concat('P', string($P_financialStatementAgeMonths), 'M'))) satisfies (some $w in (days-from-duration($dl - xs:date('2000-01-03')) mod 7) satisfies xs:date($Qual) le $dl + xs:dayTimeDuration(if ($w eq 5) then 'P2D' else if ($w eq 6) then 'P1D' else 'P0D')))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_R1_NODES_01" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_R1_NODES_01 evaluations : 3 satisfied, 0 not satisfied - formula.xml 8010</message>
+ <ref href="formula.xml#REGCA_BNP_R1_NODES_01" sourceLine="8010">
+  <property name="id" value="REGCA_BNP_R1_NODES_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="(if (string($IssuerOperatesBlockchainInfrastructureIndicator) eq 'true') then (exists($NumberOfNodesOrValidatorsOperated) and $NumberOfNodesOrValidatorsOperated ge 1) else (if (string($IssuerOperatesBlockchainInfrastructureIndicator) eq 'false') then (not(exists($NumberOfNodesOrValidatorsOperated)) or $NumberOfNodesOrValidatorsOperated eq 0) else true())) and (not(exists($NumberOfNodesOrValidatorsOperated)) or $NumberOfNodesOrValidatorsOperated ge 0) and (not(exists($NumberOfValidatorSlotsControlled)) or not($NumberOfValidatorSlotsControlled gt 0) or (exists($NumberOfNodesOrValidatorsOperated) and $NumberOfNodesOrValidatorsOperated ge 1))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_GovernanceMechanisms" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_GovernanceMechanisms evaluations : 1 satisfied, 0 not satisfied - formula.xml 3582</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_GovernanceMechanisms" sourceLine="3582">
+  <property name="id" value="REGCA_REQ_1CRYPTO_GovernanceMechanisms"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('GovernanceMechanisms', 'regca:GovernanceMechanisms')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_TOTAL_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_TOTAL_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5487</message>
+ <ref href="formula.xml#REGCA_F_TOTAL_01" sourceLine="5487">
+  <property name="id" value="REGCA_F_TOTAL_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Total eq $Iss + $Ssh + $Prior + $Conc"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPLY_05" satisfiedCount="4" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPLY_05 evaluations : 4 satisfied, 0 not satisfied - formula.xml 5423</message>
+ <ref href="formula.xml#REGCA_SUPPLY_05" sourceLine="5423">
+  <property name="id" value="REGCA_SUPPLY_05"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($Pct - $Units div $Outstanding) le $P_shareRoundingTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_NOTE_01" satisfiedCount="10" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_NOTE_01 evaluations : 10 satisfied, 0 not satisfied - formula.xml 6805</message>
+ <ref href="formula.xml#REGCA_NOTE_01" sourceLine="6805">
+  <property name="id" value="REGCA_NOTE_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($Num) and exists($Title)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_FilingMerkleRootMethod" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_FilingMerkleRootMethod evaluations : 1 satisfied, 0 not satisfied - formula.xml 8527</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_FilingMerkleRootMethod" sourceLine="8527">
+  <property name="id" value="REGCA_REQ_1CRYPTO_FilingMerkleRootMethod"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_TIE_01_XML" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_TIE_01_XML evaluations : 3 satisfied, 0 not satisfied - formula.xml 8263</message>
+ <ref href="formula.xml#REGCA_BNP_TIE_01_XML" sourceLine="8263">
+  <property name="id" value="REGCA_BNP_TIE_01_XML"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($BlockchainNetworkParticipationExpenses) and exists($BlockchainNetworkParticipationNetIncome) and $BlockchainNetworkParticipationNetIncome eq $BlockchainNetworkParticipationRevenue - $BlockchainNetworkParticipationExpenses"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PreviousFilingDate" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PreviousFilingDate evaluations : 1 satisfied, 0 not satisfied - formula.xml 8475</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PreviousFilingDate" sourceLine="8475">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PreviousFilingDate"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PreviousFilingDate', 'regca:PreviousFilingDate'))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PRIOR_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PRIOR_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 7013</message>
+ <ref href="formula.xml#REGCA_PRIOR_02" sourceLine="7013">
+  <property name="id" value="REGCA_PRIOR_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Prior) ne 'false' or (count($Desc) eq 0 and count($Link) eq 0)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_OFFER_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_OFFER_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5099</message>
+ <ref href="formula.xml#REGCA_OFFER_01" sourceLine="5099">
+  <property name="id" value="REGCA_OFFER_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($AOP - $Units * $Price) le $P_monetaryTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_LOT_04" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_LOT_04 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5281</message>
+ <ref href="formula.xml#REGCA_LOT_04" sourceLine="5281">
+  <property name="id" value="REGCA_LOT_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Included) ne 'false' or (count($Alloc) eq 0 or $Alloc eq 0)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_LEGEND_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_LEGEND_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6117</message>
+ <ref href="formula.xml#REGCA_F_LEGEND_01" sourceLine="6117">
+  <property name="id" value="REGCA_F_LEGEND_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or ((empty($L302e) or string($L302e) eq 'true') and (empty($LInv) or string($LInv) eq 'true'))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SecurityMaterialAspects" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SecurityMaterialAspects evaluations : 1 satisfied, 0 not satisfied - formula.xml 2942</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SecurityMaterialAspects" sourceLine="2942">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SecurityMaterialAspects"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('SecurityMaterialAspects', 'regca:SecurityMaterialAspects')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_EstimatedNetProceedsToIssuer" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_EstimatedNetProceedsToIssuer evaluations : 1 satisfied, 0 not satisfied - formula.xml 852</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_EstimatedNetProceedsToIssuer" sourceLine="852">
+  <property name="id" value="REGCA_REQ_1CRYPTO_EstimatedNetProceedsToIssuer"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('EstimatedNetProceedsToIssuer', 'regca:EstimatedNetProceedsToIssuer')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SubjectCryptoAssetMaterialAspects" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SubjectCryptoAssetMaterialAspects evaluations : 1 satisfied, 0 not satisfied - formula.xml 2558</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SubjectCryptoAssetMaterialAspects" sourceLine="2558">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SubjectCryptoAssetMaterialAspects"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('SubjectCryptoAssetMaterialAspects', 'regca:SubjectCryptoAssetMaterialAspects')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPL_05" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPL_05 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6327</message>
+ <ref href="formula.xml#REGCA_SUPPL_05" sourceLine="6327">
+  <property name="id" value="REGCA_SUPPL_05"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="not(string($Para) = ('http://luca.pacioli.ai/report#Rule302f1Member', 'http://luca.pacioli.ai/report#Rule302f3Member')) or (exists($Price) and exists($AOP))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_AMEND_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_AMEND_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5817</message>
+ <ref href="formula.xml#REGCA_AMEND_01" sourceLine="5817">
+  <property name="id" value="REGCA_AMEND_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="not(string($DocumentType) = ('http://luca.pacioli.ai/report#Form1CRYPTOMember', 'http://luca.pacioli.ai/report#Form1KCMember', 'http://luca.pacioli.ai/report#Form1SCMember', 'http://luca.pacioli.ai/report#Form1UCMember')) or string($Amendment) ne 'true' or exists($Number)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ManagementAndRelatedPersons" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ManagementAndRelatedPersons evaluations : 1 satisfied, 0 not satisfied - formula.xml 2622</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ManagementAndRelatedPersons" sourceLine="2622">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ManagementAndRelatedPersons"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('ManagementAndRelatedPersons', 'regca:ManagementAndRelatedPersons')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_TIER_03" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_TIER_03 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5565</message>
+ <ref href="formula.xml#REGCA_F_TIER_03" sourceLine="5565">
+  <property name="id" value="REGCA_F_TIER_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="(string($Exemption) ne 'http://luca.pacioli.ai/report#FundraisingExemptionTier1Member' or $Aff le $P_tier1AffiliateLimit) and (string($Exemption) ne 'http://luca.pacioli.ai/report#FundraisingExemptionTier2Member' or $Aff le $P_tier2AffiliateLimit)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PQA_02" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PQA_02 evaluations : 0 satisfied, 0 not satisfied - formula.xml 5911</message>
+ <ref href="formula.xml#REGCA_PQA_02" sourceLine="5911">
+  <property name="id" value="REGCA_PQA_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Basis) ne 'http://luca.pacioli.ai/report#PostQualificationAnnualUpdateMember' or xs:date($Doc) le xs:date($Qual) + xs:yearMonthDuration(concat('P', string($P_postQualificationUpdateMonths), 'M'))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_IssuerWebsiteAddress" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_IssuerWebsiteAddress evaluations : 1 satisfied, 0 not satisfied - formula.xml 1470</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_IssuerWebsiteAddress" sourceLine="1470">
+  <property name="id" value="REGCA_REQ_1CRYPTO_IssuerWebsiteAddress"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('IssuerWebsiteAddress', 'regca:IssuerWebsiteAddress')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_MA_03" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_MA_03 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8351</message>
+ <ref href="formula.xml#REGCA_BNP_MA_03" sourceLine="8351">
+  <property name="id" value="REGCA_BNP_MA_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Total eq sum($Each)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_TIER_04" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_TIER_04 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5587</message>
+ <ref href="formula.xml#REGCA_F_TIER_04" sourceLine="5587">
+  <property name="id" value="REGCA_F_TIER_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($First) ne 'true' or $Ssh le $P_firstYearSellingSecurityholderShare * ($Iss + $Ssh)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_AddressLine1" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_AddressLine1 evaluations : 1 satisfied, 0 not satisfied - formula.xml 1534</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_AddressLine1" sourceLine="1534">
+  <property name="id" value="REGCA_REQ_1CRYPTO_AddressLine1"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('AddressLine1', 'regca:AddressLine1')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_EX_04_HASH" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_EX_04_HASH evaluations : 3 satisfied, 0 not satisfied - formula.xml 7642</message>
+ <ref href="formula.xml#REGCA_BNP_EX_04_HASH" sourceLine="7642">
+  <property name="id" value="REGCA_BNP_EX_04_HASH"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($NetworkShare) and exists($CombinedShare)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_OfferingStatementSubmissionType" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_OfferingStatementSubmissionType evaluations : 1 satisfied, 0 not satisfied - formula.xml 60</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_OfferingStatementSubmissionType" sourceLine="60">
+  <property name="id" value="REGCA_REQ_1CRYPTO_OfferingStatementSubmissionType"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_JurisdictionOfIncorporationOrOrganization" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_JurisdictionOfIncorporationOrOrganization evaluations : 1 satisfied, 0 not satisfied - formula.xml 120</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_JurisdictionOfIncorporationOrOrganization" sourceLine="120">
+  <property name="id" value="REGCA_REQ_1CRYPTO_JurisdictionOfIncorporationOrOrganization"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('JurisdictionOfIncorporationOrOrganization', 'regca:JurisdictionOfIncorporationOrOrganization')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PurchaserObligationsUnderCoveredInvestmentContract" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PurchaserObligationsUnderCoveredInvestmentContract evaluations : 1 satisfied, 0 not satisfied - formula.xml 2294</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PurchaserObligationsUnderCoveredInvestmentContract" sourceLine="2294">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PurchaserObligationsUnderCoveredInvestmentContract"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PurchaserObligationsUnderCoveredInvestmentContract', 'regca:PurchaserObligationsUnderCoveredInvestmentContract')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_EXH_01" satisfiedCount="7" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_EXH_01 evaluations : 7 satisfied, 0 not satisfied - formula.xml 6461</message>
+ <ref href="formula.xml#REGCA_EXH_01" sourceLine="6461">
+  <property name="id" value="REGCA_EXH_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Incorporated) ne 'true' or exists($Link)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ConditionsToCoveredInvestmentContract" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ConditionsToCoveredInvestmentContract evaluations : 1 satisfied, 0 not satisfied - formula.xml 2358</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ConditionsToCoveredInvestmentContract" sourceLine="2358">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ConditionsToCoveredInvestmentContract"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('ConditionsToCoveredInvestmentContract', 'regca:ConditionsToCoveredInvestmentContract')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_TitleAndAmountOfSecuritiesOffered" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_TitleAndAmountOfSecuritiesOffered evaluations : 1 satisfied, 0 not satisfied - formula.xml 902</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_TitleAndAmountOfSecuritiesOffered" sourceLine="902">
+  <property name="id" value="REGCA_REQ_1CRYPTO_TitleAndAmountOfSecuritiesOffered"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('TitleAndAmountOfSecuritiesOffered', 'regca:TitleAndAmountOfSecuritiesOffered')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_FS_AGE_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_FS_AGE_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6603</message>
+ <ref href="formula.xml#REGCA_FS_AGE_01" sourceLine="6603">
+  <property name="id" value="REGCA_FS_AGE_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true') or (some $dl in (max(for $a in $BalanceSheets return xs:date(xfi:period-instant(xfi:period($a)) - xs:dayTimeDuration('P1D'))) + xs:yearMonthDuration(concat('P', string($P_financialStatementAgeMonths), 'M'))) satisfies (some $w in (days-from-duration($dl - xs:date('2000-01-03')) mod 7) satisfies xs:date($Doc) le $dl + xs:dayTimeDuration(if ($w eq 5) then 'P2D' else if ($w eq 6) then 'P1D' else 'P0D')))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_UnitsOfCoveredInvestmentContractsOffered" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_UnitsOfCoveredInvestmentContractsOffered evaluations : 1 satisfied, 0 not satisfied - formula.xml 1678</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_UnitsOfCoveredInvestmentContractsOffered" sourceLine="1678">
+  <property name="id" value="REGCA_REQ_1CRYPTO_UnitsOfCoveredInvestmentContractsOffered"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('UnitsOfCoveredInvestmentContractsOffered', 'regca:UnitsOfCoveredInvestmentContractsOffered')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_R1_STAKE_01" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_R1_STAKE_01 evaluations : 3 satisfied, 0 not satisfied - formula.xml 8112</message>
+ <ref href="formula.xml#REGCA_BNP_R1_STAKE_01" sourceLine="8112">
+  <property name="id" value="REGCA_BNP_R1_STAKE_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$EffectiveStakeControlledOnNetwork ge 0 and (not($EffectiveStakeControlledOnNetwork gt 0) or exists($TotalValueStaked)) and (not(exists($TotalValueStaked)) or ($TotalValueStaked ge 0 and (($TotalValueStaked gt 0) eq ($EffectiveStakeControlledOnNetwork gt 0))))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ReleaseSchedulesDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ReleaseSchedulesDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 3390</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ReleaseSchedulesDescription" sourceLine="3390">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ReleaseSchedulesDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('ReleaseSchedulesDescription', 'regca:ReleaseSchedulesDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_EssentialManagerialEffortDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_EssentialManagerialEffortDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 2422</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_EssentialManagerialEffortDescription" sourceLine="2422">
+  <property name="id" value="REGCA_REQ_1CRYPTO_EssentialManagerialEffortDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('EssentialManagerialEffortDescription', 'regca:EssentialManagerialEffortDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_LOT_03" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_LOT_03 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5225</message>
+ <ref href="formula.xml#REGCA_LOT_03" sourceLine="5225">
+  <property name="id" value="REGCA_LOT_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($Price div $PerUnit - $EqPrice) le 0.000001"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_R1_GOV_02" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_R1_GOV_02 evaluations : 3 satisfied, 0 not satisfied - formula.xml 8086</message>
+ <ref href="formula.xml#REGCA_BNP_R1_GOV_02" sourceLine="8086">
+  <property name="id" value="REGCA_BNP_R1_GOV_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="(if (string($ParticipatedInGovernanceVotesPast12MonthsIndicator) eq 'true') then (exists($NumberOfGovernanceVotesCast) and $NumberOfGovernanceVotesCast ge 1) else (if (string($ParticipatedInGovernanceVotesPast12MonthsIndicator) eq 'false') then (not(exists($NumberOfGovernanceVotesCast)) or $NumberOfGovernanceVotesCast eq 0) else true())) and (not(exists($NumberOfGovernanceVotesCast)) or $NumberOfGovernanceVotesCast ge 0)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_MechanismsForGeneratingAndDestroyingSubjectCryptoAsset" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_MechanismsForGeneratingAndDestroyingSubjectCryptoAsset evaluations : 1 satisfied, 0 not satisfied - formula.xml 3454</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_MechanismsForGeneratingAndDestroyingSubjectCryptoAsset" sourceLine="3454">
+  <property name="id" value="REGCA_REQ_1CRYPTO_MechanismsForGeneratingAndDestroyingSubjectCryptoAsset"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('MechanismsForGeneratingAndDestroyingSubjectCryptoAsset', 'regca:MechanismsForGeneratingAndDestroyingSubjectCryptoAsset')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_Equity" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_Equity evaluations : 1 satisfied, 0 not satisfied - formula.xml 4230</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_Equity" sourceLine="4230">
+  <property name="id" value="REGCA_REQ_1CRYPTO_Equity"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('Equity', 'regca:Equity')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ResponsibleSignatorySignature" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ResponsibleSignatorySignature evaluations : 1 satisfied, 0 not satisfied - formula.xml 4812</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ResponsibleSignatorySignature" sourceLine="4812">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ResponsibleSignatorySignature"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_AUDIT_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_AUDIT_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6747</message>
+ <ref href="formula.xml#REGCA_AUDIT_02" sourceLine="6747">
+  <property name="id" value="REGCA_AUDIT_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Audited) ne 'true' or (exists($Auditor) and exists($Standards) and exists($Report))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_D_01_XML" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_D_01_XML evaluations : 3 satisfied, 0 not satisfied - formula.xml 7449</message>
+ <ref href="formula.xml#REGCA_BNP_D_01_XML" sourceLine="7449">
+  <property name="id" value="REGCA_BNP_D_01_XML"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($EstimatedStakeSharePercentage) and abs($EstimatedStakeSharePercentage * $TotalActiveStakeOnNetwork - $EffectiveStakeControlledOnNetwork) le $P_shareRoundingTolerance * $TotalActiveStakeOnNetwork"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_DiscussionOfFinancialCondition" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_DiscussionOfFinancialCondition evaluations : 1 satisfied, 0 not satisfied - formula.xml 1158</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_DiscussionOfFinancialCondition" sourceLine="1158">
+  <property name="id" value="REGCA_REQ_1CRYPTO_DiscussionOfFinancialCondition"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('DiscussionOfFinancialCondition', 'regca:DiscussionOfFinancialCondition')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_FS_INT_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_FS_INT_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6711</message>
+ <ref href="formula.xml#REGCA_FS_INT_01" sourceLine="6711">
+  <property name="id" value="REGCA_FS_INT_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="not((string($DocumentType) eq 'http://luca.pacioli.ai/report#Form1SCMember' and string($Amend) ne 'true') or exists($InterimBasis)) or string($Statement) eq 'true'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_D_04_XML" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_D_04_XML evaluations : 3 satisfied, 0 not satisfied - formula.xml 8215</message>
+ <ref href="formula.xml#REGCA_BNP_D_04_XML" sourceLine="8215">
+  <property name="id" value="REGCA_BNP_D_04_XML"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($AffiliateEstimatedHashPowerSharePercentage) and abs($AffiliateEstimatedHashPowerSharePercentage * $TotalNetworkHashRate - $AffiliateHashRateContributedToNetwork) le $P_shareRoundingTolerance * $TotalNetworkHashRate"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_MethodsToVerifyTransactionHistory" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_MethodsToVerifyTransactionHistory evaluations : 1 satisfied, 0 not satisfied - formula.xml 3518</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_MethodsToVerifyTransactionHistory" sourceLine="3518">
+  <property name="id" value="REGCA_REQ_1CRYPTO_MethodsToVerifyTransactionHistory"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('MethodsToVerifyTransactionHistory', 'regca:MethodsToVerifyTransactionHistory')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BS_01" satisfiedCount="2" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BS_01 evaluations : 2 satisfied, 0 not satisfied - formula.xml 5711</message>
+ <ref href="formula.xml#REGCA_BS_01" sourceLine="5711">
+  <property name="id" value="REGCA_BS_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$A eq $LE"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ConflictsOfInterestAndRelatedPersonTransactions" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ConflictsOfInterestAndRelatedPersonTransactions evaluations : 1 satisfied, 0 not satisfied - formula.xml 2686</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ConflictsOfInterestAndRelatedPersonTransactions" sourceLine="2686">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ConflictsOfInterestAndRelatedPersonTransactions"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('ConflictsOfInterestAndRelatedPersonTransactions', 'regca:ConflictsOfInterestAndRelatedPersonTransactions')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPLY_06" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPLY_06 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8423</message>
+ <ref href="formula.xml#REGCA_SUPPLY_06" sourceLine="8423">
+  <property name="id" value="REGCA_SUPPLY_06"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count($Cap) eq 0 or sum($Cap) eq $Max"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PrimaryStandardIndustrialClassificationCode" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PrimaryStandardIndustrialClassificationCode evaluations : 1 satisfied, 0 not satisfied - formula.xml 264</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PrimaryStandardIndustrialClassificationCode" sourceLine="264">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PrimaryStandardIndustrialClassificationCode"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PrimaryStandardIndustrialClassificationCode', 'regca:PrimaryStandardIndustrialClassificationCode')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_EcosystemTechnologyInfrastructure" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_EcosystemTechnologyInfrastructure evaluations : 1 satisfied, 0 not satisfied - formula.xml 3774</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_EcosystemTechnologyInfrastructure" sourceLine="3774">
+  <property name="id" value="REGCA_REQ_1CRYPTO_EcosystemTechnologyInfrastructure"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('EcosystemTechnologyInfrastructure', 'regca:EcosystemTechnologyInfrastructure')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_FinancialStatementsAuditedIndicator" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_FinancialStatementsAuditedIndicator evaluations : 1 satisfied, 0 not satisfied - formula.xml 4034</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_FinancialStatementsAuditedIndicator" sourceLine="4034">
+  <property name="id" value="REGCA_REQ_1CRYPTO_FinancialStatementsAuditedIndicator"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('FinancialStatementsAuditedIndicator', 'regca:FinancialStatementsAuditedIndicator')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SignatoryTitle" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SignatoryTitle evaluations : 1 satisfied, 0 not satisfied - formula.xml 4672</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SignatoryTitle" sourceLine="4672">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SignatoryTitle"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_COVER_03" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_COVER_03 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5079</message>
+ <ref href="formula.xml#REGCA_COVER_03" sourceLine="5079">
+  <property name="id" value="REGCA_COVER_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="not(string($DocumentType) = ('http://luca.pacioli.ai/report#Form1CRYPTOMember', 'http://luca.pacioli.ai/report#Form1KCMember', 'http://luca.pacioli.ai/report#Form1SCMember', 'http://luca.pacioli.ai/report#Form1UCMember')) or string($Exemption) ne 'http://luca.pacioli.ai/report#StartupExemptionMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_RANGE_01" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_RANGE_01 evaluations : 0 satisfied, 0 not satisfied - formula.xml 5647</message>
+ <ref href="formula.xml#REGCA_F_RANGE_01" sourceLine="5647">
+  <property name="id" value="REGCA_F_RANGE_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Low le $High and (not(exists($Price)) or ($Price ge $Low and $Price le $High))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPL_02" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPL_02 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6193</message>
+ <ref href="formula.xml#REGCA_SUPPL_02" sourceLine="6193">
+  <property name="id" value="REGCA_SUPPL_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Only) ne 'true' or exists($Related)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PRIOR_07B" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PRIOR_07B evaluations : 1 satisfied, 0 not satisfied - formula.xml 7153</message>
+ <ref href="formula.xml#REGCA_PRIOR_07B" sourceLine="7153">
+  <property name="id" value="REGCA_PRIOR_07B"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="some $x in ($Entities, $Persons) satisfies lower-case(normalize-space(string($x))) eq lower-case(normalize-space(string($Issuer)))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_EX_03_HASH" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_EX_03_HASH evaluations : 3 satisfied, 0 not satisfied - formula.xml 7590</message>
+ <ref href="formula.xml#REGCA_BNP_EX_03_HASH" sourceLine="7590">
+  <property name="id" value="REGCA_BNP_EX_03_HASH"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($NetworkShare) and exists($CombinedShare)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_OFFER_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_OFFER_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5127</message>
+ <ref href="formula.xml#REGCA_OFFER_02" sourceLine="5127">
+  <property name="id" value="REGCA_OFFER_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Net eq $AOP - $Exp"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_TaxonomyEntryPointAddress" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_TaxonomyEntryPointAddress evaluations : 1 satisfied, 0 not satisfied - formula.xml 8547</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_TaxonomyEntryPointAddress" sourceLine="8547">
+  <property name="id" value="REGCA_REQ_1CRYPTO_TaxonomyEntryPointAddress"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_AggregateOfferingPriceAndAggregateSalesTotal" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_AggregateOfferingPriceAndAggregateSalesTotal evaluations : 1 satisfied, 0 not satisfied - formula.xml 802</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_AggregateOfferingPriceAndAggregateSalesTotal" sourceLine="802">
+  <property name="id" value="REGCA_REQ_1CRYPTO_AggregateOfferingPriceAndAggregateSalesTotal"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('AggregateOfferingPriceAndAggregateSalesTotal', 'regca:AggregateOfferingPriceAndAggregateSalesTotal')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ResponsibleSignatoryName" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ResponsibleSignatoryName evaluations : 1 satisfied, 0 not satisfied - formula.xml 4872</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ResponsibleSignatoryName" sourceLine="4872">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ResponsibleSignatoryName"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PRIOR_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PRIOR_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6989</message>
+ <ref href="formula.xml#REGCA_PRIOR_01" sourceLine="6989">
+  <property name="id" value="REGCA_PRIOR_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Prior) ne 'true' or count($Desc) ge 1"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_D_02_XML" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_D_02_XML evaluations : 3 satisfied, 0 not satisfied - formula.xml 7485</message>
+ <ref href="formula.xml#REGCA_BNP_D_02_XML" sourceLine="7485">
+  <property name="id" value="REGCA_BNP_D_02_XML"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($EstimatedHashPowerSharePercentage) and abs($EstimatedHashPowerSharePercentage * $TotalNetworkHashRate - $HashRateContributedToNetwork) le $P_shareRoundingTolerance * $TotalNetworkHashRate"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_EssentialManagerialEffortStatus" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_EssentialManagerialEffortStatus evaluations : 1 satisfied, 0 not satisfied - formula.xml 2490</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_EssentialManagerialEffortStatus" sourceLine="2490">
+  <property name="id" value="REGCA_REQ_1CRYPTO_EssentialManagerialEffortStatus"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('EssentialManagerialEffortStatus', 'regca:EssentialManagerialEffortStatus')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ComprehensiveIncomeLoss" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ComprehensiveIncomeLoss evaluations : 1 satisfied, 0 not satisfied - formula.xml 4428</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ComprehensiveIncomeLoss" sourceLine="4428">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ComprehensiveIncomeLoss"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('ComprehensiveIncomeLoss', 'regca:ComprehensiveIncomeLoss')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PRIOR_05" satisfiedCount="2" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PRIOR_05 evaluations : 2 satisfied, 0 not satisfied - formula.xml 7093</message>
+ <ref href="formula.xml#REGCA_PRIOR_05" sourceLine="7093">
+  <property name="id" value="REGCA_PRIOR_05"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($Name) and exists($Cap) and exists($For) and exists($Date)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_AGG_03" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_AGG_03 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7387</message>
+ <ref href="formula.xml#REGCA_BNP_AGG_03" sourceLine="7387">
+  <property name="id" value="REGCA_BNP_AGG_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$CombinedValidatorSlotsControlledOnNetwork eq $NumberOfValidatorSlotsControlled + sum($AffiliateNumberOfValidatorSlotsControlled)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_AGG_02" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_AGG_02 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7349</message>
+ <ref href="formula.xml#REGCA_BNP_AGG_02" sourceLine="7349">
+  <property name="id" value="REGCA_BNP_AGG_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($CombinedHashPowerSharePercentageOnNetwork - ($EstimatedHashPowerSharePercentage + sum($AffiliateEstimatedHashPowerSharePercentage))) le $P_shareRoundingTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_FilingMerkleRoot" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_FilingMerkleRoot evaluations : 1 satisfied, 0 not satisfied - formula.xml 8507</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_FilingMerkleRoot" sourceLine="8507">
+  <property name="id" value="REGCA_REQ_1CRYPTO_FilingMerkleRoot"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ResponsibleSignatoryCapacity" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ResponsibleSignatoryCapacity evaluations : 1 satisfied, 0 not satisfied - formula.xml 4932</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ResponsibleSignatoryCapacity" sourceLine="4932">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ResponsibleSignatoryCapacity"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_AggregateOfferingPriceAttributableToSellingSecurityholders" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_AggregateOfferingPriceAttributableToSellingSecurityholders evaluations : 1 satisfied, 0 not satisfied - formula.xml 652</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_AggregateOfferingPriceAttributableToSellingSecurityholders" sourceLine="652">
+  <property name="id" value="REGCA_REQ_1CRYPTO_AggregateOfferingPriceAttributableToSellingSecurityholders"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('AggregateOfferingPriceAttributableToSellingSecurityholders', 'regca:AggregateOfferingPriceAttributableToSellingSecurityholders')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_LOT_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_LOT_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5169</message>
+ <ref href="formula.xml#REGCA_LOT_01" sourceLine="5169">
+  <property name="id" value="REGCA_LOT_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($Units * $PerUnit - $EqUnits) le 0.000001"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SignatureStateOrProvince" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SignatureStateOrProvince evaluations : 1 satisfied, 0 not satisfied - formula.xml 1422</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SignatureStateOrProvince" sourceLine="1422">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SignatureStateOrProvince"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('SignatureStateOrProvince', 'regca:SignatureStateOrProvince')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PER_04" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PER_04 evaluations : 1 satisfied, 0 not satisfied - formula.xml 7974</message>
+ <ref href="formula.xml#REGCA_BNP_PER_04" sourceLine="7974">
+  <property name="id" value="REGCA_BNP_PER_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($PerimeterAttestation) and string($PerimeterAttestation) eq 'true' and exists($AffiliatesEngage) and exists($DeclaredAffiliateCount) and ((string($AffiliatesEngage) eq 'true') eq ($DeclaredAffiliateCount ge 1))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BDAY_04" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BDAY_04 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6891</message>
+ <ref href="formula.xml#REGCA_BDAY_04" sourceLine="6891">
+  <property name="id" value="REGCA_BDAY_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Para) ne 'http://luca.pacioli.ai/report#Rule302f2Member' or empty($FirstUse) or xs:date($Doc) le (for $bd0 in xs:date($FirstUse), $bw0 in (days-from-duration($bd0 - xs:date('2000-01-03')) mod 7), $bdf in ($bd0 - xs:dayTimeDuration(concat('P', string(max((0, $bw0 - 4))), 'D'))), $bwf in min(($bw0, 4)) return $bdf + xs:dayTimeDuration(concat('P', string($P_changeSupplementBusinessDays + 2 * (($bwf + $P_changeSupplementBusinessDays) idiv 5)), 'D')))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PER_06" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PER_06 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7828</message>
+ <ref href="formula.xml#REGCA_BNP_PER_06" sourceLine="7828">
+  <property name="id" value="REGCA_BNP_PER_06"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($AffiliateNetworkRow) ne 'true' or exists($AffiliateStakeShare) or exists($AffiliateHashShare) or exists($AffiliateValidatorSlots)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PC_01" satisfiedCount="28" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PC_01 evaluations : 28 satisfied, 0 not satisfied - formula.xml 7547</message>
+ <ref href="formula.xml#REGCA_BNP_PC_01" sourceLine="7547">
+  <property name="id" value="REGCA_BNP_PC_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$BNPPercent ge $P_percentFractionLowerBound and $BNPPercent le $P_percentFractionUpperBound"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_IntendedUseOfProceeds" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_IntendedUseOfProceeds evaluations : 1 satisfied, 0 not satisfied - formula.xml 2102</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_IntendedUseOfProceeds" sourceLine="2102">
+  <property name="id" value="REGCA_REQ_1CRYPTO_IntendedUseOfProceeds"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('IntendedUseOfProceeds', 'regca:IntendedUseOfProceeds')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BDAY_02" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BDAY_02 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6827</message>
+ <ref href="formula.xml#REGCA_BDAY_02" sourceLine="6827">
+  <property name="id" value="REGCA_BDAY_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="not(string($Para) = ('http://luca.pacioli.ai/report#Rule302f1Member', 'http://luca.pacioli.ai/report#Rule302f3Member')) or empty($Qual) or xs:date($Doc) le (for $bd0 in xs:date($Qual), $bw0 in (days-from-duration($bd0 - xs:date('2000-01-03')) mod 7), $bdf in ($bd0 - xs:dayTimeDuration(concat('P', string(max((0, $bw0 - 4))), 'D'))), $bwf in min(($bw0, 4)) return $bdf + xs:dayTimeDuration(concat('P', string($P_omittedPricingBusinessDays + 2 * (($bwf + $P_omittedPricingBusinessDays) idiv 5)), 'D')))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_AggregateOfferingPriceAttributableToIssuer" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_AggregateOfferingPriceAttributableToIssuer evaluations : 1 satisfied, 0 not satisfied - formula.xml 602</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_AggregateOfferingPriceAttributableToIssuer" sourceLine="602">
+  <property name="id" value="REGCA_REQ_1CRYPTO_AggregateOfferingPriceAttributableToIssuer"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('AggregateOfferingPriceAttributableToIssuer', 'regca:AggregateOfferingPriceAttributableToIssuer')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_OfferingUnderRegulationCryptoAssetsInPrevious12MonthsIndicator" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_OfferingUnderRegulationCryptoAssetsInPrevious12MonthsIndicator evaluations : 1 satisfied, 0 not satisfied - formula.xml 4760</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_OfferingUnderRegulationCryptoAssetsInPrevious12MonthsIndicator" sourceLine="4760">
+  <property name="id" value="REGCA_REQ_1CRYPTO_OfferingUnderRegulationCryptoAssetsInPrevious12MonthsIndicator"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_RF_SUPPLY_01_XML" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_RF_SUPPLY_01_XML evaluations : 0 satisfied, 0 not satisfied - formula.xml 5303</message>
+ <ref href="formula.xml#REGCA_RF_SUPPLY_01_XML" sourceLine="5303">
+  <property name="id" value="REGCA_RF_SUPPLY_01_XML"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Start + $Generated - $Destroyed eq $End"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PER_05B" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PER_05B evaluations : 3 satisfied, 0 not satisfied - formula.xml 7738</message>
+ <ref href="formula.xml#REGCA_BNP_PER_05B" sourceLine="7738">
+  <property name="id" value="REGCA_BNP_PER_05B"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($AffiliateEngaged) and string($AffiliateEngaged) eq 'true'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PROV_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PROV_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8567</message>
+ <ref href="formula.xml#REGCA_PROV_01" sourceLine="8567">
+  <property name="id" value="REGCA_PROV_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="matches(string($R), '^[0-9a-f]{64}$')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_D_03_XML" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_D_03_XML evaluations : 3 satisfied, 0 not satisfied - formula.xml 8167</message>
+ <ref href="formula.xml#REGCA_BNP_D_03_XML" sourceLine="8167">
+  <property name="id" value="REGCA_BNP_D_03_XML"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($AffiliateEstimatedStakeSharePercentage) and abs($AffiliateEstimatedStakeSharePercentage * $TotalActiveStakeOnNetwork - $AffiliateEffectiveStakeControlledOnNetwork) le $P_shareRoundingTolerance * $TotalActiveStakeOnNetwork"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SOI_02" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SOI_02 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6411</message>
+ <ref href="formula.xml#REGCA_SOI_02" sourceLine="6411">
+  <property name="id" value="REGCA_SOI_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Statements) eq 'true'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_AddressCountry" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_AddressCountry evaluations : 1 satisfied, 0 not satisfied - formula.xml 1630</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_AddressCountry" sourceLine="1630">
+  <property name="id" value="REGCA_REQ_1CRYPTO_AddressCountry"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('AddressCountry', 'regca:AddressCountry')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_WhitepaperAndOfferingMaterialsWebsiteAddress" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_WhitepaperAndOfferingMaterialsWebsiteAddress evaluations : 1 satisfied, 0 not satisfied - formula.xml 2166</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_WhitepaperAndOfferingMaterialsWebsiteAddress" sourceLine="2166">
+  <property name="id" value="REGCA_REQ_1CRYPTO_WhitepaperAndOfferingMaterialsWebsiteAddress"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('WhitepaperAndOfferingMaterialsWebsiteAddress', 'regca:WhitepaperAndOfferingMaterialsWebsiteAddress')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_OfferingStatementIssuerCertification" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_OfferingStatementIssuerCertification evaluations : 1 satisfied, 0 not satisfied - formula.xml 1222</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_OfferingStatementIssuerCertification" sourceLine="1222">
+  <property name="id" value="REGCA_REQ_1CRYPTO_OfferingStatementIssuerCertification"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_LockupsDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_LockupsDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 3198</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_LockupsDescription" sourceLine="3198">
+  <property name="id" value="REGCA_REQ_1CRYPTO_LockupsDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('LockupsDescription', 'regca:LockupsDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_OFFER_04" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_OFFER_04 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8371</message>
+ <ref href="formula.xml#REGCA_OFFER_04" sourceLine="8371">
+  <property name="id" value="REGCA_OFFER_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count($Pcts) eq 0 or abs(sum($Pcts) - $Total) le $P_shareRoundingTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_FinancialStatementNoteText" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_FinancialStatementNoteText evaluations : 1 satisfied, 0 not satisfied - formula.xml 4560</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_FinancialStatementNoteText" sourceLine="4560">
+  <property name="id" value="REGCA_REQ_1CRYPTO_FinancialStatementNoteText"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('FinancialStatementNoteText', 'regca:FinancialStatementNoteText')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_MA_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_MA_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8307</message>
+ <ref href="formula.xml#REGCA_BNP_MA_01" sourceLine="8307">
+  <property name="id" value="REGCA_BNP_MA_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Total eq sum($Each)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PER_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PER_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 7670</message>
+ <ref href="formula.xml#REGCA_BNP_PER_02" sourceLine="7670">
+  <property name="id" value="REGCA_BNP_PER_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($AffiliateEngaged) ne 'true' or (exists($AffiliateDeclaredNetworkCount) and $AffiliateDeclaredNetworkCount ge $P_minimumNetworksPerEngagedAffiliate and count($AffiliateNetworkRow[string(.) eq 'true']) eq $AffiliateDeclaredNetworkCount)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_AMEND_03" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_AMEND_03 evaluations : 0 satisfied, 0 not satisfied - formula.xml 5867</message>
+ <ref href="formula.xml#REGCA_AMEND_03" sourceLine="5867">
+  <property name="id" value="REGCA_AMEND_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Amended) ne 'true' or (some $e in $Exhibits satisfies matches(normalize-space(string($e)), '^11(\D|$)'))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_AggregateSalesUnderQualifiedOfferingStatementsPrior12Months" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_AggregateSalesUnderQualifiedOfferingStatementsPrior12Months evaluations : 1 satisfied, 0 not satisfied - formula.xml 702</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_AggregateSalesUnderQualifiedOfferingStatementsPrior12Months" sourceLine="702">
+  <property name="id" value="REGCA_REQ_1CRYPTO_AggregateSalesUnderQualifiedOfferingStatementsPrior12Months"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('AggregateSalesUnderQualifiedOfferingStatementsPrior12Months', 'regca:AggregateSalesUnderQualifiedOfferingStatementsPrior12Months')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_DistributionMethodsDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_DistributionMethodsDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 3262</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_DistributionMethodsDescription" sourceLine="3262">
+  <property name="id" value="REGCA_REQ_1CRYPTO_DistributionMethodsDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('DistributionMethodsDescription', 'regca:DistributionMethodsDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PriorDisqualifyingMattersIndicator" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PriorDisqualifyingMattersIndicator evaluations : 1 satisfied, 0 not satisfied - formula.xml 1094</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PriorDisqualifyingMattersIndicator" sourceLine="1094">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PriorDisqualifyingMattersIndicator"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PriorDisqualifyingMattersIndicator', 'regca:PriorDisqualifyingMattersIndicator')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_ATT_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_ATT_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 7247</message>
+ <ref href="formula.xml#REGCA_BNP_ATT_01" sourceLine="7247">
+  <property name="id" value="REGCA_BNP_ATT_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="normalize-space(string($AttestingOfficerName)) ne '' and normalize-space(string($AttestingOfficerTitle)) ne '' and normalize-space(string($AttestingOfficerIdentifier)) ne '' and exists($AttestingOfficerRole) and exists($AttestationDate)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_RF_CASH_01_XML" satisfiedCount="2" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_RF_CASH_01_XML evaluations : 2 satisfied, 0 not satisfied - formula.xml 5727</message>
+ <ref href="formula.xml#REGCA_RF_CASH_01_XML" sourceLine="5727">
+  <property name="id" value="REGCA_RF_CASH_01_XML"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Start + $Change eq $End"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_R1_GOV_01" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_R1_GOV_01 evaluations : 3 satisfied, 0 not satisfied - formula.xml 8048</message>
+ <ref href="formula.xml#REGCA_BNP_R1_GOV_01" sourceLine="8048">
+  <property name="id" value="REGCA_BNP_R1_GOV_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="(if (string($EntityHoldsGovernanceTokensIndicator) eq 'true') then (exists($GovernanceTokensQuantityHeld) and $GovernanceTokensQuantityHeld gt 0) else (if (string($EntityHoldsGovernanceTokensIndicator) eq 'false') then (not(exists($GovernanceTokensQuantityHeld)) or $GovernanceTokensQuantityHeld eq 0) else true())) and (not(exists($GovernanceTokensQuantityHeld)) or $GovernanceTokensQuantityHeld ge 0) and (not(exists($VotingPowerPercentage)) or not($VotingPowerPercentage gt 0) or (exists($GovernanceTokensQuantityHeld) and $GovernanceTokensQuantityHeld gt 0))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_PER_05D" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_PER_05D evaluations : 3 satisfied, 0 not satisfied - formula.xml 7798</message>
+ <ref href="formula.xml#REGCA_BNP_PER_05D" sourceLine="7798">
+  <property name="id" value="REGCA_BNP_PER_05D"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($AffiliateEngaged) and string($AffiliateEngaged) eq 'true'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements evaluations : 1 satisfied, 0 not satisfied - formula.xml 752</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements" sourceLine="752">
+  <property name="id" value="REGCA_REQ_1CRYPTO_AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements', 'regca:AggregateSalesConcurrentUnderOtherQualifiedOfferingStatements')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_CoveredInvestmentContractMaterialTerms" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_CoveredInvestmentContractMaterialTerms evaluations : 1 satisfied, 0 not satisfied - formula.xml 2230</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_CoveredInvestmentContractMaterialTerms" sourceLine="2230">
+  <property name="id" value="REGCA_REQ_1CRYPTO_CoveredInvestmentContractMaterialTerms"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('CoveredInvestmentContractMaterialTerms', 'regca:CoveredInvestmentContractMaterialTerms')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_AddressCityOrTown" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_AddressCityOrTown evaluations : 1 satisfied, 0 not satisfied - formula.xml 1582</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_AddressCityOrTown" sourceLine="1582">
+  <property name="id" value="REGCA_REQ_1CRYPTO_AddressCityOrTown"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('AddressCityOrTown', 'regca:AddressCityOrTown')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PROV_03" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PROV_03 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8587</message>
+ <ref href="formula.xml#REGCA_PROV_03" sourceLine="8587">
+  <property name="id" value="REGCA_PROV_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count($X) gt 0"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_LEGEND_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_LEGEND_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6145</message>
+ <ref href="formula.xml#REGCA_F_LEGEND_02" sourceLine="6145">
+  <property name="id" value="REGCA_F_LEGEND_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Prelim) ne 'true' or string($L303a) eq 'true'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SIG_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SIG_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6477</message>
+ <ref href="formula.xml#REGCA_SIG_01" sourceLine="6477">
+  <property name="id" value="REGCA_SIG_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="not(string($DocumentType) = ('http://luca.pacioli.ai/report#Form1CRYPTOMember', 'http://luca.pacioli.ai/report#Form1KCMember', 'http://luca.pacioli.ai/report#Form1SCMember', 'http://luca.pacioli.ai/report#StartupRule103DisclosureMember')) or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (string($DocumentType) = ('http://luca.pacioli.ai/report#Form1KCMember', 'http://luca.pacioli.ai/report#Form1SCMember') and string($Amend) eq 'true') or (every $m in ('http://luca.pacioli.ai/report#PrincipalExecutiveOfficerMember', 'http://luca.pacioli.ai/report#PrincipalFinancialOfficerMember', 'http://luca.pacioli.ai/report#PrincipalAccountingOfficerMember') satisfies $m = (for $c in $Caps return string($c)))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_LiabilitiesAndEquity" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_LiabilitiesAndEquity evaluations : 1 satisfied, 0 not satisfied - formula.xml 4296</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_LiabilitiesAndEquity" sourceLine="4296">
+  <property name="id" value="REGCA_REQ_1CRYPTO_LiabilitiesAndEquity"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('LiabilitiesAndEquity', 'regca:LiabilitiesAndEquity')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PurchaserQualificationsOrRestrictions" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PurchaserQualificationsOrRestrictions evaluations : 1 satisfied, 0 not satisfied - formula.xml 1842</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PurchaserQualificationsOrRestrictions" sourceLine="1842">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PurchaserQualificationsOrRestrictions"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PurchaserQualificationsOrRestrictions', 'regca:PurchaserQualificationsOrRestrictions')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SignatoryName" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SignatoryName evaluations : 1 satisfied, 0 not satisfied - formula.xml 4628</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SignatoryName" sourceLine="4628">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SignatoryName"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_OFFER_03" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_OFFER_03 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5149</message>
+ <ref href="formula.xml#REGCA_OFFER_03" sourceLine="5149">
+  <property name="id" value="REGCA_OFFER_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count($Uses) eq 0 or abs(sum($Uses) - $Net) le $P_monetaryTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_DocumentDate" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_DocumentDate evaluations : 1 satisfied, 0 not satisfied - formula.xml 80</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_DocumentDate" sourceLine="80">
+  <property name="id" value="REGCA_REQ_1CRYPTO_DocumentDate"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_StaffContactTelephoneNumber" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_StaffContactTelephoneNumber evaluations : 1 satisfied, 0 not satisfied - formula.xml 456</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_StaffContactTelephoneNumber" sourceLine="456">
+  <property name="id" value="REGCA_REQ_1CRYPTO_StaffContactTelephoneNumber"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('StaffContactTelephoneNumber', 'regca:StaffContactTelephoneNumber')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPLY_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPLY_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5351</message>
+ <ref href="formula.xml#REGCA_SUPPLY_02" sourceLine="5351">
+  <property name="id" value="REGCA_SUPPLY_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count($Alloc) eq 0 or sum($Alloc) eq $Max"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_MaterialDistributionAgreements" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_MaterialDistributionAgreements evaluations : 1 satisfied, 0 not satisfied - formula.xml 1906</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_MaterialDistributionAgreements" sourceLine="1906">
+  <property name="id" value="REGCA_REQ_1CRYPTO_MaterialDistributionAgreements"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('MaterialDistributionAgreements', 'regca:MaterialDistributionAgreements')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REWARD_01" satisfiedCount="2" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REWARD_01 evaluations : 2 satisfied, 0 not satisfied - formula.xml 5455</message>
+ <ref href="formula.xml#REGCA_REWARD_01" sourceLine="5455">
+  <property name="id" value="REGCA_REWARD_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs(sum($Shares) - 1) le $P_shareRoundingTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_CAP_01" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_CAP_01 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7425</message>
+ <ref href="formula.xml#REGCA_BNP_CAP_01" sourceLine="7425">
+  <property name="id" value="REGCA_BNP_CAP_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$CombinedValidatorSlotsControlledOnNetwork le $TotalValidatorSlotsInNetwork"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_RANGE_03" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_RANGE_03 evaluations : 0 satisfied, 0 not satisfied - formula.xml 5939</message>
+ <ref href="formula.xml#REGCA_F_RANGE_03" sourceLine="5939">
+  <property name="id" value="REGCA_F_RANGE_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="($High le $P_priceRangeUpperThreshold and $High - $Low le $P_priceRangeMaxWidth) or ($High gt $P_priceRangeUpperThreshold and $High - $Low le $P_priceRangeMaxShare * $High)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPL_03" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPL_03 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6213</message>
+ <ref href="formula.xml#REGCA_SUPPL_03" sourceLine="6213">
+  <property name="id" value="REGCA_SUPPL_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="not(string($Para) = ('http://luca.pacioli.ai/report#Rule302f1Member', 'http://luca.pacioli.ai/report#Rule302f3Member')) or not((exists($Low) and $Price lt $Low) or (exists($High) and $Price gt $High) or $Units lt $QUnits) or abs($AOP - $QMax) le $P_supplementChangeLimit * $QMax"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_IBR_02" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_IBR_02 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6439</message>
+ <ref href="formula.xml#REGCA_IBR_02" sourceLine="6439">
+  <property name="id" value="REGCA_IBR_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Modified) ne 'true' or (exists($Text) and exists($Date))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot evaluations : 1 satisfied, 0 not satisfied - formula.xml 8443</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot" sourceLine="8443">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PreviousFilingMerkleRoot"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PreviousFilingMerkleRoot', 'regca:PreviousFilingMerkleRoot'))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_StaffContactAddress" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_StaffContactAddress evaluations : 1 satisfied, 0 not satisfied - formula.xml 408</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_StaffContactAddress" sourceLine="408">
+  <property name="id" value="REGCA_REQ_1CRYPTO_StaffContactAddress"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('StaffContactAddress', 'regca:StaffContactAddress')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_EstimatedNetOfferingProceeds" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_EstimatedNetOfferingProceeds evaluations : 1 satisfied, 0 not satisfied - formula.xml 1970</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_EstimatedNetOfferingProceeds" sourceLine="1970">
+  <property name="id" value="REGCA_REQ_1CRYPTO_EstimatedNetOfferingProceeds"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('EstimatedNetOfferingProceeds', 'regca:EstimatedNetOfferingProceeds')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_NetIncomeLoss" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_NetIncomeLoss evaluations : 1 satisfied, 0 not satisfied - formula.xml 4362</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_NetIncomeLoss" sourceLine="4362">
+  <property name="id" value="REGCA_REQ_1CRYPTO_NetIncomeLoss"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('NetIncomeLoss', 'regca:NetIncomeLoss')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_TIER_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_TIER_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5521</message>
+ <ref href="formula.xml#REGCA_F_TIER_01" sourceLine="5521">
+  <property name="id" value="REGCA_F_TIER_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Exemption) ne 'http://luca.pacioli.ai/report#FundraisingExemptionTier1Member' or $Total le $P_tier1Limit"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_CentralIndexKey" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_CentralIndexKey evaluations : 1 satisfied, 0 not satisfied - formula.xml 216</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_CentralIndexKey" sourceLine="216">
+  <property name="id" value="REGCA_REQ_1CRYPTO_CentralIndexKey"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('CentralIndexKey', 'regca:CentralIndexKey')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_IBR_01" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_IBR_01 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6423</message>
+ <ref href="formula.xml#REGCA_IBR_01" sourceLine="6423">
+  <property name="id" value="REGCA_IBR_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($Link)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SOI_01" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SOI_01 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6359</message>
+ <ref href="formula.xml#REGCA_SOI_01" sourceLine="6359">
+  <property name="id" value="REGCA_SOI_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($After) ne 'true' or (exists($Name) and exists($Phone) and exists($Addr)) or exists($Url) or string($Copy) eq 'true'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_ExemptionRelied" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_ExemptionRelied evaluations : 1 satisfied, 0 not satisfied - formula.xml 40</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_ExemptionRelied" sourceLine="40">
+  <property name="id" value="REGCA_REQ_1CRYPTO_ExemptionRelied"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_RANGE_02" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_RANGE_02 evaluations : 0 satisfied, 0 not satisfied - formula.xml 5669</message>
+ <ref href="formula.xml#REGCA_F_RANGE_02" sourceLine="5669">
+  <property name="id" value="REGCA_F_RANGE_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or abs($Price - ($Low + $High) div 2) le 0.000001"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_UnitsOfClassAlreadyOutstanding" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_UnitsOfClassAlreadyOutstanding evaluations : 1 satisfied, 0 not satisfied - formula.xml 552</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_UnitsOfClassAlreadyOutstanding" sourceLine="552">
+  <property name="id" value="REGCA_REQ_1CRYPTO_UnitsOfClassAlreadyOutstanding"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('UnitsOfClassAlreadyOutstanding', 'regca:UnitsOfClassAlreadyOutstanding')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SourceCodePubliclyAvailableIndicator" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SourceCodePubliclyAvailableIndicator evaluations : 1 satisfied, 0 not satisfied - formula.xml 3006</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SourceCodePubliclyAvailableIndicator" sourceLine="3006">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SourceCodePubliclyAvailableIndicator"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('SourceCodePubliclyAvailableIndicator', 'regca:SourceCodePubliclyAvailableIndicator')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SignatureCity" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SignatureCity evaluations : 1 satisfied, 0 not satisfied - formula.xml 1374</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SignatureCity" sourceLine="1374">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SignatureCity"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('SignatureCity', 'regca:SignatureCity')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PRIOR_03" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PRIOR_03 evaluations : 1 satisfied, 0 not satisfied - formula.xml 7049</message>
+ <ref href="formula.xml#REGCA_PRIOR_03" sourceLine="7049">
+  <property name="id" value="REGCA_PRIOR_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($Link)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_YearOfIncorporationOrOrganization" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_YearOfIncorporationOrOrganization evaluations : 1 satisfied, 0 not satisfied - formula.xml 168</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_YearOfIncorporationOrOrganization" sourceLine="168">
+  <property name="id" value="REGCA_REQ_1CRYPTO_YearOfIncorporationOrOrganization"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('YearOfIncorporationOrOrganization', 'regca:YearOfIncorporationOrOrganization')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_Rule302eLegendIncludedIndicator" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_Rule302eLegendIncludedIndicator evaluations : 1 satisfied, 0 not satisfied - formula.xml 966</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_Rule302eLegendIncludedIndicator" sourceLine="966">
+  <property name="id" value="REGCA_REQ_1CRYPTO_Rule302eLegendIncludedIndicator"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('Rule302eLegendIncludedIndicator', 'regca:Rule302eLegendIncludedIndicator')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_Assets" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_Assets evaluations : 1 satisfied, 0 not satisfied - formula.xml 4098</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_Assets" sourceLine="4098">
+  <property name="id" value="REGCA_REQ_1CRYPTO_Assets"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('Assets', 'regca:Assets')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_LOT_05" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_LOT_05 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5253</message>
+ <ref href="formula.xml#REGCA_LOT_05" sourceLine="5253">
+  <property name="id" value="REGCA_LOT_05"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($EqUnits * $EqPrice - $AOP) le $P_monetaryTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_SupplyDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_SupplyDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 3070</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_SupplyDescription" sourceLine="3070">
+  <property name="id" value="REGCA_REQ_1CRYPTO_SupplyDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('SupplyDescription', 'regca:SupplyDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_InvestmentLimitLegendIncludedIndicator" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_InvestmentLimitLegendIncludedIndicator evaluations : 1 satisfied, 0 not satisfied - formula.xml 1030</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_InvestmentLimitLegendIncludedIndicator" sourceLine="1030">
+  <property name="id" value="REGCA_REQ_1CRYPTO_InvestmentLimitLegendIncludedIndicator"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('InvestmentLimitLegendIncludedIndicator', 'regca:InvestmentLimitLegendIncludedIndicator')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_AGG_01" satisfiedCount="3" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_AGG_01 evaluations : 3 satisfied, 0 not satisfied - formula.xml 7311</message>
+ <ref href="formula.xml#REGCA_BNP_AGG_01" sourceLine="7311">
+  <property name="id" value="REGCA_BNP_AGG_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($CombinedStakeSharePercentageOnNetwork - ($EstimatedStakeSharePercentage + sum($AffiliateEstimatedStakeSharePercentage))) le $P_shareRoundingTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PlanOfDevelopment" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PlanOfDevelopment evaluations : 1 satisfied, 0 not satisfied - formula.xml 2878</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PlanOfDevelopment" sourceLine="2878">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PlanOfDevelopment"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PlanOfDevelopment', 'regca:PlanOfDevelopment')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BNP_MA_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BNP_MA_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8331</message>
+ <ref href="formula.xml#REGCA_BNP_MA_02" sourceLine="8331">
+  <property name="id" value="REGCA_BNP_MA_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Total eq sum($Each)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_OfferingPeriodDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_OfferingPeriodDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 1778</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_OfferingPeriodDescription" sourceLine="1778">
+  <property name="id" value="REGCA_REQ_1CRYPTO_OfferingPeriodDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('OfferingPeriodDescription', 'regca:OfferingPeriodDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_Liabilities" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_Liabilities evaluations : 1 satisfied, 0 not satisfied - formula.xml 4164</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_Liabilities" sourceLine="4164">
+  <property name="id" value="REGCA_REQ_1CRYPTO_Liabilities"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('Liabilities', 'regca:Liabilities')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_RISK_01" satisfiedCount="44" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_RISK_01 evaluations : 44 satisfied, 0 not satisfied - formula.xml 6783</message>
+ <ref href="formula.xml#REGCA_RISK_01" sourceLine="6783">
+  <property name="id" value="REGCA_RISK_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="exists($Cat) and exists($Head)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPLY_04" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPLY_04 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5403</message>
+ <ref href="formula.xml#REGCA_SUPPLY_04" sourceLine="5403">
+  <property name="id" value="REGCA_SUPPLY_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count($Each) eq 0 or $Total eq sum($Each)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_PARTI_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_PARTI_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6101</message>
+ <ref href="formula.xml#REGCA_F_PARTI_02" sourceLine="6101">
+  <property name="id" value="REGCA_F_PARTI_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Affiliates le $Sellers"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_OFFER_05" satisfiedCount="6" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_OFFER_05 evaluations : 6 satisfied, 0 not satisfied - formula.xml 8391</message>
+ <ref href="formula.xml#REGCA_OFFER_05" sourceLine="8391">
+  <property name="id" value="REGCA_OFFER_05"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Net eq 0 or abs($Pct - $Amt div $Net) le $P_shareRoundingTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_EcosystemParticipantTypes" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_EcosystemParticipantTypes evaluations : 1 satisfied, 0 not satisfied - formula.xml 3838</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_EcosystemParticipantTypes" sourceLine="3838">
+  <property name="id" value="REGCA_REQ_1CRYPTO_EcosystemParticipantTypes"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('EcosystemParticipantTypes', 'regca:EcosystemParticipantTypes')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PCT_01" satisfiedCount="16" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PCT_01 evaluations : 16 satisfied, 0 not satisfied - formula.xml 5469</message>
+ <ref href="formula.xml#REGCA_PCT_01" sourceLine="5469">
+  <property name="id" value="REGCA_PCT_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="$Pct ge $P_percentFractionLowerBound and $Pct le $P_percentFractionUpperBound"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_LOT_02" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_LOT_02 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5197</message>
+ <ref href="formula.xml#REGCA_LOT_02" sourceLine="5197">
+  <property name="id" value="REGCA_LOT_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($Units * $Price - $AOP) le $P_monetaryTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_AUDIT_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_AUDIT_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5619</message>
+ <ref href="formula.xml#REGCA_F_AUDIT_01" sourceLine="5619">
+  <property name="id" value="REGCA_F_AUDIT_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Exemption) ne 'http://luca.pacioli.ai/report#FundraisingExemptionTier2Member' or string($Audited) eq 'true' or string($DocumentType) eq 'http://luca.pacioli.ai/report#Form1SCMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_OtherPartiesAndSystemsUsingSubjectCryptoAsset" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_OtherPartiesAndSystemsUsingSubjectCryptoAsset evaluations : 1 satisfied, 0 not satisfied - formula.xml 3902</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_OtherPartiesAndSystemsUsingSubjectCryptoAsset" sourceLine="3902">
+  <property name="id" value="REGCA_REQ_1CRYPTO_OtherPartiesAndSystemsUsingSubjectCryptoAsset"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('OtherPartiesAndSystemsUsingSubjectCryptoAsset', 'regca:OtherPartiesAndSystemsUsingSubjectCryptoAsset')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_StaffContactName" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_StaffContactName evaluations : 1 satisfied, 0 not satisfied - formula.xml 360</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_StaffContactName" sourceLine="360">
+  <property name="id" value="REGCA_REQ_1CRYPTO_StaffContactName"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('StaffContactName', 'regca:StaffContactName')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PROV_05" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PROV_05 evaluations : 1 satisfied, 0 not satisfied - formula.xml 8667</message>
+ <ref href="formula.xml#REGCA_PROV_05" sourceLine="8667">
+  <property name="id" value="REGCA_PROV_05"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="matches(string($TX), '^0x[0-9a-f]{64}$')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_PricingDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_PricingDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 3134</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_PricingDescription" sourceLine="3134">
+  <property name="id" value="REGCA_REQ_1CRYPTO_PricingDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('PricingDescription', 'regca:PricingDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_RiskFactorStatement" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_RiskFactorStatement evaluations : 1 satisfied, 0 not satisfied - formula.xml 3966</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_RiskFactorStatement" sourceLine="3966">
+  <property name="id" value="REGCA_REQ_1CRYPTO_RiskFactorStatement"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('RiskFactorStatement', 'regca:RiskFactorStatement')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_EstimatedOfferingExpenses" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_EstimatedOfferingExpenses evaluations : 1 satisfied, 0 not satisfied - formula.xml 2036</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_EstimatedOfferingExpenses" sourceLine="2036">
+  <property name="id" value="REGCA_REQ_1CRYPTO_EstimatedOfferingExpenses"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('EstimatedOfferingExpenses', 'regca:EstimatedOfferingExpenses')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_RANGE_04" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_RANGE_04 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5955</message>
+ <ref href="formula.xml#REGCA_F_RANGE_04" sourceLine="5955">
+  <property name="id" value="REGCA_F_RANGE_04"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($Omit) ne 'true' or (string($Cash) ne 'false' and string($Competitive) ne 'true' and exists($Low) and exists($High) and exists($Units))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_F_TIER_05" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_F_TIER_05 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6013</message>
+ <ref href="formula.xml#REGCA_F_TIER_05" sourceLine="6013">
+  <property name="id" value="REGCA_F_TIER_05"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="(string($Exemption) ne 'http://luca.pacioli.ai/report#FundraisingExemptionTier1Member' or $High * $Units + $Prior + $Conc le $P_tier1Limit) and (string($Exemption) ne 'http://luca.pacioli.ai/report#FundraisingExemptionTier2Member' or $High * $Units + $Prior + $Conc le $P_tier2Limit)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_FX_02" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_FX_02 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6919</message>
+ <ref href="formula.xml#REGCA_FX_02" sourceLine="6919">
+  <property name="id" value="REGCA_FX_02"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($Amt * $Rate - $USD) le $P_monetaryTolerance and exists($Ccy) and upper-case(normalize-space(string($Ccy))) ne 'USD' and (some $m in xfi:unit-numerator(xfi:unit($Amt)) satisfies local-name-from-QName($m) eq upper-case(normalize-space(string($Ccy)))) and exists($RateDate) and (empty($SaleDate) or xs:date($RateDate) le xs:date($SaleDate))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPL_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPL_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 6165</message>
+ <ref href="formula.xml#REGCA_SUPPL_01" sourceLine="6165">
+  <property name="id" value="REGCA_SUPPL_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($SubType) ne 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' or (exists($Para) and exists($FileNo))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_SUPPLY_03" satisfiedCount="13" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_SUPPLY_03 evaluations : 13 satisfied, 0 not satisfied - formula.xml 5371</message>
+ <ref href="formula.xml#REGCA_SUPPLY_03" sourceLine="5371">
+  <property name="id" value="REGCA_SUPPLY_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs($Pct - $Units div $Max) le $P_shareRoundingTolerance"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_PQA_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_PQA_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5891</message>
+ <ref href="formula.xml#REGCA_PQA_01" sourceLine="5891">
+  <property name="id" value="REGCA_PQA_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($SubType) ne 'http://luca.pacioli.ai/report#PostQualificationAmendmentMember' or exists($Basis)"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_BDAY_03" satisfiedCount="0" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_BDAY_03 evaluations : 0 satisfied, 0 not satisfied - formula.xml 6855</message>
+ <ref href="formula.xml#REGCA_BDAY_03" sourceLine="6855">
+  <property name="id" value="REGCA_BDAY_03"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="not(string($Para) = ('http://luca.pacioli.ai/report#Rule302f1Member', 'http://luca.pacioli.ai/report#Rule302f3Member')) or (empty($PriceDate) and empty($FirstUse)) or xs:date($Doc) le (for $bd0 in xs:date(min((for $x in ($PriceDate, $FirstUse) return xs:date($x)))), $bw0 in (days-from-duration($bd0 - xs:date('2000-01-03')) mod 7), $bdf in ($bd0 - xs:dayTimeDuration(concat('P', string(max((0, $bw0 - 4))), 'D'))), $bwf in min(($bw0, 4)) return $bdf + xs:dayTimeDuration(concat('P', string($P_pricingSupplementBusinessDays + 2 * (($bwf + $P_pricingSupplementBusinessDays) idiv 5)), 'D')))"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_COVER_01" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_COVER_01 evaluations : 1 satisfied, 0 not satisfied - formula.xml 5056</message>
+ <ref href="formula.xml#REGCA_COVER_01" sourceLine="5056">
+  <property name="id" value="REGCA_COVER_01"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="count(distinct-values(for $d in $DocumentTypes return tokenize(normalize-space(string($d)), ' '))) eq 1"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_StaffCommentLetterEmailAddress1" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_StaffCommentLetterEmailAddress1 evaluations : 1 satisfied, 0 not satisfied - formula.xml 504</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_StaffCommentLetterEmailAddress1" sourceLine="504">
+  <property name="id" value="REGCA_REQ_1CRYPTO_StaffCommentLetterEmailAddress1"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('StaffCommentLetterEmailAddress1', 'regca:StaffCommentLetterEmailAddress1')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember'"/>
+ </ref></entry>
+<entry code="formula:trace" level="info">
+ <message assertionType="Value" id="REGCA_REQ_1CRYPTO_CurrentStageOfDevelopmentDescription" satisfiedCount="1" notSatisfiedCount="0">[formula:trace] Value Assertion REGCA_REQ_1CRYPTO_CurrentStageOfDevelopmentDescription evaluations : 1 satisfied, 0 not satisfied - formula.xml 1310</message>
+ <ref href="formula.xml#REGCA_REQ_1CRYPTO_CurrentStageOfDevelopmentDescription" sourceLine="1310">
+  <property name="id" value="REGCA_REQ_1CRYPTO_CurrentStageOfDevelopmentDescription"/>
+  <property name="label" value="assertion"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="string($DocumentType) ne 'http://luca.pacioli.ai/report#Form1CRYPTOMember' or count($X) gt 0 or (some $o in $Omitted satisfies normalize-space(string($o)) = ('CurrentStageOfDevelopmentDescription', 'regca:CurrentStageOfDevelopmentDescription')) or (string($SubType) eq 'http://luca.pacioli.ai/report#OfferingCircularSupplementMember' and string($SupplementOnly) eq 'true') or (string($PartIIIOnly) eq 'true' and string($Amend) eq 'true')"/>
+ </ref></entry>
+<entry code="info" level="info">
+ <message>[info] formula validation and execution in 2.11 secs - sbrm-jsonld\xbrl\form-1-crypto-second-offering\instance.xml </message>
+ <ref href="sbrm-jsonld\xbrl\form-1-crypto-second-offering\instance.xml"/></entry>
+</log>

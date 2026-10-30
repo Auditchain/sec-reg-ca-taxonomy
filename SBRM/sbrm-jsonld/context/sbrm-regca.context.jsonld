@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "doco": "http://purl.org/spar/doco/",
+    "sbrm-rev": "https://www.omg.org/spec/SBRM/ReportingEnvelope/",
+    "sbrm-rst": "https://www.omg.org/spec/SBRM/ReportStructure/",
+    "sbrm-frst": "https://www.omg.org/spec/SBRM/FinancialReportElements/",
+    "cmns-av": "https://www.omg.org/spec/Commons/AnnotationVocabulary/",
+    "cmns-cls": "https://www.omg.org/spec/Commons/Classifiers/",
+    "cmns-col": "https://www.omg.org/spec/Commons/Collections/",
+    "cmns-cxtdsg": "https://www.omg.org/spec/Commons/ContextualDesignators/",
+    "cmns-doc": "https://www.omg.org/spec/Commons/Documents/",
+    "cmns-docc": "https://www.omg.org/spec/Commons/DocumentComponents/",
+    "cmns-dsg": "https://www.omg.org/spec/Commons/Designators/",
+    "cmns-dt": "https://www.omg.org/spec/Commons/DatesAndTimes/",
+    "cmns-pts": "https://www.omg.org/spec/Commons/PartiesAndSituations/",
+    "cmns-qtu": "https://www.omg.org/spec/Commons/QuantitiesAndUnits/",
+    "cmns-rlcmp": "https://www.omg.org/spec/Commons/RolesAndCompositions/",
+    "cmns-txt": "https://www.omg.org/spec/Commons/TextDatatype/",
+    "sbrm-mm": "https://accounting.auditchain.finance/sbrm/2026/metamodel/",
+    "xbrlb": "https://accounting.auditchain.finance/sbrm/2026/xbrl-bridge/",
+    "regca": "http://luca.pacioli.ai/report#",
+    "iso4217": "http://www.xbrl.org/2003/iso4217#",
+    "xbrli": "http://www.xbrl.org/2003/instance#",
+    "xbrl-role": "http://www.xbrl.org/2003/role/",
+    "regca-complete": "http://luca.pacioli.ai/report/sbrm/complete-2026-10-18/",
+    "regca-1crypto": "http://luca.pacioli.ai/report/sbrm/form-1-crypto-second-offering/",
+    "owl:imports": {
+      "@type": "@id"
+    },
+    "rdfs:subClassOf": {
+      "@type": "@id"
+    },
+    "rdfs:isDefinedBy": {
+      "@type": "@id"
+    },
+    "dct:publisher": {
+      "@type": "@id"
+    },
+    "dct:type": {
+      "@type": "@id"
+    },
+    "dct:source": {
+      "@type": "@id"
+    },
+    "dct:conformsTo": {
+      "@type": "@id"
+    },
+    "prov:wasDerivedFrom": {
+      "@type": "@id"
+    },
+    "cmns-cxtdsg:appliesTo": {
+      "@type": "@id"
+    },
+    "cmns-cls:isClassifiedBy": {
+      "@type": "@id"
+    },
+    "cmns-col:hasMember": {
+      "@type": "@id"
+    },
+    "cmns-col:compliesWith": {
+      "@type": "@id"
+    },
+    "cmns-dsg:isDefinedIn": {
+      "@type": "@id"
+    },
+    "cmns-dt:hasTime": {
+      "@type": "@id"
+    },
+    "cmns-dt:hasDatePeriod": {
+      "@type": "@id"
+    },
+    "cmns-dt:hasStartDate": {
+      "@type": "@id"
+    },
+    "cmns-dt:hasEndDate": {
+      "@type": "@id"
+    },
+    "cmns-qtu:hasMeasurementUnit": {
+      "@type": "@id"
+    },
+    "cmns-rlcmp:isPlayedBy": {
+      "@type": "@id"
+    },
+    "sbrm-rev:isReportedBy": {
+      "@type": "@id"
+    },
+    "sbrm-rev:hasReportDate": {
+      "@type": "@id"
+    },
+    "sbrm-rst:hasReportElement": {
+      "@type": "@id"
+    },
+    "sbrm-frst:hasOperator": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasDataType": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasPart": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasPartElement": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasLineItems": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasDimension": {
+      "@type": "@id"
+    },
+    "sbrm-mm:memberElement": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasTotal": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasNumber": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasBeginningBalance": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasEndingBalance": {
+      "@type": "@id"
+    },
+    "sbrm-mm:asNumber": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasConcept": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasConceptArrangementPattern": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasReportLevelRule": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasFactSet": {
+      "@type": "@id"
+    },
+    "xbrlb:enumerationDomain": {
+      "@type": "@id"
+    },
+    "xbrlb:labelOf": {
+      "@type": "@id"
+    },
+    "xbrlb:referenceOf": {
+      "@type": "@id"
+    },
+    "xbrlb:fromElement": {
+      "@type": "@id"
+    },
+    "xbrlb:conceptAspect": {
+      "@type": "@id"
+    },
+    "xbrlb:derivedFact": {
+      "@type": "@id"
+    },
+    "xbrlb:basedOnSourceFact": {
+      "@type": "@id"
+    },
+    "xbrlb:importsTaxonomy": {
+      "@type": "@id"
+    },
+    "xbrlb:hasExecutableForm": {
+      "@type": "@id"
+    },
+    "owl:inverseOf": {
+      "@type": "@id"
+    },
+    "sbrm-mm:correspondsToMetamodelElement": {
+      "@type": "@id"
+    },
+    "sbrm-mm:hasFragment": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "xbrlb:dimensionOrder": {
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "xbrlb:fieldOrder": {
+      "@container": "@list"
+    },
+    "xbrlb:sections": {
+      "@container": "@list"
+    }
+  }
+}

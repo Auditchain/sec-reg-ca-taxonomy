@@ -1,0 +1,360 @@
+@prefix cmns-dt: <https://www.omg.org/spec/Commons/DatesAndTimes/> .
+@prefix cmns-qtu: <https://www.omg.org/spec/Commons/QuantitiesAndUnits/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doco: <http://purl.org/spar/doco/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sbrm-frst: <https://www.omg.org/spec/SBRM/FinancialReportElements/> .
+@prefix sbrm-mm: <https://accounting.auditchain.finance/sbrm/2026/metamodel/> .
+@prefix sbrm-rev: <https://www.omg.org/spec/SBRM/ReportingEnvelope/> .
+@prefix sbrm-rst: <https://www.omg.org/spec/SBRM/ReportStructure/> .
+
+doco:Section sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573556860795_451162_13300> .
+
+sbrm-mm: a owl:Ontology ;
+    rdfs:label "SBRM metamodel bridge vocabulary" ;
+    dct:description "Terms for SBRM metamodel elements (metamodel.xmi, version 20241101) that the SBRM OWL ontologies do not define. Each term keeps the exact metamodel name as its label and cites the xmi:id of the element it stands for. SBRM ontology terms used directly are annotated with the metamodel element they correspond to." ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    owl:imports sbrm-frst:,
+        sbrm-rst: .
+
+sbrm-mm:AnyURI a owl:Class ;
+    rdfs:label "anyURI" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1584496498133_884167_42322" .
+
+sbrm-mm:ArithmeticExpression a owl:Class ;
+    rdfs:label "Arithmetic Expression" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1547244201304_361421_43557" .
+
+sbrm-mm:ConsistencyRule a owl:Class ;
+    rdfs:label "Consistency Rule" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1581373557109_937246_43419" .
+
+sbrm-mm:DerivationRule a owl:Class ;
+    rdfs:label "Derivation Rule" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1581375178710_720194_43579" .
+
+sbrm-mm:Difference a owl:NamedIndividual,
+        sbrm-frst:Operator ;
+    rdfs:comment "Subtraction operator (observation A-10)." .
+
+sbrm-mm:DisclosureRule a owl:Class ;
+    rdfs:label "Disclosure Rule" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1581374461613_967399_43517" .
+
+sbrm-mm:Equals a owl:NamedIndividual,
+        sbrm-frst:Operator ;
+    rdfs:comment "Operator asserting that its two operands are equal. The metamodel defines Operator but no operator literals (observation A-10)." .
+
+sbrm-mm:Fragment a owl:Class ;
+    rdfs:label "Fragment" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1547234842707_78437_42465" .
+
+sbrm-mm:Member a owl:Class ;
+    rdfs:label "Member" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573557861116_792326_13680" .
+
+sbrm-mm:MemberMAP a owl:Class ;
+    rdfs:label "Member MAP" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1547239795643_595693_42907" .
+
+sbrm-mm:Monetary a owl:Class ;
+    rdfs:label "Monetary" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573566920596_9703_15785" .
+
+sbrm-mm:NonNumericDataType a owl:Class ;
+    rdfs:label "NonNumericDataType" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573566103228_974529_15421" .
+
+sbrm-mm:Operand a owl:Class ;
+    rdfs:label "Operand" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580853502867_521451_43114" .
+
+sbrm-mm:Percent a owl:Class ;
+    rdfs:label "Percent" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573566583257_878932_15626" .
+
+sbrm-mm:Product a owl:NamedIndividual,
+        sbrm-frst:Operator ;
+    rdfs:comment "Multiplication operator (observation A-10)." .
+
+sbrm-mm:Quotient a owl:NamedIndividual,
+        sbrm-frst:Operator ;
+    rdfs:comment "Division operator (observation A-10)." .
+
+sbrm-mm:ReportLevelRule a owl:Class ;
+    rdfs:label "Report Level Rule" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1547241875150_994269_42958" .
+
+sbrm-mm:RollForwardChange a owl:Class ;
+    rdfs:label "Roll Forward Change" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1579812155464_424487_42417" .
+
+sbrm-mm:RollForwardRule a owl:Class ;
+    rdfs:label "Role Forward Rule" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1551302750419_113871_43571" .
+
+sbrm-mm:RollUpInput a owl:Class ;
+    rdfs:label "Roll Up Input" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573559808382_872832_14293" .
+
+sbrm-mm:Set a owl:Class ;
+    rdfs:label "Set" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1547235440263_95689_42661" .
+
+sbrm-mm:SetMember a owl:Class ;
+    rdfs:label "SetMember" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580422296450_146023_42810" .
+
+sbrm-mm:StructureAssociation a owl:Class ;
+    rdfs:label "Structure Association" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573556966651_135080_13348" .
+
+sbrm-mm:Submission a owl:Class ;
+    rdfs:label "Submission" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1547143398564_153501_42369" .
+
+sbrm-mm:TextBlock a owl:Class ;
+    rdfs:label "TextBlock" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573566532700_747459_15596" .
+
+sbrm-mm:TypedDimension a owl:Class ;
+    rdfs:label "Typed Dimension" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573558641231_812425_14045" .
+
+sbrm-mm:ValueType a owl:Class ;
+    rdfs:label "ValueType" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_2022x_2_c31030f_1731436563920_759145_18732" .
+
+sbrm-mm:XsdBoolean a owl:Class ;
+    rdfs:label "xsdBoolean" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573568457483_986021_16071" .
+
+sbrm-mm:XsdDecimal a owl:Class ;
+    rdfs:label "xsdDecimal" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573566639948_986151_15655" .
+
+sbrm-mm:XsdInteger a owl:Class ;
+    rdfs:label "xsdInteger" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573568433880_217457_16045" .
+
+sbrm-mm:XsdString a owl:Class ;
+    rdfs:label "xsdString" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573566246075_914474_15505" .
+
+sbrm-mm:asNestedExpression a owl:ObjectProperty ;
+    rdfs:label "as nested expression" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580853560549_816868_43172" .
+
+sbrm-mm:asNumber a owl:ObjectProperty ;
+    rdfs:label "as number" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580853553144_610488_43159" .
+
+sbrm-mm:correspondsToMetamodelElement a owl:AnnotationProperty ;
+    rdfs:comment "Bridge mechanics: links an SBRM ontology term to the metamodel element it corresponds to." .
+
+sbrm-mm:hasBeginningBalance a owl:ObjectProperty ;
+    rdfs:label "has beginning balance" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580420830615_927675_42479" .
+
+sbrm-mm:hasChange a owl:ObjectProperty ;
+    rdfs:label "has change" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580420781605_819159_42444" .
+
+sbrm-mm:hasConcept a owl:ObjectProperty ;
+    rdfs:label "(unnamed Concept Arrangement Pattern → Class association end)" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1551334724268_584056_41780" .
+
+sbrm-mm:hasConceptArrangementPattern a owl:ObjectProperty ;
+    rdfs:label "has concept arrangement pattern" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580854691965_833378_43254" .
+
+sbrm-mm:hasDataType a owl:ObjectProperty ;
+    rdfs:label "has data type" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573565950572_597727_15357" .
+
+sbrm-mm:hasDimension a owl:ObjectProperty ;
+    rdfs:label "has dimension" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1551468104108_763683_42264",
+        "_19_0_2_e4a0319_1573558542598_319363_13943" .
+
+sbrm-mm:hasEndingBalance a owl:ObjectProperty ;
+    rdfs:label "has ending balance" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580420862948_968425_42495" .
+
+sbrm-mm:hasFactSet a owl:ObjectProperty ;
+    rdfs:label "has fact set" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1547235245237_327275_42612",
+        "_19_0_1_6730224_1547243325903_10_43227" .
+
+sbrm-mm:hasFragment a owl:ObjectProperty ;
+    rdfs:label "has fragment" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1547235235873_335277_42599" .
+
+sbrm-mm:hasInput a owl:ObjectProperty ;
+    rdfs:label "has input" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580420443697_345557_42329" .
+
+sbrm-mm:hasLineItems a owl:ObjectProperty ;
+    rdfs:label "has line items" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573558549580_886249_13956" .
+
+sbrm-mm:hasMemberArrangementPattern a owl:ObjectProperty ;
+    rdfs:label "has member arrangement pattern" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1547235039107_676239_42526" .
+
+sbrm-mm:hasNumber a owl:ObjectProperty ;
+    rdfs:label "has number" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580420463360_529068_42342" .
+
+sbrm-mm:hasOperand a owl:ObjectProperty ;
+    rdfs:label "has operand" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580853521980_990139_43144" .
+
+sbrm-mm:hasPart a owl:ObjectProperty ;
+    rdfs:label "has part" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573557068364_329638_13380" .
+
+sbrm-mm:hasPartElement a owl:ObjectProperty ;
+    rdfs:label "has part element" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573556909440_900464_13336" .
+
+sbrm-mm:hasReportLevelRule a owl:ObjectProperty ;
+    rdfs:label "has report level rule" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_1_6730224_1551292844982_686048_41725" .
+
+sbrm-mm:hasTotal a owl:ObjectProperty ;
+    rdfs:label "has total" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580420480961_687843_42355" .
+
+sbrm-mm:hasValueType a owl:ObjectProperty ;
+    rdfs:comment "Inverse of sbrm-mm:forClass, so that a class can point to its value type." ;
+    owl:inverseOf sbrm-mm:forClass .
+
+sbrm-mm:id a owl:DatatypeProperty ;
+    rdfs:label "id" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_2_e4a0319_1573568068042_808243_15945" .
+
+sbrm-mm:isAdded a owl:DatatypeProperty ;
+    rdfs:label "isAdded" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580422963480_15510_42870" .
+
+sbrm-mm:memberElement a owl:ObjectProperty ;
+    rdfs:label "member element" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580422339204_322166_42842" .
+
+sbrm-mm:sequence a owl:DatatypeProperty ;
+    rdfs:label "sequence" ;
+    rdfs:isDefinedBy <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi> ;
+    sbrm-mm:xmiId "_19_0_3_e4a0319_1580422317327_100689_42835",
+        "_19_0_3_e4a0319_1580422771259_139343_42860",
+        "_19_0_3_e4a0319_1580853575322_988135_43180",
+        "_19_0_3_e4a0319_1580853817777_865069_43201" .
+
+sbrm-mm:xmiId a owl:AnnotationProperty ;
+    rdfs:comment "Bridge mechanics: the xmi:id of the metamodel element a bridge term stands for." .
+
+cmns-dt:DatePeriodFact sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573466434080_728625_12667> .
+
+cmns-qtu:MeasurementUnit sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1551903404510_552607_41812> .
+
+cmns-qtu:hasMeasurementUnit sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1551903404543_947062_41814> .
+
+cmns-qtu:hasNumericValue sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573467982886_450280_12815> .
+
+sbrm-frst:Credit sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573556481904_210582_13120> .
+
+sbrm-frst:Currency sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573463444673_246136_12223> .
+
+sbrm-frst:Debit sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573556468635_40944_13094> .
+
+sbrm-frst:InstantFact sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573466448242_230233_12693> .
+
+sbrm-frst:LineItems sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573557819432_919681_13651> .
+
+sbrm-frst:MonetaryFact sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573466080574_819322_12606> .
+
+sbrm-frst:MonetaryFactValue sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573466147024_580073_12638> .
+
+sbrm-frst:NonNumericFactValue sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1551903345922_183558_41803> .
+
+sbrm-frst:RollForward sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1547235487416_623852_42672> .
+
+sbrm-frst:RollUp sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1547235457550_930881_42666> .
+
+sbrm-frst:hasRounding sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573470624864_751719_12965> .
+
+sbrm-rst:Dimension sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1547235120850_403271_42568> .
+
+sbrm-rst:Fact sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1547235134204_501170_42583> .
+
+sbrm-rst:FactSet sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1547228377538_513800_42458> .
+
+sbrm-rst:Hypercube sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573557771503_426732_13622> .
+
+sbrm-rst:Network sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573556735504_812333_13209> .
+
+sbrm-rst:NumericFactValue sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1551903314837_273842_41774> .
+
+sbrm-rst:QuantitativeFact sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573466058514_9116_12580> .
+
+sbrm-rst:isClosed sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_2_e4a0319_1573558791902_595299_14137> .
+
+sbrm-rev:Report sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_1_6730224_1547143501033_261190_42425> .
+
+sbrm-rev:hasReportDate sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_2022x_2_c31030f_1731435415564_748142_17789> .
+
+sbrm-rev:isReportedBy sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_2022x_2_c31030f_1731435415569_232553_17798> .
+
+sbrm-frst:Operator sbrm-mm:correspondsToMetamodelElement <https://www.omg.org/spec/SBRM/20241101/metamodel.xmi#_19_0_3_e4a0319_1580421626196_278683_42742> .
+

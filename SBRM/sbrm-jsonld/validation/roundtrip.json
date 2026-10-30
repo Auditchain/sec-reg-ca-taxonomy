@@ -1,0 +1,128 @@
+{
+  "run": {
+    "tool": "sbrm-regca-build 1.0",
+    "run_at": "2026-10-30T12:52:47+00:00",
+    "inputs": {
+      "M1": {
+        "file": "Reg CA Complete Model 2026-10-18.json",
+        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+      },
+      "M2": {
+        "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+        "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1"
+      }
+    }
+  },
+  "results": {
+    "M1": {
+      "original": "Reg CA Complete Model 2026-10-18.json",
+      "original_bytes": 5660955,
+      "rebuilt_bytes": 5660955,
+      "byte_exact": true,
+      "structural_difference": null,
+      "record_counts": {
+        "BaseInformation": {
+          "base": 7,
+          "rebuilt": 7
+        },
+        "Terms": {
+          "base": 975,
+          "rebuilt": 975
+        },
+        "Labels": {
+          "base": 1261,
+          "rebuilt": 1261
+        },
+        "References": {
+          "base": 2619,
+          "rebuilt": 2619
+        },
+        "Structures": {
+          "base": 66,
+          "rebuilt": 66
+        },
+        "Associations": {
+          "base": 1394,
+          "rebuilt": 1394
+        },
+        "Rules-Consistency": {
+          "base": 3,
+          "rebuilt": 3
+        },
+        "Rules-RollForward": {
+          "base": 2,
+          "rebuilt": 2
+        },
+        "Rules-Derivation": {
+          "base": 4,
+          "rebuilt": 4
+        },
+        "Rules-Nonstandard": {
+          "base": 489,
+          "rebuilt": 489
+        }
+      },
+      "counts_match": true,
+      "layer_b_regenerated_identically": true
+    },
+    "M2": {
+      "original": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+      "original_bytes": 4476837,
+      "rebuilt_bytes": 4476837,
+      "byte_exact": true,
+      "structural_difference": null,
+      "record_counts": {
+        "BaseInformation": {
+          "base": 7,
+          "rebuilt": 7
+        },
+        "Terms": {
+          "base": 733,
+          "rebuilt": 733
+        },
+        "Labels": {
+          "base": 1031,
+          "rebuilt": 1031
+        },
+        "References": {
+          "base": 2229,
+          "rebuilt": 2229
+        },
+        "Structures": {
+          "base": 55,
+          "rebuilt": 55
+        },
+        "Associations": {
+          "base": 1061,
+          "rebuilt": 1061
+        },
+        "Rules-Consistency": {
+          "base": 3,
+          "rebuilt": 3
+        },
+        "Rules-RollForward": {
+          "base": 2,
+          "rebuilt": 2
+        },
+        "Rules-Derivation": {
+          "base": 4,
+          "rebuilt": 4
+        },
+        "Rules-Nonstandard": {
+          "base": 212,
+          "rebuilt": 212
+        },
+        "Facts": {
+          "base": 1169,
+          "rebuilt": 1169
+        },
+        "Facts-Dimensions": {
+          "base": 1086,
+          "rebuilt": 1086
+        }
+      },
+      "counts_match": true,
+      "layer_b_regenerated_identically": true
+    }
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "run": {
+    "tool": "sbrm-regca-build 1.0",
+    "run_at": "2026-10-30T12:52:47+00:00",
+    "inputs": {
+      "M1": {
+        "file": "Reg CA Complete Model 2026-10-18.json",
+        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+      },
+      "M2": {
+        "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+        "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1"
+      }
+    }
+  },
+  "determinism": {
+    "byte_identical_across_two_builds": true
+  },
+  "round_trip": {
+    "M1": {
+      "byte_exact": true,
+      "bytes": 5660955,
+      "layer_b_regenerated": true
+    },
+    "M2": {
+      "byte_exact": true,
+      "bytes": 4476837,
+      "layer_b_regenerated": true
+    }
+  },
+  "json_ld": {
+    "parse": {
+      "complete-2026-10-18/regca-complete.definition.jsonld": {
+        "rdflib_quads": 67665,
+        "pyld_quads": 67665
+      },
+      "form-1-crypto-second-offering/regca-1-crypto.definition.jsonld": {
+        "rdflib_quads": 52842,
+        "pyld_quads": 52842
+      },
+      "form-1-crypto-second-offering/regca-1-crypto.report.jsonld": {
+        "rdflib_quads": 14293,
+        "pyld_quads": 14293
+      }
+    },
+    "processors_agree": true
+  },
+  "closure": {
+    "M1": true,
+    "M2": true
+  },
+  "M2_structure": {
+    "facts": 1169,
+    "errors": 0,
+    "by_check": {}
+  },
+  "M2_rules": {
+    "Roll-ups (calculation)": {
+      "pass": 20,
+      "fail": 0,
+      "not_evaluable": 1,
+      "not_applicable": 0
+    },
+    "Roll-forward SubjectCryptoAssetSupplyOutstanding": {
+      "pass": 0,
+      "fail": 0,
+      "not_evaluable": 1,
+      "not_applicable": 0
+    },
+    "Roll-forward CashAndCashEquivalents": {
+      "pass": 2,
+      "fail": 0,
+      "not_evaluable": 0,
+      "not_applicable": 0
+    },
+    "Roll-forward Equity": {
+      "pass": 2,
+      "fail": 0,
+      "not_evaluable": 0,
+      "not_applicable": 0
+    },
+    "REGCA_BNP_D_01": {
+      "pass": 2,
+      "fail": 0,
+      "not_evaluable": 0,
+      "not_applicable": 1
+    },
+    "REGCA_BNP_D_02": {
+      "pass": 0,
+      "fail": 0,
+      "not_evaluable": 0,
+      "not_applicable": 3
+    },
+    "REGCA_BNP_D_03": {
+      "pass": 2,
+      "fail": 0,
+      "not_evaluable": 0,
+      "not_applicable": 1
+    },
+    "REGCA_BNP_D_04": {
+      "pass": 0,
+      "fail": 0,
+      "not_evaluable": 0,
+      "not_applicable": 3
+    },
+    "REGCA_BNP_TIE_01": {
+      "pass": 3,
+      "fail": 0,
+      "not_evaluable": 0,
+      "not_applicable": 0
+    },
+    "REGCA_C_BS_01": {
+      "pass": 2,
+      "fail": 0,
+      "not_evaluable": 0,
+      "not_applicable": 0
+    },
+    "REGCA_C_OFFER_01": {
+      "pass": 1,
+      "fail": 0,
+      "not_evaluable": 0,
+      "not_applicable": 0
+    }
+  },
+  "M2_required_elements": {
+    "required": 93,
+    "present": 93,
+    "absent": 0
+  },
+  "negative_suite": {
+    "1 required fact dropped": true,
+    "2 Assets at 2027-06-30 changed by 1": true,
+    "3 cash at 2027-06-30 changed by 1": true,
+    "4 instant fact given a duration": true,
+    "5 enumeration value from another domain": true,
+    "6 monetary fact without a unit": true,
+    "7 unknown JSON key": true,
+    "8 typed axis on a concept no hypercube allows it on": true,
+    "9 fact class not in the definition": true,
+    "10 definition without regca:Assets (still used by facts)": true
+  },
+  "shacl": {
+    "shapes": {
+      "M1": {
+        "roll-up": 12,
+        "roll-forward": 3,
+        "arithmetic-expression": 7
+      },
+      "M2": {
+        "roll-up": 11,
+        "roll-forward": 3,
+        "arithmetic-expression": 7
+      }
+    },
+    "M2_conforms": true,
+    "M2_violations": 0,
+    "coverage_matches_V9": true,
+    "negative_suite": {
+      "Assets at 2027-06-30 +1": true,
+      "cash at 2027-06-30 +1": true,
+      "equity at 2027-06-30 +1": true,
+      "aggregate offering price +1": true,
+      "BNP net income +1 (first network)": true,
+      "stake share +0.01, beyond the 0.0001 tolerance": true,
+      "stake share +0.00005, within the 0.0001 tolerance (must NOT fire)": true
+    }
+  },
+  "xbrl_generated": {
+    "M1": {
+      "elements": 975,
+      "typed_domains": 36,
+      "enumeration_domains": 37,
+      "roles": 103,
+      "formula_links": 489
+    },
+    "M2": {
+      "elements": 733,
+      "typed_domains": 32,
+      "enumeration_domains": 24,
+      "roles": 79,
+      "formula_links": 212,
+      "contexts": 193,
+      "units": 2,
+      "facts": 1169
+    }
+  },
+  "xbrl_negative_suite": {
+    "Assets at 2027-06-30 +1": true,
+    "IssuerName fact removed": true,
+    "cash at 2027-06-30 +1": true,
+    "stake share +0.01, beyond the 0.0001 tolerance": true,
+    "stake share +0.00005, within the tolerance (must NOT fire)": true,
+    "DocumentType set to a member of another domain": true,
+    "extra axis on a fact in a closed hypercube": true
+  },
+  "drift": {
+    "BaseInformation": {
+      "M1_records": 7,
+      "M2_records": 7,
+      "only_in_M1": 0,
+      "only_in_M2": 0,
+      "differing_content": 1,
+      "differing_sequence_only": 0
+    },
+    "Terms": {
+      "M1_records": 975,
+      "M2_records": 733,
+      "only_in_M1": 242,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 0
+    },
+    "Labels": {
+      "M1_records": 1261,
+      "M2_records": 1031,
+      "only_in_M1": 318,
+      "only_in_M2": 88,
+      "differing_content": 29,
+      "differing_sequence_only": 0
+    },
+    "References": {
+      "M1_records": 2619,
+      "M2_records": 2229,
+      "only_in_M1": 402,
+      "only_in_M2": 10,
+      "differing_content": 0,
+      "differing_sequence_only": 2206
+    },
+    "Structures": {
+      "M1_records": 66,
+      "M2_records": 55,
+      "only_in_M1": 11,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 54
+    },
+    "Associations": {
+      "M1_records": 1394,
+      "M2_records": 1061,
+      "only_in_M1": 333,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 37
+    },
+    "Rules-Consistency": {
+      "M1_records": 3,
+      "M2_records": 3,
+      "only_in_M1": 0,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 0
+    },
+    "Rules-RollForward": {
+      "M1_records": 2,
+      "M2_records": 2,
+      "only_in_M1": 0,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 2
+    },
+    "Rules-Derivation": {
+      "M1_records": 4,
+      "M2_records": 4,
+      "only_in_M1": 0,
+      "only_in_M2": 0,
+      "differing_content": 0,
+      "differing_sequence_only": 4
+    },
+    "Rules-Nonstandard": {
+      "M1_records": 489,
+      "M2_records": 212,
+      "only_in_M1": 277,
+      "only_in_M2": 0,
+      "differing_content": 4,
+      "differing_sequence_only": 207
+    }
+  },
+  "lucasuite": {
+    "ok": true,
+    "failures": [],
+    "lucasuite/regca-complete.json": {
+      "identical_to_source_model": true,
+      "blocking_problems": 0,
+      "not_imported": 0,
+      "stored_rows": {
+        "BaseInformation": 7,
+        "ReportElement": 975,
+        "Labels": 1261,
+        "References": 2619,
+        "Structures": 66,
+        "Associations": 1394,
+        "Rules": 498
+      }
+    },
+    "lucasuite/regca-1-crypto.json": {
+      "identical_to_source_model": true,
+      "blocking_problems": 0,
+      "not_imported": 0,
+      "stored_rows": {
+        "BaseInformation": 7,
+        "ReportElement": 733,
+        "Labels": 1031,
+        "References": 2229,
+        "Structures": 55,
+        "Associations": 1061,
+        "Rules": 221,
+        "Facts": 1169
+      }
+    },
+    "imported_schemas_fetched": 6,
+    "controls_caught": "11/11"
+  },
+  "inputs_unchanged": true,
+  "outputs": {
+    "complete-2026-10-18/regca-complete.definition.jsonld": 8228308,
+    "form-1-crypto-second-offering/regca-1-crypto.definition.jsonld": 5814695,
+    "form-1-crypto-second-offering/regca-1-crypto.report.jsonld": 1126954
+  },
+  "postbuild_arelle": {
+    "ok": true,
+    "failures": [],
+    "complete-2026-10-18": {
+      "stale_files": [],
+      "taxonomy_messages": 0,
+      "controls_rejected": "3/3"
+    },
+    "form-1-crypto-second-offering": {
+      "stale_files": [],
+      "taxonomy_messages": 0,
+      "controls_rejected": "3/3",
+      "instance_messages": 0,
+      "assertions": {
+        "parameter register (no assertion)": {
+          "no assertion": 1
+        },
+        "required-element rules": {
+          "passed": 93
+        },
+        "other XBRL Formula rules": {
+          "passed": 91,
+          "not evaluated (no fact matched its variables)": 19
+        },
+        "executable twins of declarative rules": {
+          "not evaluated (no fact matched its variables)": 1,
+          "passed": 7
+        }
+      }
+    }
+  },
+  "environment": {
+    "python": "~/.venvs/sbrm-regca\\Scripts\\python.exe",
+    "environment": "~/.venvs/sbrm-regca",
+    "windows_long_paths_enabled": false,
+    "deepest_installed_below_site_packages": 115,
+    "longest_installed_path": 163,
+    "windows_path_limit": 259,
+    "headroom": 96,
+    "requirements": {
+      "rdflib": "7.6.0",
+      "pyld": "3.3.0",
+      "pyshacl": "0.40.2",
+      "arelle-release": "2.47.3"
+    },
+    "assumption_holds": true
+  },
+  "seconds": 194.0,
+  "failures": []
+}

@@ -1,0 +1,715 @@
+{
+  "run": {
+    "tool": "sbrm-regca-build 1.0",
+    "run_at": "2026-10-30T12:52:47+00:00",
+    "inputs": {
+      "M1": {
+        "file": "Reg CA Complete Model 2026-10-18.json",
+        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+      },
+      "M2": {
+        "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+        "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1"
+      }
+    }
+  },
+  "structure": {
+    "facts": 1169,
+    "errors": [],
+    "error_count": 0,
+    "by_check": {},
+    "ok": true
+  },
+  "rules": {
+    "document_type": "http://luca.pacioli.ai/report#Form1CRYPTOMember",
+    "patterns": {
+      "Roll-ups (calculation)": {
+        "pass": 20,
+        "fail": 0,
+        "not_evaluable": 1,
+        "not_applicable": 0,
+        "details": []
+      },
+      "Roll-forward SubjectCryptoAssetSupplyOutstanding": {
+        "pass": 0,
+        "fail": 0,
+        "not_evaluable": 1,
+        "not_applicable": 0,
+        "details": []
+      },
+      "Roll-forward CashAndCashEquivalents": {
+        "pass": 2,
+        "fail": 0,
+        "not_evaluable": 0,
+        "not_applicable": 0,
+        "details": []
+      },
+      "Roll-forward Equity": {
+        "pass": 2,
+        "fail": 0,
+        "not_evaluable": 0,
+        "not_applicable": 0,
+        "details": []
+      },
+      "REGCA_BNP_D_01": {
+        "pass": 2,
+        "fail": 0,
+        "not_evaluable": 0,
+        "not_applicable": 1,
+        "details": []
+      },
+      "REGCA_BNP_D_02": {
+        "pass": 0,
+        "fail": 0,
+        "not_evaluable": 0,
+        "not_applicable": 3,
+        "details": []
+      },
+      "REGCA_BNP_D_03": {
+        "pass": 2,
+        "fail": 0,
+        "not_evaluable": 0,
+        "not_applicable": 1,
+        "details": []
+      },
+      "REGCA_BNP_D_04": {
+        "pass": 0,
+        "fail": 0,
+        "not_evaluable": 0,
+        "not_applicable": 3,
+        "details": []
+      },
+      "REGCA_BNP_TIE_01": {
+        "pass": 3,
+        "fail": 0,
+        "not_evaluable": 0,
+        "not_applicable": 0,
+        "details": []
+      },
+      "REGCA_C_BS_01": {
+        "pass": 2,
+        "fail": 0,
+        "not_evaluable": 0,
+        "not_applicable": 0,
+        "details": []
+      },
+      "REGCA_C_OFFER_01": {
+        "pass": 1,
+        "fail": 0,
+        "not_evaluable": 0,
+        "not_applicable": 0,
+        "details": []
+      }
+    },
+    "required_elements": {
+      "required": 93,
+      "present": 93,
+      "absent": []
+    },
+    "other_xbrl_formula_rules": {
+      "counts": {
+        "not machine-checked": 111,
+        "checked": 8
+      },
+      "rules": [
+        {
+          "rule": "REGCA_AMEND_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Amendments to Form 1-CRYPTO and to Forms 1-KC, 1-SC and 1-UC are numbered (Rule 301(f)(1)(i); Rule 305(b))."
+        },
+        {
+          "rule": "REGCA_AMEND_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "An amendment relating solely to Part III includes an explanatory note (Rule 301(f)(1)(iii))."
+        },
+        {
+          "rule": "REGCA_AMEND_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "An amendment with amended audited financial statements includes the certifying accountant's consent, filed as Exhibit 11 (Rule 301(f)(1)(ii); Form 1-CRYPTO Item 15(11))."
+        },
+        {
+          "rule": "REGCA_AUDIT_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Audited statements are filed with the auditor's report, which names the auditor and the auditing standards (U.S. GAAS or PCAOB) (Form 1-CRYPTO Part F/S (b)(2), (c)(1)(iii); Form 1-KC Item 12)."
+        },
+        {
+          "rule": "REGCA_BDAY_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "An offering circular with pricing information omitted at qualification is filed within 15 business days after the later of the qualification of the offering statement or of a post-qualification amendm"
+        },
+        {
+          "rule": "REGCA_BDAY_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "An offering circular filed under Rule 302(f)(1) or (3) is filed within two business days after the earlier of the date the offering price was determined and the date it was first used after qualificat"
+        },
+        {
+          "rule": "REGCA_BDAY_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "An offering circular reflecting a substantive change or addition is filed within five business days after it is first used after qualification (Rule 302(f)(2)). Checked when the first-use date is repo"
+        },
+        {
+          "rule": "REGCA_BNP_AGG_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_AGG_01: abs($CombinedStakeSharePercentageOnNetwork - ($EstimatedStakeSharePercentage + sum($AffiliateEstimatedStakeSharePercentage))) le $P_shareRoundingTolerance. Carri"
+        },
+        {
+          "rule": "REGCA_BNP_AGG_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_AGG_02: abs($CombinedHashPowerSharePercentageOnNetwork - ($EstimatedHashPowerSharePercentage + sum($AffiliateEstimatedHashPowerSharePercentage))) le $P_shareRoundingTole"
+        },
+        {
+          "rule": "REGCA_BNP_AGG_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_AGG_03: $CombinedValidatorSlotsControlledOnNetwork eq $NumberOfValidatorSlotsControlled + sum($AffiliateNumberOfValidatorSlotsControlled). Carried over unchanged (rename"
+        },
+        {
+          "rule": "REGCA_BNP_ATT_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_ATT_01: normalize-space(string($AttestingOfficerName)) ne '' and normalize-space(string($AttestingOfficerTitle)) ne '' and normalize-space(string($AttestingOfficerIdenti"
+        },
+        {
+          "rule": "REGCA_BNP_ATT_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "The affiliate perimeter attestation is signed on or before the document date."
+        },
+        {
+          "rule": "REGCA_BNP_CAP_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_CAP_01: $CombinedValidatorSlotsControlledOnNetwork le $TotalValidatorSlotsInNetwork. Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 mod"
+        },
+        {
+          "rule": "REGCA_BNP_D_01_XML",
+          "status": "checked through its declarative twin REGCA_BNP_D_01",
+          "commentary": "Executable assertion REGCA_BNP_D_01_XML: exists($EstimatedStakeSharePercentage) and abs($EstimatedStakeSharePercentage * $TotalActiveStakeOnNetwork - $EffectiveStakeControlledOnNetwork) le $P_shareRou"
+        },
+        {
+          "rule": "REGCA_BNP_D_02_XML",
+          "status": "checked through its declarative twin REGCA_BNP_D_02",
+          "commentary": "Executable assertion REGCA_BNP_D_02_XML: exists($EstimatedHashPowerSharePercentage) and abs($EstimatedHashPowerSharePercentage * $TotalNetworkHashRate - $HashRateContributedToNetwork) le $P_shareRound"
+        },
+        {
+          "rule": "REGCA_BNP_D_03_XML",
+          "status": "checked through its declarative twin REGCA_BNP_D_03",
+          "commentary": "Executable assertion REGCA_BNP_D_03_XML: exists($AffiliateEstimatedStakeSharePercentage) and abs($AffiliateEstimatedStakeSharePercentage * $TotalActiveStakeOnNetwork - $AffiliateEffectiveStakeControll"
+        },
+        {
+          "rule": "REGCA_BNP_D_04_XML",
+          "status": "checked through its declarative twin REGCA_BNP_D_04",
+          "commentary": "Executable assertion REGCA_BNP_D_04_XML: exists($AffiliateEstimatedHashPowerSharePercentage) and abs($AffiliateEstimatedHashPowerSharePercentage * $TotalNetworkHashRate - $AffiliateHashRateContributed"
+        },
+        {
+          "rule": "REGCA_BNP_EX_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_EX_02: string($AffiliateParticipatesOnSameProtocolIndicator) ne 'true' or count($AffiliateNetworkShare) ge 1. Carried over unchanged (renamed) from the BNP rules in the "
+        },
+        {
+          "rule": "REGCA_BNP_EX_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_EX_03: exists($NetworkShare) and exists($CombinedShare). Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_EX_03_HASH",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_EX_03_HASH: exists($NetworkShare) and exists($CombinedShare). Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_EX_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_EX_04: exists($NetworkShare) and exists($CombinedShare). Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_EX_04_HASH",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_EX_04_HASH: exists($NetworkShare) and exists($CombinedShare). Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_EX_05",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_EX_05: exists($NetworkNativeTokenSymbol). Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_MA_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_MA_01: $Total eq sum($Each). Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_MA_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_MA_02: $Total eq sum($Each). Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_MA_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_MA_03: $Total eq sum($Each). Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_ORD_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: an affiliate that can influence transaction ordering on a network reports its participation revenue on that network, binding the ordering indicator to a monetary fact (Testing Machine-Readab"
+        },
+        {
+          "rule": "REGCA_BNP_PC_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PC_01: $BNPPercent ge $P_percentFractionLowerBound and $BNPPercent le $P_percentFractionUpperBound. Carried over unchanged (renamed) from the BNP rules in the Auditchain"
+        },
+        {
+          "rule": "REGCA_BNP_PER_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PER_01: string($AffiliateEngaged) ne 'true' or (normalize-space(string($AffiliateLegalName)) ne '' and normalize-space(string($AffiliateLEI)) ne '' and exists($Affiliate"
+        },
+        {
+          "rule": "REGCA_BNP_PER_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PER_02: string($AffiliateEngaged) ne 'true' or (exists($AffiliateDeclaredNetworkCount) and $AffiliateDeclaredNetworkCount ge $P_minimumNetworksPerEngagedAffiliate and co"
+        },
+        {
+          "rule": "REGCA_BNP_PER_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PER_03: exists($DeclaredAffiliateCount) and $DeclaredAffiliateCount eq count($AffiliatePerimeterRow[string(.) eq 'true']). Carried over unchanged (renamed) from the BNP "
+        },
+        {
+          "rule": "REGCA_BNP_PER_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PER_04: exists($PerimeterAttestation) and string($PerimeterAttestation) eq 'true' and exists($AffiliatesEngage) and exists($DeclaredAffiliateCount) and ((string($Affilia"
+        },
+        {
+          "rule": "REGCA_BNP_PER_05",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PER_05: string($AffiliateNetworkRow) ne 'true' or (exists($AffiliateEngaged) and string($AffiliateEngaged) eq 'true'). Carried over unchanged (renamed) from the BNP rule"
+        },
+        {
+          "rule": "REGCA_BNP_PER_05B",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PER_05B: exists($AffiliateEngaged) and string($AffiliateEngaged) eq 'true'. Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_PER_05C",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PER_05C: exists($AffiliateEngaged) and string($AffiliateEngaged) eq 'true'. Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_PER_05D",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PER_05D: exists($AffiliateEngaged) and string($AffiliateEngaged) eq 'true'. Carried over unchanged (renamed) from the BNP rules in the Auditchain FDIC PS-02 model."
+        },
+        {
+          "rule": "REGCA_BNP_PER_06",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_PER_06: string($AffiliateNetworkRow) ne 'true' or exists($AffiliateStakeShare) or exists($AffiliateHashShare) or exists($AffiliateValidatorSlots). Carried over unchanged"
+        },
+        {
+          "rule": "REGCA_BNP_R1_GOV_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_R1_GOV_01: (if (string($EntityHoldsGovernanceTokensIndicator) eq 'true') then (exists($GovernanceTokensQuantityHeld) and $GovernanceTokensQuantityHeld gt 0) else (if (st"
+        },
+        {
+          "rule": "REGCA_BNP_R1_GOV_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_R1_GOV_02: (if (string($ParticipatedInGovernanceVotesPast12MonthsIndicator) eq 'true') then (exists($NumberOfGovernanceVotesCast) and $NumberOfGovernanceVotesCast ge 1) "
+        },
+        {
+          "rule": "REGCA_BNP_R1_NODES_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_R1_NODES_01: (if (string($IssuerOperatesBlockchainInfrastructureIndicator) eq 'true') then (exists($NumberOfNodesOrValidatorsOperated) and $NumberOfNodesOrValidatorsOper"
+        },
+        {
+          "rule": "REGCA_BNP_R1_STAKE_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_R1_STAKE_01: $EffectiveStakeControlledOnNetwork ge 0 and (not($EffectiveStakeControlledOnNetwork gt 0) or exists($TotalValueStaked)) and (not(exists($TotalValueStaked)) "
+        },
+        {
+          "rule": "REGCA_BNP_TIE_01_XML",
+          "status": "checked through its declarative twin REGCA_BNP_TIE_01",
+          "commentary": "Executable assertion REGCA_BNP_TIE_01_XML: exists($BlockchainNetworkParticipationExpenses) and exists($BlockchainNetworkParticipationNetIncome) and $BlockchainNetworkParticipationNetIncome eq $Blockch"
+        },
+        {
+          "rule": "REGCA_BNP_TIE_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Executable assertion REGCA_BNP_TIE_02: exists($AffiliateBlockchainNetworkParticipationExpenses) and exists($AffiliateBlockchainNetworkParticipationNetIncome) and $AffiliateBlockchainNetworkParticipati"
+        },
+        {
+          "rule": "REGCA_BS_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Total assets equal total liabilities and equity (ASC 210)."
+        },
+        {
+          "rule": "REGCA_COVER_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Exactly one document type is selected on the cover page. The rule is evaluated on every filing that reports the issuer's name, the document date, the filing's merkle root or the taxonomy entry point a"
+        },
+        {
+          "rule": "REGCA_COVER_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Forms 1-CRYPTO, 1-KC, 1-SC and 1-UC are used only with the fundraising exemption (Tier 1 or Tier 2)."
+        },
+        {
+          "rule": "REGCA_EXH_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "An exhibit incorporated by reference has a hyperlink to the document on EDGAR (Form 1-CRYPTO General Instruction III(b))."
+        },
+        {
+          "rule": "REGCA_FS_AGE_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "The most recent balance sheet in an offering statement is no more than nine months old at filing (Form 1-CRYPTO Part F/S (b)(3)(i)-(iv)). A last day falling on a weekend moves to the Monday (Instructi"
+        },
+        {
+          "rule": "REGCA_FS_AGE_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "The most recent balance sheet in an offering statement is no more than nine months old at qualification as well as at filing (Form 1-CRYPTO Part F/S (b)(3)(ii): an offering statement filed or qualifie"
+        },
+        {
+          "rule": "REGCA_FS_CRYPTO_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Fair value of disclosed crypto asset holdings does not exceed crypto assets on the balance sheet (ASC 350-60-45-1, 50-1)."
+        },
+        {
+          "rule": "REGCA_FS_INT_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Interim statements come with management's statement that all adjustments necessary for them not to be misleading are included (Form 1-CRYPTO Part F/S (b)(5)(iii); Form 1-SC Item 5(b))."
+        },
+        {
+          "rule": "REGCA_FX_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed (Form 1-CRYPTO foreign currency table): an amount received in a foreign currency gives its ISO 4217 code (matching the unit of the amount, not USD), the exchange rate and its date; the amount"
+        },
+        {
+          "rule": "REGCA_FX_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: the translated foreign-currency amounts do not exceed the total of the aggregate offering price and aggregate sales they form part of (Form 1-CRYPTO Part I Item 2; Rule 100)."
+        },
+        {
+          "rule": "REGCA_F_AUDIT_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Tier 2 financial statements are audited (Form 1-CRYPTO Part F/S (c)); Form 1-SC statements may be unaudited."
+        },
+        {
+          "rule": "REGCA_F_LEGEND_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "The offering circular cover carries the Rule 302(e) legend and the 10 percent investment-limit legend (Rule 302(e); Form 1-CRYPTO Part II (b)(3), (b)(5))."
+        },
+        {
+          "rule": "REGCA_F_LEGEND_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "A preliminary offering circular carries the Rule 303(a) legend (Rule 303(a); Form 1-CRYPTO Part II (b)(4))."
+        },
+        {
+          "rule": "REGCA_F_PARTI_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Form 1-CRYPTO Part I Item 2: the issuer and selling-securityholder portions of the aggregate offering price add up to the number of securities offered times the price per security (Rule 100 definition"
+        },
+        {
+          "rule": "REGCA_F_PARTI_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "The portion offered by affiliate selling securityholders is part of the selling-securityholder portion (Rule 300(a)(1)-(2))."
+        },
+        {
+          "rule": "REGCA_F_RANGE_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "The bona fide price range is ordered and contains the reported price, which is its midpoint where a range is given (Rule 302(b)(2); Form 1-CRYPTO Part I Item 2)."
+        },
+        {
+          "rule": "REGCA_F_RANGE_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Where a price range is given, the price reported in Part I is its midpoint (Form 1-CRYPTO Part I Item 2). Not applied to an offering circular filed under Rule 302(f), which reports the final price."
+        },
+        {
+          "rule": "REGCA_F_RANGE_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "The price range is no wider than $2 where its upper end is $10 or less, or 20 percent where it is over $10 (Rule 302(b)(2)(i)). The model reads the 20 percent as 20 percent of the upper end."
+        },
+        {
+          "rule": "REGCA_F_RANGE_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Pricing may be omitted under Rule 302(b) only with a price range and the maximum number of units on the cover, and not for a non-cash or competitive-bidding offering (Rule 302(b)(1)-(4))."
+        },
+        {
+          "rule": "REGCA_F_TIER_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Tier 1: aggregate offering price plus aggregate sales do not exceed $20,000,000 (Rule 300(a)(1))."
+        },
+        {
+          "rule": "REGCA_F_TIER_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Tier 2: aggregate offering price plus aggregate sales do not exceed $75,000,000 (Rule 300(a)(2))."
+        },
+        {
+          "rule": "REGCA_F_TIER_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Affiliate selling securityholders: not more than $6,000,000 (Tier 1) or $22,500,000 (Tier 2) (Rule 300(a)(1)-(2))."
+        },
+        {
+          "rule": "REGCA_F_TIER_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "In the first offering and offerings qualified within one year after it, selling securityholders account for no more than 30 percent of the aggregate offering price (Rule 300(a)(3))."
+        },
+        {
+          "rule": "REGCA_F_TIER_05",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Where a price range is given, the tier limit is tested at the upper end of the range (Rule 302(b)(2)(ii); Rule 300(a))."
+        },
+        {
+          "rule": "REGCA_F_TOTAL_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Form 1-CRYPTO Part I Item 2: the total is the sum of the four preceding amounts."
+        },
+        {
+          "rule": "REGCA_IBR_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Each description of information incorporated by reference comes with a hyperlink to the document on EDGAR (Form 1-CRYPTO General Instruction III(b); Forms 1-KC, 1-SC and 1-UC General Instruction D(1))"
+        },
+        {
+          "rule": "REGCA_IBR_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "If an incorporated document was substantively modified after it was filed, the text and date of the modification are filed with the reference (Form 1-CRYPTO General Instruction III(d))."
+        },
+        {
+          "rule": "REGCA_LOT_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed functional-unit disclosure: units of covered investment contract offered times units of the subject crypto asset per unit equals the equivalent units of the subject crypto asset offered, the "
+        },
+        {
+          "rule": "REGCA_LOT_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Units offered times the price per unit, in the unit the issuer defines, equals the aggregate offering price (Rule 100); the same product in Rule 101(e) measures is tested by REGCA_LOT_03."
+        },
+        {
+          "rule": "REGCA_LOT_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed functional-unit disclosure: the price per unit divided by the units of the subject crypto asset per unit equals the equivalent price per unit of the subject crypto asset, the price Rule 101(e"
+        },
+        {
+          "rule": "REGCA_LOT_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "No purchase price is allocated to a functional asset when none is included."
+        },
+        {
+          "rule": "REGCA_LOT_05",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed functional-unit disclosure: the Rule 101(e) measures multiply to the same aggregate offering price as the units the issuer defines (Rule 101(e); Rule 100)."
+        },
+        {
+          "rule": "REGCA_NOTE_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Each note to the financial statements is a row with its number and title (Form 1-CRYPTO Part F/S; Form 1-KC Item 12; Form 1-SC Item 5). Added Oct. 5, 2026 with the removal of the single all-notes text"
+        },
+        {
+          "rule": "REGCA_OFFER_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Aggregate offering price equals units offered times price per unit (Rule 101(e); Rule 103(b)(2)(i))."
+        },
+        {
+          "rule": "REGCA_OFFER_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Estimated net offering proceeds equal the aggregate offering price less estimated expenses paid from proceeds (Rule 103(b)(2)(iii))."
+        },
+        {
+          "rule": "REGCA_OFFER_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Amounts by use of proceeds add up to estimated net proceeds, within the monetary tolerance (Rule 103(b)(2)(iv))."
+        },
+        {
+          "rule": "REGCA_OFFER_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Percentages of estimated net proceeds by use add up to the total percentage, within the rounding tolerance."
+        },
+        {
+          "rule": "REGCA_OFFER_05",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Each percentage of estimated net proceeds equals the amount for that use divided by estimated net proceeds, within the rounding tolerance."
+        },
+        {
+          "rule": "REGCA_PARAM_REGISTER",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Parameter register: P_startupOfferingLimit = 5000000 (Rule 200(b)(4); adjusted under Rule 102); P_startupPeriodYears = 4 (Rule 200(b)(1), 200(e)); P_annualUpdateDays = 30 (Rule 200(d)(3)); P_tier1Limi"
+        },
+        {
+          "rule": "REGCA_PCT_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Percentages are stored as fractions between 0 and 1."
+        },
+        {
+          "rule": "REGCA_PQA_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "A post-qualification amendment states whether it is the 12-month update or reflects a fundamental change (Rule 301(f)(2))."
+        },
+        {
+          "rule": "REGCA_PQA_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "The 12-month post-qualification amendment is filed within 12 months after the qualification date (Rule 301(f)(2)(i)). Uses the document date as the filing date."
+        },
+        {
+          "rule": "REGCA_PRIOR_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: if the issuer answers yes to \"Has the issuer conducted an offering under Regulation Crypto Assets in the previous 12 months?\", each offering is described in its own text box."
+        },
+        {
+          "rule": "REGCA_PRIOR_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: if the answer is no, no prior offering is described or linked."
+        },
+        {
+          "rule": "REGCA_PRIOR_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: each prior offering described has its own URL."
+        },
+        {
+          "rule": "REGCA_PRIOR_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: the answer on prior offerings is signed."
+        },
+        {
+          "rule": "REGCA_PRIOR_05",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: each signature gives the printed name of the person signing, each capacity in which the person signs (one row of the capacity table for each), whether the person signs for itself or for an e"
+        },
+        {
+          "rule": "REGCA_PRIOR_06",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: a signature on behalf of an entity names the entity and gives the title of the person signing for it, as in the \"(Registrant) By (Signature and Title)\" block of Form 10-K."
+        },
+        {
+          "rule": "REGCA_PRIOR_07B",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: the issuer signs the answer on prior offerings — its name is the entity named in a signature or the person signing, ignoring case and spacing (Forms 1-CRYPTO and 1-KC, whose issuer is a sing"
+        },
+        {
+          "rule": "REGCA_PROV_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: the merkle root of the filing is 64 lowercase hexadecimal characters."
+        },
+        {
+          "rule": "REGCA_PROV_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: the merkle root of the previous filing is 64 lowercase hexadecimal characters."
+        },
+        {
+          "rule": "REGCA_PROV_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: the merkle root of the filing is anchored at least once (table of anchors)."
+        },
+        {
+          "rule": "REGCA_PROV_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: each anchor gives the network (CAIP-2), the block number, the date and the link to the transaction."
+        },
+        {
+          "rule": "REGCA_PROV_05",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: the transaction identifier of an anchor is 0x followed by 64 lowercase hexadecimal characters."
+        },
+        {
+          "rule": "REGCA_PROV_06",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Proposed: the network identifier of an anchor follows CAIP-2 (namespace, colon, reference)."
+        },
+        {
+          "rule": "REGCA_REWARD_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Within each reward program, recipient shares sum to 100 percent."
+        },
+        {
+          "rule": "REGCA_RF_CASH_01_XML",
+          "status": "checked through its declarative twin REGCA_RF_CASH_01",
+          "commentary": "Executable form of REGCA_RF_CASH_01: cash at the start of the period plus the net change equals cash at the end (ASC 230)."
+        },
+        {
+          "rule": "REGCA_RF_EQUITY_01_XML",
+          "status": "checked through its declarative twin REGCA_RF_EQUITY_01",
+          "commentary": "Executable form of REGCA_RF_EQUITY_01: opening equity plus net income, other comprehensive income, equity issued and other changes equals closing equity (ASC 505)."
+        },
+        {
+          "rule": "REGCA_RF_SUPPLY_01_XML",
+          "status": "checked as a roll-forward pattern (see patterns)",
+          "commentary": "Executable form of REGCA_RF_SUPPLY_01: supply at the start of the period plus units generated less units destroyed equals supply at the end (Rule 103(b)(7))."
+        },
+        {
+          "rule": "REGCA_RISK_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Each risk factor row gives its category and its heading with the statement (Rule 103(b)(10): short, concise statements specific to the covered investment contract, the issuer, the subject crypto asset"
+        },
+        {
+          "rule": "REGCA_SIG_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Form 1-CRYPTO, Form 1-KC and Form 1-SC are signed by the principal executive, financial and accounting officers (Rule 301(c); Form 1-KC and 1-SC General Instruction C(2)); Auditchain Labs proposes the"
+        },
+        {
+          "rule": "REGCA_SIG_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "A majority of the board of directors or other governing body signs Form 1-CRYPTO and Form 1-KC (Rule 301(c); Form 1-KC General Instruction C(2)); Auditchain Labs proposes the same for Form 1-SU, the s"
+        },
+        {
+          "rule": "REGCA_SOI_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "After public filing, solicitation materials say where to get the preliminary offering circular (name, phone and address), give its URL, or include it (Rule 304(b)(4))."
+        },
+        {
+          "rule": "REGCA_SOI_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Solicitation materials include the statements required by Rule 304(b)(1)-(3)."
+        },
+        {
+          "rule": "REGCA_SRC_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "If the source code is publicly available, its website address is disclosed (Rule 103(b)(6))."
+        },
+        {
+          "rule": "REGCA_SUPPLY_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Supply outstanding does not exceed maximum supply."
+        },
+        {
+          "rule": "REGCA_SUPPLY_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Allocations sum to maximum supply (Rule 103(b)(7))."
+        },
+        {
+          "rule": "REGCA_SUPPLY_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Each allocation percentage equals allocated units divided by maximum supply."
+        },
+        {
+          "rule": "REGCA_SUPPLY_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "Total units held by related persons equals the sum of the related-person rows (Rule 103(b)(7))."
+        },
+        {
+          "rule": "REGCA_SUPPLY_05",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "A related person's percentage equals units held divided by supply outstanding."
+        },
+        {
+          "rule": "REGCA_SUPPLY_06",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "The minting caps of the roles that can mint add up to the maximum supply (proposed)."
+        },
+        {
+          "rule": "REGCA_SUPPL_01",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "An offering circular filed under Rule 302(f) shows on its cover the paragraph it is filed under and the offering statement file number (Rule 302(f)(5))."
+        },
+        {
+          "rule": "REGCA_SUPPL_02",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "A supplement filed on its own identifies on its cover the date of the related offering circular (Rule 302(f)(2))."
+        },
+        {
+          "rule": "REGCA_SUPPL_03",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "A decrease in volume, or a price outside the qualified range, reflected in a Rule 302(f)(1) or (3) supplement changes the maximum aggregate offering price by no more than 20 percent (Rule 302(b), Note"
+        },
+        {
+          "rule": "REGCA_SUPPL_04",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "A supplement may not increase the volume of securities offered (Rule 302(b), Note)."
+        },
+        {
+          "rule": "REGCA_SUPPL_05",
+          "status": "not machine-checked (needs an XBRL Formula processor)",
+          "commentary": "An offering circular filed under Rule 302(f)(1) or (3) contains the pricing information omitted at qualification (Rule 302(c), (f)(1))."
+        }
+      ]
+    },
+    "failures": 0,
+    "ok": true
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "run": {
+    "tool": "sbrm-regca-build 1.0",
+    "run_at": "2026-10-30T12:52:47+00:00",
+    "inputs": {
+      "M1": {
+        "file": "Reg CA Complete Model 2026-10-18.json",
+        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+      },
+      "M2": {
+        "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+        "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1"
+      }
+    }
+  },
+  "shapes": {
+    "M1": {
+      "file": "complete-2026-10-18/regca-complete.shapes.ttl",
+      "shapes": {
+        "roll-up": 12,
+        "roll-forward": 3,
+        "arithmetic-expression": 7
+      },
+      "byte_stable": true
+    },
+    "M2": {
+      "file": "form-1-crypto-second-offering/regca-1-crypto.shapes.ttl",
+      "shapes": {
+        "roll-up": 11,
+        "roll-forward": 3,
+        "arithmetic-expression": 7
+      },
+      "byte_stable": true
+    }
+  },
+  "M2_validation": {
+    "shapes": 21,
+    "conforms": true,
+    "violations": []
+  },
+  "coverage": {
+    "focus_nodes_evaluated_per_shape": {
+      "REGCA_BNP_D_01: regca:EstimatedStakeSharePercentage = regca:EffectiveStakeControlledOnNetwork div regca:TotalActiveStakeOnNetwork": 2,
+      "REGCA_BNP_D_02: regca:EstimatedHashPowerSharePercentage = regca:HashRateContributedToNetwork div regca:TotalNetworkHashRate": 0,
+      "REGCA_BNP_D_03: regca:AffiliateEstimatedStakeSharePercentage = regca:AffiliateEffectiveStakeControlledOnNetwork div regca:TotalActiveStakeOnNetwork[regca:AffiliateIdentifierTypedAxis = absent]": 2,
+      "REGCA_BNP_D_04: regca:AffiliateEstimatedHashPowerSharePercentage = regca:AffiliateHashRateContributedToNetwork div regca:TotalNetworkHashRate[regca:AffiliateIdentifierTypedAxis = absent]": 0,
+      "REGCA_BNP_TIE_01: $BlockchainNetworkParticipationNetIncome = $BlockchainNetworkParticipationRevenue - $BlockchainNetworkParticipationExpenses": 3,
+      "REGCA_C_BS_01: $Assets = $LiabilitiesAndEquity": 2,
+      "REGCA_C_OFFER_01: $AggregateOfferingPrice = $UnitsOfCoveredInvestmentContractsOffered * $PurchasePricePerUnit": 1,
+      "Roll-forward regca:SubjectCryptoAssetSupplyOutstanding (regca-31-economics)": 0,
+      "Roll-forward regca:CashAndCashEquivalents (regca-73-cash-flows)": 2,
+      "Roll-forward regca:Equity (regca-74-changes-in-equity)": 2,
+      "Roll-up regca:EstimatedNetOfferingProceeds (regca-22-offering)": 1,
+      "Roll-up regca:AggregateOfferingPriceAndAggregateSalesTotal (regca-60-form-1-crypto-part-i)": 1,
+      "Roll-up regca:Assets (regca-71-balance-sheet)": 2,
+      "Roll-up regca:Equity (regca-71-balance-sheet)": 2,
+      "Roll-up regca:Liabilities (regca-71-balance-sheet)": 2,
+      "Roll-up regca:LiabilitiesAndEquity (regca-71-balance-sheet)": 2,
+      "Roll-up regca:ComprehensiveIncomeLoss (regca-72-comprehensive-income)": 2,
+      "Roll-up regca:IncomeLossBeforeIncomeTaxes (regca-72-comprehensive-income)": 2,
+      "Roll-up regca:NetIncomeLoss (regca-72-comprehensive-income)": 2,
+      "Roll-up regca:OperatingIncomeLoss (regca-72-comprehensive-income)": 2,
+      "Roll-up regca:CashAndCashEquivalentsPeriodIncreaseDecrease (regca-73-cash-flows)": 2
+    },
+    "roll_up_total": 20,
+    "matches_validator_V9": true
+  },
+  "negative_suite": {
+    "cases": [
+      {
+        "mutant": "Assets at 2027-06-30 +1",
+        "expected_shapes": [
+          "expression/REGCA_C_BS_01",
+          "rollup/regca-71-balance-sheet/Assets"
+        ],
+        "fired_shapes": [
+          "expression/REGCA_C_BS_01",
+          "rollup/regca-71-balance-sheet/Assets"
+        ],
+        "example_message": "REGCA_C_BS_01: reported 1410001 but $Assets = $LiabilitiesAndEquity gives 1410000",
+        "ok": true
+      },
+      {
+        "mutant": "cash at 2027-06-30 +1",
+        "expected_shapes": [
+          "rollforward/regca-73-cash-flows/CashAndCashEquivalents",
+          "rollup/regca-71-balance-sheet/Assets"
+        ],
+        "fired_shapes": [
+          "rollforward/regca-73-cash-flows/CashAndCashEquivalents",
+          "rollup/regca-71-balance-sheet/Assets"
+        ],
+        "example_message": "regca:CashAndCashEquivalents: opening 990000 plus net change 297500 does not equal closing 1287501",
+        "ok": true
+      },
+      {
+        "mutant": "equity at 2027-06-30 +1",
+        "expected_shapes": [
+          "rollforward/regca-74-changes-in-equity/Equity",
+          "rollup/regca-71-balance-sheet/Equity",
+          "rollup/regca-71-balance-sheet/LiabilitiesAndEquity"
+        ],
+        "fired_shapes": [
+          "rollforward/regca-74-changes-in-equity/Equity",
+          "rollup/regca-71-balance-sheet/Equity",
+          "rollup/regca-71-balance-sheet/LiabilitiesAndEquity"
+        ],
+        "example_message": "regca:LiabilitiesAndEquity (1410000) does not equal the sum of its inputs (1410001) in regca-71-balance-sheet",
+        "ok": true
+      },
+      {
+        "mutant": "aggregate offering price +1",
+        "expected_shapes": [
+          "expression/REGCA_C_OFFER_01",
+          "rollup/regca-22-offering/EstimatedNetOfferingProceeds"
+        ],
+        "fired_shapes": [
+          "expression/REGCA_C_OFFER_01",
+          "rollup/regca-22-offering/EstimatedNetOfferingProceeds"
+        ],
+        "example_message": "regca:EstimatedNetOfferingProceeds (38693750) does not equal the sum of its inputs (38693751) in regca-22-offering",
+        "ok": true
+      },
+      {
+        "mutant": "BNP net income +1 (first network)",
+        "expected_shapes": [
+          "expression/REGCA_BNP_TIE_01"
+        ],
+        "fired_shapes": [
+          "expression/REGCA_BNP_TIE_01"
+        ],
+        "example_message": "REGCA_BNP_TIE_01: reported 1 but $BlockchainNetworkParticipationNetIncome = $BlockchainNetworkParticipationRevenue - $BlockchainNetworkParticipationExpenses gives 0",
+        "ok": true
+      },
+      {
+        "mutant": "stake share +0.01, beyond the 0.0001 tolerance",
+        "expected_shapes": [
+          "expression/REGCA_BNP_D_01"
+        ],
+        "fired_shapes": [
+          "expression/REGCA_BNP_D_01"
+        ],
+        "example_message": "REGCA_BNP_D_01: reported 0.01000091 but regca:EstimatedStakeSharePercentage = regca:EffectiveStakeControlledOnNetwork div regca:TotalActiveStakeOnNetwork gives 0.0000009142857142857142857142857143 (tolerance 0.0001 from the rule’s XBRL Formula twin)",
+        "ok": true
+      },
+      {
+        "mutant": "stake share +0.00005, within the 0.0001 tolerance (must NOT fire)",
+        "expected_shapes": [],
+        "fired_shapes": [],
+        "example_message": null,
+        "ok": true
+      }
+    ],
+    "all_ok": true
+  }
+}

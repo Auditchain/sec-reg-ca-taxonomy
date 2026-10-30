@@ -1,0 +1,197 @@
+{
+  "run_at": "2026-10-30T12:57:02+00:00",
+  "lucasuite_source": "SUITE 6-1-2026: app/Services/FileService.php; app/Services/ReportService.php (import, normalizeFacts, replaceStructureToNetwork, filterFactsWithoutDefinedConceptTerms); app/Support/Luca/TaxonomyModelValidator.php; resources/views/luca/partials/modal-import.blade.php",
+  "replayed_as": "an upload through the import dialog into a new, empty report, with \"Keep the original ReportingEntityAspect name from the import\" ticked",
+  "schema_fetch_certificates": "certifi 2026.10.23",
+  "files": {
+    "lucasuite/regca-complete.json": {
+      "rebuilt_from": [
+        "complete-2026-10-18/regca-complete.definition.jsonld"
+      ],
+      "bytes": 5660955,
+      "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837",
+      "identical_to_source_model": true,
+      "rows_in_file": {
+        "BaseInformation": 7,
+        "Terms": 975,
+        "Labels": 1261,
+        "References": 2619,
+        "Structures": 66,
+        "Associations": 1394,
+        "Rules-Consistency": 3,
+        "Rules-RollForward": 2,
+        "Rules-Derivation": 4,
+        "Rules-Nonstandard": 489
+      },
+      "blocking_problems": [],
+      "stored_rows": {
+        "BaseInformation": 7,
+        "ReportElement": 975,
+        "Labels": 1261,
+        "References": 2619,
+        "Structures": 66,
+        "Associations": 1394,
+        "Rules": 498
+      },
+      "not_imported": [],
+      "notes": []
+    },
+    "lucasuite/regca-1-crypto.json": {
+      "rebuilt_from": [
+        "form-1-crypto-second-offering/regca-1-crypto.definition.jsonld",
+        "form-1-crypto-second-offering/regca-1-crypto.report.jsonld"
+      ],
+      "bytes": 4476837,
+      "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1",
+      "identical_to_source_model": true,
+      "rows_in_file": {
+        "BaseInformation": 7,
+        "Terms": 733,
+        "Labels": 1031,
+        "References": 2229,
+        "Structures": 55,
+        "Associations": 1061,
+        "Rules-Consistency": 3,
+        "Rules-RollForward": 2,
+        "Rules-Derivation": 4,
+        "Rules-Nonstandard": 212,
+        "Facts": 1169,
+        "Facts-Dimensions": 1086
+      },
+      "blocking_problems": [],
+      "stored_rows": {
+        "BaseInformation": 7,
+        "ReportElement": 733,
+        "Labels": 1031,
+        "References": 2229,
+        "Structures": 55,
+        "Associations": 1061,
+        "Rules": 221,
+        "Facts": 1169
+      },
+      "not_imported": [],
+      "notes": [
+        "Facts-Dimensions: each row is stored on its fact (Facts.Dimensions) without its Sequence column; Sequence is the row number in this file, so nothing is lost.",
+        "ReportingEntityAspect on the facts: PacioliLabsInc | 5067001J8OL3RK15TE82. LucaSuite keeps it only if \"Keep the original ReportingEntityAspect name from the import\" is ticked in the import dialog. The box is ticked by default, but only the super-admin, moderator, enterprise and enterprise operator roles see it; without it, LucaSuite replaces the entity on every fact with the report's. The import API keeps it unless importEntity is not 1."
+      ]
+    }
+  },
+  "controls": [
+    {
+      "control": "the SBRM JSON-LD uploaded as it is",
+      "expected": "blocked",
+      "caught": true,
+      "reported": [
+        "Unsupported file type"
+      ]
+    },
+    {
+      "control": "a Concept term without a Datatype",
+      "expected": "blocked",
+      "caught": true,
+      "reported": [
+        "Terms row 6 (QName=regca:DocumentType): Datatype is required for Concept."
+      ]
+    },
+    {
+      "control": "a term category LucaSuite does not support",
+      "expected": "blocked",
+      "caught": true,
+      "reported": [
+        "Terms row 6 (QName=regca:DocumentType): unsupported ReportElementCategory \"Axis\"."
+      ]
+    },
+    {
+      "control": "a second Local BaseInformation row",
+      "expected": "blocked",
+      "caught": true,
+      "reported": [
+        "BaseInformation import contains more than one Local row."
+      ]
+    },
+    {
+      "control": "an imported namespace that is not its schema's targetNamespace",
+      "expected": "blocked",
+      "caught": true,
+      "reported": [
+        "BaseInformation row 4 (Code=Import, Prefix=currency): NamespaceIdentifier \"http://example.com/not-iso4217\" does not match schema targetNamespace \"http://www.xbrl.org/2003/iso4217\"."
+      ]
+    },
+    {
+      "control": "an association to an element the imported schema does not define",
+      "expected": "blocked",
+      "caught": true,
+      "reported": [
+        "BaseInformation import for prefix \"country\" uses SchemaLocation \"https://www.xbrl.org/taxonomy/int/country/current/elts.xsd\" that does not define referenced elements: country:NoSuchCountry."
+      ]
+    },
+    {
+      "control": "a fact whose concept is not a Concept term",
+      "expected": "lost",
+      "caught": true,
+      "reported": [
+        "Facts: 1 facts skipped, no Term with ReportElementCategory \"Concept\" for regca:NoSuchConcept"
+      ]
+    },
+    {
+      "control": "a label row repeated",
+      "expected": "lost",
+      "caught": true,
+      "reported": [
+        "Labels[1031]: every field equals an earlier Labels row, so LucaSuite stores the two as one"
+      ]
+    },
+    {
+      "control": "a dimension row whose fact is missing",
+      "expected": "lost",
+      "caught": true,
+      "reported": [
+        "Facts-Dimensions: 1 rows name no fact in Facts and are dropped"
+      ]
+    },
+    {
+      "control": "a reference row without values",
+      "expected": "lost",
+      "caught": true,
+      "reported": [
+        "References: 1 rows without values are skipped"
+      ]
+    },
+    {
+      "control": "a sheet LucaSuite does not know",
+      "expected": "lost",
+      "caught": true,
+      "reported": [
+        "Calculations: sheet not imported (1 rows)"
+      ]
+    }
+  ],
+  "failures": [],
+  "imported_schemas": {
+    "http://www.xbrl.org/2010/generic-message.xsd": {
+      "targetNamespace": "http://xbrl.org/2010/message",
+      "elements": 1
+    },
+    "https://www.xbrl.org/taxonomy/int/currency/current/elts.xsd": {
+      "targetNamespace": "http://www.xbrl.org/2003/iso4217",
+      "elements": 285
+    },
+    "https://www.xbrl.org/taxonomy/int/lei/2020-07-02/lei-formula-functions.xsd": {
+      "targetNamespace": "http://www.xbrl.org/taxonomy/int/lei/2020-07-02/functions",
+      "elements": 0
+    },
+    "https://www.xbrl.org/taxonomy/int/country/current/elts.xsd": {
+      "targetNamespace": "https://xbrl.org/2024/iso3166",
+      "elements": 257
+    },
+    "http://www.xbrl.org/2010/custom-function-implementation.xsd": {
+      "targetNamespace": "http://xbrl.org/2010/custom-function",
+      "elements": 4
+    },
+    "http://www.xbrl.org/2010/validation-message.xsd": {
+      "targetNamespace": "http://xbrl.org/2010/message/validation",
+      "elements": 0
+    }
+  },
+  "ok": true
+}

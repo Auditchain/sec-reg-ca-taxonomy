@@ -1,0 +1,115 @@
+{
+  "run": {
+    "tool": "sbrm-regca-build 1.0",
+    "run_at": "2026-10-30T12:52:47+00:00",
+    "inputs": {
+      "M1": {
+        "file": "Reg CA Complete Model 2026-10-18.json",
+        "sha256": "36a04b488cd07dfeb2fafabd9e27d66b6567eb73ac6249c1110e5dde3a70c837"
+      },
+      "M2": {
+        "file": "Model SEC Reg CA Form 1-Crypto - Second Offering.json",
+        "sha256": "10e1be3ea221d052e4ffc154fd4df12f62af28e8f241be3dcff79bebaf74f8d1"
+      }
+    }
+  },
+  "cases": [
+    {
+      "mutant": "1 required fact dropped",
+      "rejected": true,
+      "evidence": {
+        "required elements": 1
+      }
+    },
+    {
+      "mutant": "2 Assets at 2027-06-30 changed by 1",
+      "rejected": true,
+      "evidence": {
+        "Roll-ups (calculation)": 1,
+        "REGCA_C_BS_01": 1
+      }
+    },
+    {
+      "mutant": "3 cash at 2027-06-30 changed by 1",
+      "rejected": true,
+      "evidence": {
+        "Roll-ups (calculation)": 1,
+        "Roll-forward CashAndCashEquivalents": 1
+      }
+    },
+    {
+      "mutant": "4 instant fact given a duration",
+      "rejected": true,
+      "evidence": [
+        {
+          "check": "period",
+          "fact": "regca-1crypto:fact/FACT7a00cd5fb3",
+          "message": "regca:IssuerName is an instant concept but the fact has a duration"
+        }
+      ]
+    },
+    {
+      "mutant": "5 enumeration value from another domain",
+      "rejected": true,
+      "evidence": [
+        {
+          "check": "enumeration",
+          "fact": "regca-1crypto:fact/FACT0af0abcad3",
+          "message": "'http://luca.pacioli.ai/report#AICPAIndependenceStandardsMember' is not a member of regca:DocumentTypeDomain"
+        }
+      ]
+    },
+    {
+      "mutant": "6 monetary fact without a unit",
+      "rejected": true,
+      "evidence": [
+        {
+          "check": "unit",
+          "fact": "regca-1crypto:fact/FACTc1a8039789",
+          "message": "monetary fact without an ISO 4217 currency unit"
+        }
+      ]
+    },
+    {
+      "mutant": "7 unknown JSON key",
+      "rejected": true,
+      "evidence": [
+        {
+          "check": "unknown-key",
+          "fact": "regca-1crypto:fact/FACT7a00cd5fb3",
+          "message": "unknown keys ['sbrm-mm:bogusProperty']"
+        }
+      ]
+    },
+    {
+      "mutant": "8 typed axis on a concept no hypercube allows it on",
+      "rejected": true,
+      "evidence": [
+        {
+          "check": "dimension",
+          "fact": "regca-1crypto:fact/FACT7a00cd5fb3",
+          "message": "axis set ['regca:BlockchainNetworkIdentifierTypedAxis'] is not permitted for regca:IssuerName"
+        }
+      ]
+    },
+    {
+      "mutant": "9 fact class not in the definition",
+      "rejected": true,
+      "evidence": [
+        {
+          "check": "class",
+          "fact": "regca-1crypto:fact/FACT7a00cd5fb3",
+          "message": "regca:NoSuchConcept is not a concept declared in the definition"
+        }
+      ]
+    },
+    {
+      "mutant": "10 definition without regca:Assets (still used by facts)",
+      "rejected": true,
+      "evidence": [
+        "regca:Assets"
+      ]
+    }
+  ],
+  "all_rejected": true
+}
